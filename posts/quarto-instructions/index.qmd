@@ -4,11 +4,6 @@ author: "Insert Author's Name Here"
 date: "7/9/2024"
 categories: [instructions, code, analysis, fantasy football]
 image: "quarto-logo.png"
-format:
-  html:
-    toc: true
-    number-sections: true
-    code-fold: show
 ---
 
 # Preamble {#sec-preamble}

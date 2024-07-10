@@ -4,11 +4,6 @@ author: "Insert Author's Name Here"
 date: "7/10/2024"
 categories: [template, fantasy football]
 image: "fantasyFootball.jpg"
-format:
-  html:
-    toc: true
-    number-sections: true
-    code-fold: show
 ---
 
 This is a template [Quarto](https://quarto.org) file for your blog posts.
