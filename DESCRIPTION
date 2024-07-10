@@ -33,4 +33,5 @@ Imports:
   petersenlab,
   ffanalytics
 Remotes:
-  DevPsyLab/petersenlab
+  DevPsyLab/petersenlab,
+  FantasyFootballAnalytics/ffanalytics
