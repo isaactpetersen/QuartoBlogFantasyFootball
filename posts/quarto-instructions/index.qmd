@@ -88,6 +88,10 @@ library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
 plot(cars)
 ```
 
+# Image {#sec-image}
+
+![](quarto-logo.png)
+
 # Unordered Lists {#sec-unorderedLists}
 
 - one item
