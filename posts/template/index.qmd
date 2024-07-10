@@ -1,0 +1,92 @@
+---
+title: "Quarto Blog Post Template"
+author: "Insert Author's Name Here"
+date: "7/10/2024"
+categories: [code, analysis]
+image: "fantasyFootball.jpg"
+format:
+  html:
+    toc: true
+    number-sections: true
+    code-fold: show
+---
+
+Note: The post image was obtained from [here](https://commons.wikimedia.org/wiki/File:Fantasy_Football_-1.jpg).
+
+# Intro
+
+This is a template [Quarto](https://quarto.org) file for your blog posts.
+This document is a [Quarto](https://quarto.org) document, which is an example of a computational notebook.
+[Quarto](https://quarto.org) enables you to weave together content and executable code into a finished document.
+In a [Quarto](https://quarto.org) document, the results appear beneath the code.
+This allows you to share your data, statistical code, results, graphics, and text interpreting the analyses all in-line.
+Sharing data and your analysis code with others helps ensure reproducibility—i.e., that others get the exact same results as you.
+For more information on the value of computational notebooks, see the article titled "[The Scientific Paper Is Obsolete](https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/)".
+To learn more about [Quarto](https://quarto.org) see <https://quarto.org>.
+
+# Instructions for Working with Quarto
+
+- **Use a new line for every sentence.** 
+This helps with version control—individually changed sentences will be highlighted upon commits (which are easy to parse to identify the specific changes) rather than whole paragraphs (which are a nightmare to parse to identify the specific changes).
+- Add linked content (e.g., images) to the sub-directories of the relevant post
+- Use no spaces in file or folder names.
+Use a dash (-) instead of a space.
+- When making numbered (ordered) lists, just use `1. ` for all numbers.
+[Quarto](https://quarto.org) will make them sequential automatically.
+- To update the list of `R` packages that are installed for running the blog post (`.qmd`) files, update the `DESCRIPTION` file.
+
+# Preamble {#sec-preamble}
+
+## Install Libraries {#sec-installLibraries}
+
+Below is a code chunk that specifies `eval: false`, which allows providing code without executing the code:
+
+```{r}
+#| eval: false
+
+install.packages("remotes")
+remotes::install_github("DevPsyLab/petersenlab")
+```
+
+## Load Libraries {#sec-loadLibraries}
+
+Below is a code chunk that specifies `message: false` and `warning: false` to suppress messages and warnings:
+
+```{r}
+#| message: false
+#| warning: false
+
+library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
+```
+
+# Level-1 Heading {#sec-level1Heading}
+
+This is a post with executable code.
+
+```{r}
+1 + 1
+```
+
+## Level-2 Heading {#sec-level2Heading}
+
+### Level-3 Heading {#sec-level3Heading}
+
+### Level-4 Heading {#sec-level4Heading}
+
+# Abstract {#sec-abstract}
+
+# Background {#sec-background}
+
+# Method {#sec-method}
+
+# Results {#sec-results}
+
+# Discussion {#sec-discussion}
+
+## Conclusion {#sec-conclusion}
+
+# Session Info {#sec-sessionInfo}
+
+```{r}
+sessionInfo()
+```
