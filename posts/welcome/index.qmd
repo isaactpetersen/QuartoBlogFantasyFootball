@@ -29,3 +29,7 @@ The whole world can see it.
 This can increase the visibility of your work and profile.
 You can expect that anything you write online is **permanent**.
 My strong suggestion is: <u>Don't write anything that you wouldn't feel comfortable with your parents or (current or) future employer seeing.</u>
+- The writing should be your own!
+- For all graphics, you should either a) create them yourself or b) use only those graphics that you have the license to use.
+You can use graphics with a Creative Commons license as long as you follow the terms of the license (e.g., cite the original, indicate if you make any changes, etc).
+To find graphics that have a Creative Commons license, when using Google Image Search, select: "Tools" > "Usage Rights" > "Creative Commons Licenses".
