@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "My Blog",
     "section": "",
-    "text": "Quarto Blog Post Template\n\n\n\n\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nJul 10, 2024\n\n\nInsert Author’s Name Here\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 14, 2022\n\n\nInsert D. Name\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 11, 2022\n\n\nInsert D. Name\n\n\n\n\n\n\nNo matching items"
+    "text": "Quarto Blog Post Template\n\n\n\n\n\n\ntemplate\n\n\nfantasy football\n\n\n\n\n\n\n\n\n\nJul 10, 2024\n\n\nInsert Author’s Name Here\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Instructions\n\n\n\n\n\n\ninstructions\n\n\ncode\n\n\nanalysis\n\n\nfantasy football\n\n\n\n\n\n\n\n\n\nJul 9, 2024\n\n\nInsert Author’s Name Here\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 14, 2022\n\n\nInsert D. Name\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 11, 2022\n\n\nInsert D. Name\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -12,6 +12,34 @@
     "title": "Post With Code",
     "section": "",
     "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "posts/quarto-instructions/index.html",
+    "href": "posts/quarto-instructions/index.html",
+    "title": "Quarto Instructions",
+    "section": "",
+    "text": "This document provides instructions for your blog posts. This document is a Quarto document, which is an example of a computational notebook. Quarto enables you to weave together content and executable code into a finished document. In a Quarto document, the results appear beneath the code. This allows you to share your data, statistical code, results, graphics, and text interpreting the analyses all in-line. Sharing data and your analysis code with others helps ensure reproducibility—i.e., that others get the exact same results as you. For more information on the value of computational notebooks, see the article titled “The Scientific Paper Is Obsolete”. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "posts/quarto-instructions/index.html#sec-installLibraries",
+    "href": "posts/quarto-instructions/index.html#sec-installLibraries",
+    "title": "Quarto Instructions",
+    "section": "3.1 Install Libraries",
+    "text": "3.1 Install Libraries\nBelow is a code chunk that specifies eval: false, which allows providing code without executing the code:\n\n\nCode\ninstall.packages(\"remotes\")\nremotes::install_github(\"DevPsyLab/petersenlab\")"
+  },
+  {
+    "objectID": "posts/quarto-instructions/index.html#sec-loadLibraries",
+    "href": "posts/quarto-instructions/index.html#sec-loadLibraries",
+    "title": "Quarto Instructions",
+    "section": "3.2 Load Libraries",
+    "text": "3.2 Load Libraries\nBelow is a code chunk that specifies message: false and warning: false to suppress messages and warnings:\n\n\nCode\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab"
+  },
+  {
+    "objectID": "posts/quarto-instructions/index.html#sec-level2Heading",
+    "href": "posts/quarto-instructions/index.html#sec-level2Heading",
+    "title": "Quarto Instructions",
+    "section": "4.1 Level-2 Heading",
+    "text": "4.1 Level-2 Heading\n\n4.1.1 Level-3 Heading\n\n\n4.1.2 Level-4 Heading"
   },
   {
     "objectID": "about.html",
@@ -32,34 +60,13 @@
     "href": "posts/template/index.html",
     "title": "Quarto Blog Post Template",
     "section": "",
-    "text": "Note: The post image was obtained from here."
-  },
-  {
-    "objectID": "posts/template/index.html#sec-installLibraries",
-    "href": "posts/template/index.html#sec-installLibraries",
-    "title": "Quarto Blog Post Template",
-    "section": "3.1 Install Libraries",
-    "text": "3.1 Install Libraries\nBelow is a code chunk that specifies eval: false, which allows providing code without executing the code:\n\n\nCode\ninstall.packages(\"remotes\")\nremotes::install_github(\"DevPsyLab/petersenlab\")"
-  },
-  {
-    "objectID": "posts/template/index.html#sec-loadLibraries",
-    "href": "posts/template/index.html#sec-loadLibraries",
-    "title": "Quarto Blog Post Template",
-    "section": "3.2 Load Libraries",
-    "text": "3.2 Load Libraries\nBelow is a code chunk that specifies message: false and warning: false to suppress messages and warnings:\n\n\nCode\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab"
-  },
-  {
-    "objectID": "posts/template/index.html#sec-level2Heading",
-    "href": "posts/template/index.html#sec-level2Heading",
-    "title": "Quarto Blog Post Template",
-    "section": "4.1 Level-2 Heading",
-    "text": "4.1 Level-2 Heading\n\n4.1.1 Level-3 Heading\n\n\n4.1.2 Level-4 Heading"
+    "text": "This is a template Quarto file for your blog posts. Note: The post image was obtained from here."
   },
   {
     "objectID": "posts/template/index.html#sec-conclusion",
     "href": "posts/template/index.html#sec-conclusion",
     "title": "Quarto Blog Post Template",
-    "section": "9.1 Conclusion",
-    "text": "9.1 Conclusion"
+    "section": "5.1 Conclusion",
+    "text": "5.1 Conclusion"
   }
 ]

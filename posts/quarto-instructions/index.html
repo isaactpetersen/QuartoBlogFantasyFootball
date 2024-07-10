@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Insert Author’s Name Here">
-<meta name="dcterms.date" content="2024-07-10">
+<meta name="dcterms.date" content="2024-07-09">
 
-<title>Quarto Blog Post Template – My Blog</title>
+<title>Quarto Instructions – My Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -149,9 +149,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Quarto Blog Post Template</h1>
+      <h1 class="title">Quarto Instructions</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">template</div>
+                <div class="quarto-category">instructions</div>
+                <div class="quarto-category">code</div>
+                <div class="quarto-category">analysis</div>
                 <div class="quarto-category">fantasy football</div>
               </div>
                   </div>
@@ -170,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 10, 2024</p>
+        <p class="date">July 9, 2024</p>
       </div>
     </div>
     
@@ -186,15 +188,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-abstract" id="toc-sec-abstract" class="nav-link active" data-scroll-target="#sec-abstract"><span class="header-section-number">1</span> Abstract</a></li>
-  <li><a href="#sec-background" id="toc-sec-background" class="nav-link" data-scroll-target="#sec-background"><span class="header-section-number">2</span> Background</a></li>
-  <li><a href="#sec-method" id="toc-sec-method" class="nav-link" data-scroll-target="#sec-method"><span class="header-section-number">3</span> Method</a></li>
-  <li><a href="#sec-results" id="toc-sec-results" class="nav-link" data-scroll-target="#sec-results"><span class="header-section-number">4</span> Results</a></li>
-  <li><a href="#sec-discussion" id="toc-sec-discussion" class="nav-link" data-scroll-target="#sec-discussion"><span class="header-section-number">5</span> Discussion</a>
+  <li><a href="#intro" id="toc-intro" class="nav-link active" data-scroll-target="#intro"><span class="header-section-number">1</span> Intro</a></li>
+  <li><a href="#instructions-for-working-with-quarto" id="toc-instructions-for-working-with-quarto" class="nav-link" data-scroll-target="#instructions-for-working-with-quarto"><span class="header-section-number">2</span> Instructions for Working with Quarto</a></li>
+  <li><a href="#sec-preamble" id="toc-sec-preamble" class="nav-link" data-scroll-target="#sec-preamble"><span class="header-section-number">3</span> Preamble</a>
   <ul class="collapse">
-  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion"><span class="header-section-number">5.1</span> Conclusion</a></li>
+  <li><a href="#sec-installLibraries" id="toc-sec-installLibraries" class="nav-link" data-scroll-target="#sec-installLibraries"><span class="header-section-number">3.1</span> Install Libraries</a></li>
+  <li><a href="#sec-loadLibraries" id="toc-sec-loadLibraries" class="nav-link" data-scroll-target="#sec-loadLibraries"><span class="header-section-number">3.2</span> Load Libraries</a></li>
   </ul></li>
-  <li><a href="#sec-sessionInfo" id="toc-sec-sessionInfo" class="nav-link" data-scroll-target="#sec-sessionInfo"><span class="header-section-number">6</span> Session Info</a></li>
+  <li><a href="#sec-level1Heading" id="toc-sec-level1Heading" class="nav-link" data-scroll-target="#sec-level1Heading"><span class="header-section-number">4</span> Level-1 Heading</a>
+  <ul class="collapse">
+  <li><a href="#sec-level2Heading" id="toc-sec-level2Heading" class="nav-link" data-scroll-target="#sec-level2Heading"><span class="header-section-number">4.1</span> Level-2 Heading</a>
+  <ul class="collapse">
+  <li><a href="#sec-level3Heading" id="toc-sec-level3Heading" class="nav-link" data-scroll-target="#sec-level3Heading"><span class="header-section-number">4.1.1</span> Level-3 Heading</a></li>
+  <li><a href="#sec-level4Heading" id="toc-sec-level4Heading" class="nav-link" data-scroll-target="#sec-level4Heading"><span class="header-section-number">4.1.2</span> Level-4 Heading</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -205,63 +213,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>This is a template <a href="https://quarto.org">Quarto</a> file for your blog posts. Note: The post image was obtained from <a href="https://commons.wikimedia.org/wiki/File:Fantasy_Football_-1.jpg">here</a>.</p>
-<section id="sec-abstract" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Abstract</h1>
-<p>This should be a brief summary of your article. It should briefly summarize the background, method, results, discussion, and conclusion.</p>
+<section id="intro" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Intro</h1>
+<p>This document provides instructions for your blog posts. This document is a <a href="https://quarto.org">Quarto</a> document, which is an example of a computational notebook. <a href="https://quarto.org">Quarto</a> enables you to weave together content and executable code into a finished document. In a <a href="https://quarto.org">Quarto</a> document, the results appear beneath the code. This allows you to share your data, statistical code, results, graphics, and text interpreting the analyses all in-line. Sharing data and your analysis code with others helps ensure reproducibility—i.e., that others get the exact same results as you. For more information on the value of computational notebooks, see the article titled “<a href="https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/">The Scientific Paper Is Obsolete</a>”. To learn more about <a href="https://quarto.org">Quarto</a> see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
 </section>
-<section id="sec-background" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Background</h1>
+<section id="instructions-for-working-with-quarto" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Instructions for Working with Quarto</h1>
+<ul>
+<li><strong>Use a new line for every sentence.</strong> This helps with version control—individually changed sentences will be highlighted upon commits (which are easy to parse to identify the specific changes) rather than whole paragraphs (which are a nightmare to parse to identify the specific changes).</li>
+<li>Add linked content (e.g., images) to the sub-directories of the relevant post</li>
+<li>Use no spaces in file or folder names. Use a dash (-) instead of a space.</li>
+<li>When making numbered (ordered) lists, just use <code>1.</code> for all numbers. <a href="https://quarto.org">Quarto</a> will make them sequential automatically.</li>
+<li>To update the list of <code>R</code> packages that are installed for running the blog post (<code>.qmd</code>) files, update the <code>DESCRIPTION</code> file.</li>
+</ul>
 </section>
-<section id="sec-method" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Method</h1>
-</section>
-<section id="sec-results" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Results</h1>
-</section>
-<section id="sec-discussion" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Discussion</h1>
-<section id="sec-conclusion" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="sec-conclusion"><span class="header-section-number">5.1</span> Conclusion</h2>
-</section>
-</section>
-<section id="sec-sessionInfo" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Session Info</h1>
+<section id="sec-preamble" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Preamble</h1>
+<section id="sec-installLibraries" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-installLibraries"><span class="header-section-number">3.1</span> Install Libraries</h2>
+<p>Below is a code chunk that specifies <code>eval: false</code>, which allows providing code without executing the code:</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"DevPsyLab/petersenlab"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="sec-loadLibraries" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-loadLibraries"><span class="header-section-number">3.2</span> Load Libraries</h2>
+<p>Below is a code chunk that specifies <code>message: false</code> and <code>warning: false</code> to suppress messages and warnings:</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"petersenlab"</span>) <span class="co">#located here: https://github.com/DevPsyLab/petersenlab</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="sec-level1Heading" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Level-1 Heading</h1>
+<p>This is a post with executable code.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.1 (2024-06-14)
-Platform: x86_64-pc-linux-gnu
-Running under: Ubuntu 22.04.4 LTS
-
-Matrix products: default
-BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
-LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
-
-locale:
- [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
- [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
- [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
-[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
-
-time zone: UTC
-tzcode source: system (glibc)
-
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
-
-loaded via a namespace (and not attached):
- [1] htmlwidgets_1.6.4 compiler_4.4.1    fastmap_1.2.0     cli_3.6.3        
- [5] tools_4.4.1       htmltools_0.5.8.1 yaml_2.3.9        rmarkdown_2.27   
- [9] knitr_1.48        jsonlite_1.8.8    xfun_0.45         digest_0.6.36    
-[13] rlang_1.1.4       evaluate_0.24.0  </code></pre>
+<pre><code>[1] 2</code></pre>
 </div>
 </div>
+<section id="sec-level2Heading" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-level2Heading"><span class="header-section-number">4.1</span> Level-2 Heading</h2>
+<section id="sec-level3Heading" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="sec-level3Heading"><span class="header-section-number">4.1.1</span> Level-3 Heading</h3>
+</section>
+<section id="sec-level4Heading" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="sec-level4Heading"><span class="header-section-number">4.1.2</span> Level-4 Heading</h3>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
