@@ -1,0 +1,12 @@
+Package: placeholder
+Title: QuartoBlog
+Version: 1.0.0
+Imports:
+  quarto,
+  knitr,
+  rmarkdown,
+  blogdown,
+  remotes,
+  petersenlab
+Remotes:
+  DevPsyLab/petersenlab
