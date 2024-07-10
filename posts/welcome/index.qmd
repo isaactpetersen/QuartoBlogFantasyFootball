@@ -11,8 +11,20 @@ This is my first blog post.
 
 # Instructions {#sec-instructions}
 
+In this assignment, you will be creating you "Welcome to my Blog" post.
+Please follow the instructions below:
+
 - Insert a blog title (above)
 - Feel free to change the post image if you'd like (you'll need to add the image to the folder and update the file name above)
-- Introduce yourself (first name or full name) and tell the readers about you are (nothing you don't feel comfortable sharing).
+- Introduce yourself (including your full name) and tell the readers about yourself (nothing you don't feel comfortable sharing).
 - Say what your blog articles will be about (generally) and why you are excited to write about that.
 - Say something about the unique perspective you will bring to writing about that topic.
+- Remove the "Instructions" section when you post your article.
+
+Notes:
+
+- This is a **public** blog.
+The whole world can see it.
+This can increase the visibility of your work and profile.
+You can expect that anything you write online is **permanent**.
+My strong suggestion is: <u>Don't write anything that you wouldn't feel comfortable with your parents or (current or) future employer seeing.</u>
