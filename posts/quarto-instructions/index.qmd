@@ -11,7 +11,18 @@ format:
     code-fold: show
 ---
 
-# Intro
+# Preamble {#sec-preamble}
+
+## Load Libraries {#sec-loadLibraries}
+
+```{r}
+#| message: false
+#| warning: false
+
+library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
+```
+
+# Intro {#sec-intro}
 
 This document provides instructions for your blog posts.
 This document is a [Quarto](https://quarto.org) document, which is an example of a computational notebook.
@@ -22,7 +33,7 @@ Sharing data and your analysis code with others helps ensure reproducibility—i
 For more information on the value of computational notebooks, see the article titled "[The Scientific Paper Is Obsolete](https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/)".
 To learn more about [Quarto](https://quarto.org) see <https://quarto.org>.
 
-# Instructions for Working with Quarto
+# Instructions for Working with Quarto {#sec-quartoInstructions}
 
 - **Use a new line for every sentence.** 
 This helps with version control—individually changed sentences will be highlighted upon commits (which are easy to parse to identify the specific changes) rather than whole paragraphs (which are a nightmare to parse to identify the specific changes).
@@ -32,30 +43,6 @@ Use a dash (-) instead of a space.
 - When making numbered (ordered) lists, just use `1. ` for all numbers.
 [Quarto](https://quarto.org) will make them sequential automatically.
 - To update the list of `R` packages that are installed for running the blog post (`.qmd`) files, update the `DESCRIPTION` file.
-
-# Preamble {#sec-preamble}
-
-## Install Libraries {#sec-installLibraries}
-
-Below is a code chunk that specifies `eval: false`, which allows providing code without executing the code:
-
-```{r}
-#| eval: false
-
-install.packages("remotes")
-remotes::install_github("DevPsyLab/petersenlab")
-```
-
-## Load Libraries {#sec-loadLibraries}
-
-Below is a code chunk that specifies `message: false` and `warning: false` to suppress messages and warnings:
-
-```{r}
-#| message: false
-#| warning: false
-
-library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
-```
 
 # Level-1 Heading {#sec-level1Heading}
 
@@ -69,4 +56,62 @@ This is a post with executable code.
 
 ### Level-3 Heading {#sec-level3Heading}
 
-### Level-4 Heading {#sec-level4Heading}
+#### Level-4 Heading {#sec-level4Heading}
+
+# Adding Code Options {#sec-addCodeOptions}
+
+You can add options to executable code like this:
+
+```{r}
+#| echo: false
+
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+Below is a code chunk that specifies `eval: false`, which allows providing code without executing the code:
+
+```{r}
+#| eval: false
+
+install.packages("remotes")
+remotes::install_github("DevPsyLab/petersenlab")
+```
+
+Below is a code chunk that specifies `message: false` and `warning: false` to suppress messages and warnings:
+
+```{r}
+#| message: false
+#| warning: false
+
+library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
+```
+
+# Plot {#sec-plot}
+
+```{r}
+plot(cars)
+```
+
+# Unordered Lists {#sec-unorderedLists}
+
+- one item
+- one item
+- one item
+    - one more item
+    - one more item
+    - one more item
+
+# Ordered Lists {#sec-orderedLists}
+
+1. the first item
+2. the second item
+3. the third item
+    - one unordered item
+    - one unordered item
+
+# Session Info {#sec-sessionInfo}
+
+```{r}
+sessionInfo()
+```

@@ -14,6 +14,17 @@ format:
 This is a template [Quarto](https://quarto.org) file for your blog posts.
 Note: The post image was obtained from [here](https://commons.wikimedia.org/wiki/File:Fantasy_Football_-1.jpg).
 
+# Preamble {#sec-preamble}
+
+## Load Libraries {#sec-loadLibraries}
+
+```{r}
+#| message: false
+#| warning: false
+
+library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
+```
+
 # Abstract {#sec-abstract}
 
 This should be a brief summary of your article.
