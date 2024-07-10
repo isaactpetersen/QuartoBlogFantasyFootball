@@ -1,7 +1,7 @@
 # Quarto Blog Template
 
-This is the code that creates the Quarto Blog Template.
-The Quarto Blog Template is located here: **https://isaactpetersen.github.io/QuartoBlog**
+This is the code that creates the Quarto Blog Template for Dr. Petersen's fantasy football course.
+The Quarto Blog Template is located here: **https://isaactpetersen.github.io/QuartoBlogFantasyFootball**
 
 For more information on how to customize your blog, see here: https://quarto.org/docs/websites/website-blog.html
 
