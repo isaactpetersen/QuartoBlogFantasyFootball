@@ -4,14 +4,21 @@
     "href": "index.html",
     "title": "My Blog",
     "section": "",
-    "text": "Quarto Blog Post Template\n\n\n\n\n\n\ntemplate\n\n\nfantasy football\n\n\n\n\n\n\n\n\n\nJul 10, 2024\n\n\nInsert Author’s Name Here\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Instructions\n\n\n\n\n\n\ninstructions\n\n\ncode\n\n\nanalysis\n\n\nfantasy football\n\n\n\n\n\n\n\n\n\nJul 9, 2024\n\n\nInsert Author’s Name Here\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 14, 2022\n\n\nInsert D. Name\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 11, 2022\n\n\nInsert D. Name\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome To My Blog\n\n\n\n\n\n\nwelcome\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 11, 2024\n\n\nInsert D. Name\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Blog Post Template\n\n\n\n\n\n\ntemplate\n\n\nfantasy football\n\n\n\n\n\n\n\n\n\nJul 10, 2024\n\n\nInsert Author’s Name Here\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Instructions\n\n\n\n\n\n\ninstructions\n\n\ncode\n\n\nanalysis\n\n\nfantasy football\n\n\n\n\n\n\n\n\n\nJul 9, 2024\n\n\nInsert Author’s Name Here\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
     "section": "",
-    "text": "This is a post with executable code.\n\n\nCode\n1 + 1\n\n\n[1] 2"
+    "text": "Welcome to my blog entitled, “INSERT TITLE HERE”. This is my first blog post.\n\n1 Instructions\n\nInsert a blog title (above)\nFeel free to change the post image if you’d like (you’ll need to add the image to the folder and update the file name above)\nIntroduce yourself (first name or full name) and tell the readers about you are (nothing you don’t feel comfortable sharing).\nSay what your blog articles will be about (generally) and why you are excited to write about that.\nSay something about the unique perspective you will bring to writing about that topic."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
   },
   {
     "objectID": "posts/quarto-instructions/index.html",
@@ -33,20 +40,6 @@
     "title": "Quarto Instructions",
     "section": "4.1 Level-2 Heading",
     "text": "4.1 Level-2 Heading\n\n4.1.1 Level-3 Heading\n\n4.1.1.1 Level-4 Heading"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
     "objectID": "posts/template/index.html",
