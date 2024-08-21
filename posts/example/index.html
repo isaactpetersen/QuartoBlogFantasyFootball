@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Insert Author’s Name Here">
+<meta name="dcterms.date" content="2024-08-20">
 
-<title>My Blog</title>
+<title>Example Blog Post – My Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +22,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,67 +102,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -138,7 +114,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">My Blog</span>
     </a>
   </div>
@@ -149,7 +125,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,194 +148,178 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My Blog</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Example Blog Post</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">template</div>
+                <div class="quarto-category">fantasy football</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Insert Author’s Name Here </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 20, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="fantasy football">fantasy football <span class="quarto-category-count">(3)</span></div><div class="category" data-category="instructions">instructions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div><div class="category" data-category="template">template <span class="quarto-category-count">(2)</span></div><div class="category" data-category="welcome">welcome <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-preamble" id="toc-sec-preamble" class="nav-link active" data-scroll-target="#sec-preamble"><span class="header-section-number">1</span> Preamble</a>
+  <ul class="collapse">
+  <li><a href="#sec-loadLibraries" id="toc-sec-loadLibraries" class="nav-link" data-scroll-target="#sec-loadLibraries"><span class="header-section-number">1.1</span> Load Libraries</a></li>
+  </ul></li>
+  <li><a href="#sec-abstract" id="toc-sec-abstract" class="nav-link" data-scroll-target="#sec-abstract"><span class="header-section-number">2</span> Abstract</a></li>
+  <li><a href="#sec-background" id="toc-sec-background" class="nav-link" data-scroll-target="#sec-background"><span class="header-section-number">3</span> Background</a>
+  <ul class="collapse">
+  <li><a href="#sec-presentStudy" id="toc-sec-presentStudy" class="nav-link" data-scroll-target="#sec-presentStudy"><span class="header-section-number">3.1</span> The Present Study</a></li>
+  </ul></li>
+  <li><a href="#sec-method" id="toc-sec-method" class="nav-link" data-scroll-target="#sec-method"><span class="header-section-number">4</span> Method</a>
+  <ul class="collapse">
+  <li><a href="#sec-data" id="toc-sec-data" class="nav-link" data-scroll-target="#sec-data"><span class="header-section-number">4.1</span> Data</a></li>
+  <li><a href="#sec-statisticalAnalysis" id="toc-sec-statisticalAnalysis" class="nav-link" data-scroll-target="#sec-statisticalAnalysis"><span class="header-section-number">4.2</span> Statistical Analysis</a></li>
+  </ul></li>
+  <li><a href="#sec-results" id="toc-sec-results" class="nav-link" data-scroll-target="#sec-results"><span class="header-section-number">5</span> Results</a></li>
+  <li><a href="#sec-discussion" id="toc-sec-discussion" class="nav-link" data-scroll-target="#sec-discussion"><span class="header-section-number">6</span> Discussion</a>
+  <ul class="collapse">
+  <li><a href="#sec-strenthgsLimitations" id="toc-sec-strenthgsLimitations" class="nav-link" data-scroll-target="#sec-strenthgsLimitations"><span class="header-section-number">6.1</span> Strengths and Limitations</a></li>
+  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion"><span class="header-section-number">6.2</span> Conclusion</a></li>
+  </ul></li>
+  <li><a href="#sec-references" id="toc-sec-references" class="nav-link" data-scroll-target="#sec-references"><span class="header-section-number">7</span> References</a></li>
+  <li><a href="#sec-sessionInfo" id="toc-sec-sessionInfo" class="nav-link" data-scroll-target="#sec-sessionInfo"><span class="header-section-number">8</span> Session Info</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>This is a template <a href="https://quarto.org">Quarto</a> file for your blog posts. Note: The post image was obtained from <a href="https://commons.wikimedia.org/wiki/File:Fantasy_Football_-1.jpg">here</a>.</p>
+<section id="sec-preamble" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Preamble</h1>
+<section id="sec-loadLibraries" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="sec-loadLibraries"><span class="header-section-number">1.1</span> Load Libraries</h2>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"petersenlab"</span>) <span class="co">#located here: https://github.com/DevPsyLab/petersenlab</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="sec-abstract" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Abstract</h1>
+</section>
+<section id="sec-background" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Background</h1>
+<section id="sec-presentStudy" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-presentStudy"><span class="header-section-number">3.1</span> The Present Study</h2>
+</section>
+</section>
+<section id="sec-method" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Method</h1>
+<section id="sec-data" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-data"><span class="header-section-number">4.1</span> Data</h2>
+</section>
+<section id="sec-statisticalAnalysis" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-statisticalAnalysis"><span class="header-section-number">4.2</span> Statistical Analysis</h2>
+</section>
+</section>
+<section id="sec-results" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Results</h1>
+</section>
+<section id="sec-discussion" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Discussion</h1>
+<section id="sec-strenthgsLimitations" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="sec-strenthgsLimitations"><span class="header-section-number">6.1</span> Strengths and Limitations</h2>
+</section>
+<section id="sec-conclusion" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="sec-conclusion"><span class="header-section-number">6.2</span> Conclusion</h2>
+</section>
+</section>
+<section id="sec-references" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> References</h1>
+</section>
+<section id="sec-sessionInfo" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Session Info</h1>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>R version 4.4.1 (2024-06-14)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 22.04.4 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+time zone: UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] petersenlab_1.0.6
+
+loaded via a namespace (and not attached):
+ [1] utf8_1.2.4         generics_0.1.3     lattice_0.22-6     stringi_1.8.4     
+ [5] digest_0.6.37      magrittr_2.0.3     evaluate_0.24.0    grid_4.4.1        
+ [9] RColorBrewer_1.1-3 mvtnorm_1.2-6      fastmap_1.2.0      plyr_1.8.9        
+[13] jsonlite_1.8.8     nnet_7.3-19        backports_1.5.0    DBI_1.2.3         
+[17] Formula_1.2-5      gridExtra_2.3      purrr_1.0.2        fansi_1.0.6       
+[21] viridisLite_0.4.2  scales_1.3.0       pbivnorm_0.6.0     mnormt_2.1.1      
+[25] cli_3.6.3          mitools_2.4        rlang_1.1.4        munsell_0.5.1     
+[29] Hmisc_5.1-3        base64enc_0.1-3    yaml_2.3.10        mix_1.0-12        
+[33] parallel_4.4.1     tools_4.4.1        reshape2_1.4.4     checkmate_2.3.2   
+[37] htmlTable_2.4.3    dplyr_1.1.4        colorspace_2.1-1   ggplot2_3.5.1     
+[41] vctrs_0.6.5        R6_2.5.1           rpart_4.1.23       stats4_4.4.1      
+[45] lifecycle_1.0.4    stringr_1.5.1      htmlwidgets_1.6.4  psych_2.4.6.26    
+[49] foreign_0.8-86     cluster_2.1.6      pkgconfig_2.0.3    pillar_1.9.0      
+[53] gtable_0.3.5       Rcpp_1.0.13        glue_1.7.0         data.table_1.15.4 
+[57] xfun_0.47          tibble_3.2.1       tidyselect_1.2.1   rstudioapi_0.16.0 
+[61] knitr_1.48         xtable_1.8-4       nlme_3.1-164       htmltools_0.5.8.1 
+[65] rmarkdown_2.28     lavaan_0.6-18      compiler_4.4.1     quadprog_1.5-8    </code></pre>
+</div>
+</div>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="template,fantasy football" data-listing-date-sort="1724112000000" data-listing-file-modified-sort="1724216520935" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
-<div class="thumbnail">
-<p><a href="./posts/example/index.html" class="no-external"></a></p><a href="./posts/example/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/example/fantasyFootball.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/example/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/example/index.html" class="no-external">Example Blog Post</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/example/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('template'); return false;">
-template
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('fantasy football'); return false;">
-fantasy football
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/example/index.html" class="no-external">This is a template Quarto file for your blog posts. Note: The post image was obtained from here.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/example/index.html" class="no-external">
-<div class="listing-date">
-Aug 20, 2024
-</div>
-<div class="listing-author">
-Insert Author’s Name Here
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="welcome,news" data-listing-date-sort="1720656000000" data-listing-file-modified-sort="1724216520935" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="264">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/welcome/thumbnail.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Welcome To My Blog</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/welcome/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('welcome'); return false;">
-welcome
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/welcome/index.html" class="no-external">Welcome to my blog entitled, “INSERT TITLE HERE”. This is my first blog post.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Jul 11, 2024
-</div>
-<div class="listing-author">
-Insert D. Name
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="template,fantasy football" data-listing-date-sort="1720569600000" data-listing-file-modified-sort="1724216520935" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="344">
-<div class="thumbnail">
-<p><a href="./posts/template/index.html" class="no-external"></a></p><a href="./posts/template/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/template/fantasyFootball.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/template/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/template/index.html" class="no-external">Quarto Blog Post Template</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/template/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('template'); return false;">
-template
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('fantasy football'); return false;">
-fantasy football
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/template/index.html" class="no-external">This is a template Quarto file for your blog posts. Note: The post image was obtained from here.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/template/index.html" class="no-external">
-<div class="listing-date">
-Jul 10, 2024
-</div>
-<div class="listing-author">
-Insert Author’s Name Here
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="instructions,code,analysis,fantasy football" data-listing-date-sort="1720483200000" data-listing-file-modified-sort="1724216520935" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="381">
-<div class="thumbnail">
-<p><a href="./posts/quarto-instructions/index.html" class="no-external"></a></p><a href="./posts/quarto-instructions/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/quarto-instructions/quarto-logo.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/quarto-instructions/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/quarto-instructions/index.html" class="no-external">Quarto Instructions</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/quarto-instructions/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('instructions'); return false;">
-instructions
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('fantasy football'); return false;">
-fantasy football
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/quarto-instructions/index.html" class="no-external">This document provides instructions for your blog posts. This document is a Quarto document, which is an example of a computational notebook. Quarto enables you to weave…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/quarto-instructions/index.html" class="no-external">
-<div class="listing-date">
-Jul 9, 2024
-</div>
-<div class="listing-author">
-Insert Author’s Name Here
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

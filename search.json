@@ -7,6 +7,69 @@
     "text": "Welcome to my blog entitled, “INSERT TITLE HERE”. This is my first blog post.\n\n1 Instructions\nIn this assignment, you will be creating your “Welcome to my Blog” post by editing the contents of this document. Please follow the instructions below:\n\nIn the header (above), change the author name to your full name and change the date.\nFeel free to change the post image if you’d like (you’ll need to add the image to the folder and update the file name above).\nInsert a blog title.\nIntroduce yourself and tell the readers about yourself (nothing you don’t feel comfortable sharing).\nSay what your blog articles will be about (generally) and why you are excited to write about that.\nSay something about the unique perspective you will bring to writing about that topic.\nRemove the “Instructions” section when you post your article.\n\nNotes:\n\nThis is a public blog. The whole world can see it. This can increase the visibility of your work and profile. You can expect that anything you write online is permanent. My strong suggestion is: Don’t write anything that you wouldn’t feel comfortable with your parents or (current or) future employer seeing.\nThe writing should be your own!\nFor all graphics, you should either a) create them yourself or b) use only those graphics that you have the license to use. You can use graphics with a Creative Commons license as long as you follow the terms of the license (e.g., cite the original, indicate if you make any changes, etc). To find graphics that have a Creative Commons license, when using Google Image Search, select: “Tools” &gt; “Usage Rights” &gt; “Creative Commons Licenses”."
   },
   {
+    "objectID": "posts/example/index.html",
+    "href": "posts/example/index.html",
+    "title": "Example Blog Post",
+    "section": "",
+    "text": "This is a template Quarto file for your blog posts. Note: The post image was obtained from here."
+  },
+  {
+    "objectID": "posts/example/index.html#sec-loadLibraries",
+    "href": "posts/example/index.html#sec-loadLibraries",
+    "title": "Example Blog Post",
+    "section": "1.1 Load Libraries",
+    "text": "1.1 Load Libraries\n\n\nCode\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab"
+  },
+  {
+    "objectID": "posts/example/index.html#sec-presentStudy",
+    "href": "posts/example/index.html#sec-presentStudy",
+    "title": "Example Blog Post",
+    "section": "3.1 The Present Study",
+    "text": "3.1 The Present Study"
+  },
+  {
+    "objectID": "posts/example/index.html#sec-data",
+    "href": "posts/example/index.html#sec-data",
+    "title": "Example Blog Post",
+    "section": "4.1 Data",
+    "text": "4.1 Data"
+  },
+  {
+    "objectID": "posts/example/index.html#sec-statisticalAnalysis",
+    "href": "posts/example/index.html#sec-statisticalAnalysis",
+    "title": "Example Blog Post",
+    "section": "4.2 Statistical Analysis",
+    "text": "4.2 Statistical Analysis"
+  },
+  {
+    "objectID": "posts/example/index.html#sec-strenthgsLimitations",
+    "href": "posts/example/index.html#sec-strenthgsLimitations",
+    "title": "Example Blog Post",
+    "section": "6.1 Strengths and Limitations",
+    "text": "6.1 Strengths and Limitations"
+  },
+  {
+    "objectID": "posts/example/index.html#sec-conclusion",
+    "href": "posts/example/index.html#sec-conclusion",
+    "title": "Example Blog Post",
+    "section": "6.2 Conclusion",
+    "text": "6.2 Conclusion"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "My Blog",
+    "section": "",
+    "text": "Example Blog Post\n\n\n\n\n\n\ntemplate\n\n\nfantasy football\n\n\n\n\n\n\n\n\n\nAug 20, 2024\n\n\nInsert Author’s Name Here\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nwelcome\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 11, 2024\n\n\nInsert D. Name\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Blog Post Template\n\n\n\n\n\n\ntemplate\n\n\nfantasy football\n\n\n\n\n\n\n\n\n\nJul 10, 2024\n\n\nInsert Author’s Name Here\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Instructions\n\n\n\n\n\n\ninstructions\n\n\ncode\n\n\nanalysis\n\n\nfantasy football\n\n\n\n\n\n\n\n\n\nJul 9, 2024\n\n\nInsert Author’s Name Here\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
     "objectID": "posts/template/index.html",
     "href": "posts/template/index.html",
     "title": "Quarto Blog Post Template",
@@ -54,20 +117,6 @@
     "title": "Quarto Blog Post Template",
     "section": "6.2 Conclusion",
     "text": "6.2 Conclusion\nThis sections provides an overall conclusion given the findings of the study, including take-away messages, implications, etc."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "My Blog",
-    "section": "",
-    "text": "Welcome To My Blog\n\n\n\n\n\n\nwelcome\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 11, 2024\n\n\nInsert D. Name\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Blog Post Template\n\n\n\n\n\n\ntemplate\n\n\nfantasy football\n\n\n\n\n\n\n\n\n\nJul 10, 2024\n\n\nInsert Author’s Name Here\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Instructions\n\n\n\n\n\n\ninstructions\n\n\ncode\n\n\nanalysis\n\n\nfantasy football\n\n\n\n\n\n\n\n\n\nJul 9, 2024\n\n\nInsert Author’s Name Here\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/quarto-instructions/index.html",
