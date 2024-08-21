@@ -22,18 +22,56 @@ library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
 
 # Abstract {#sec-abstract}
 
-This should be a brief summary of your article.
+The Abstract is be a brief summary of your article.
 It should briefly summarize the background, method, results, discussion, and conclusion.
 
 # Background {#sec-background}
 
+This section should provide a background on the topic and why it is important.
+
+## The Present Study {#sec-presentStudy}
+
+This section should describe your research question(s) and hypotheses, and should provide a justification for each hypothesis—ideally based on prior work, theory, etc.
+It should also describe why your study is innovative and important.
+The research question(s) should be clear.
+The hypotheses should be specific and testable.
+
 # Method {#sec-method}
+
+This section should describe how you tested your research question(s), including several subsections.
+A strong method section should allow any research to replicate your findings.
+That is, readers should know enough detail of how you conducted your study so that they can get the same answer.
+Traditionally, this section would include several subsections, including a) Participants, b) Procedure, c) Measures, and d) [Statistical Analysis](#sec-statisticalAnalysis).
+However, for this class and purpose, we will adapt the Method section to include the following subsections.
+
+## Data {#sec-data}
+
+This section describes the data you used—including the subset of players, positions, seasons, and indices you examined—and how you obtained them.
+
+## Statistical Analysis {#sec-statisticalAnalysis}
+
+This section describes the statistical approach you used, including the packages, key functions, and settings you used.
 
 # Results {#sec-results}
 
+This section presents the results of the statistical analysis, including output, figures, and basic description of the findings.
+The section should include `R` code/analyses to test the research question(s) and hypotheses, and it should include a written description of the findings all inline with the code and output.
+
 # Discussion {#sec-discussion}
 
+This section summarizes the findings and relates the findings back to background you provided at the beginning of the article.
+
+## Strengths and Limitations {#sec-strenthgsLimitations}
+
+This section describes the strengths and limitations of the study.
+
 ## Conclusion {#sec-conclusion}
+
+This sections provides an overall conclusion given the findings of the study, including take-away messages, implications, etc.
+
+# References {#sec-references}
+
+This section provides a list of references that you cited above.
 
 # Session Info {#sec-sessionInfo}
 
