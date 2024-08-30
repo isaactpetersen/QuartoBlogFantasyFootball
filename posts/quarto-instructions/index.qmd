@@ -39,8 +39,7 @@ For example:
 ```{r}
 #| eval: false
 
-nfl_pbp_raw <- progressr::with_progress(
-  nflreadr::load_pbp(seasons = TRUE))
+nfl_pbp_raw <- nflreadr::load_pbp(seasons = TRUE)
 ```
 - Use no spaces in file or folder names.
 Use a dash (-) instead of a space.
@@ -87,7 +86,7 @@ This is a post with executable code.
 
 You can add options to executable code like this:
 
-```{r}
+```{{r}}
 #| echo: false
 
 2 * 2
