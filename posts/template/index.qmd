@@ -75,6 +75,8 @@ This section provides a list of references that you cited above.
 
 # Session Info {#sec-sessionInfo}
 
+This section provides your session info for reproducibility.
+
 ```{r}
 sessionInfo()
 ```
