@@ -123,14 +123,14 @@
     "href": "posts/quarto-instructions/index.html",
     "title": "Quarto Instructions",
     "section": "",
-    "text": "Code\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab"
+    "text": "```{r}\n#| message: false\n#| warning: false\n\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab\n```\n\n\nCode\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab"
   },
   {
     "objectID": "posts/quarto-instructions/index.html#sec-loadLibraries",
     "href": "posts/quarto-instructions/index.html#sec-loadLibraries",
     "title": "Quarto Instructions",
     "section": "",
-    "text": "Code\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab"
+    "text": "```{r}\n#| message: false\n#| warning: false\n\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab\n```\n\n\nCode\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab"
   },
   {
     "objectID": "posts/quarto-instructions/index.html#sec-level2Heading",
