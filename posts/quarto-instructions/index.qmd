@@ -46,6 +46,7 @@ Use a dash (-) instead of a space.
 - When making numbered (ordered) lists, just use `1. ` for all numbers.
 [Quarto](https://quarto.org) will make them sequential automatically.
 - To update the list of `R` packages that are installed for running the blog post (`.qmd`) files, update the `DESCRIPTION` file.
+- Before posting the article to the blog, make sure the article renders correctly locally by clicking the "Render" button in RStudio.
 
 # Submitting Blog Articles {#sec-submitBlogArticles}
 
