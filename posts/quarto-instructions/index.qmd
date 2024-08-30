@@ -47,6 +47,14 @@ Use a dash (-) instead of a space.
 [Quarto](https://quarto.org) will make them sequential automatically.
 - To update the list of `R` packages that are installed for running the blog post (`.qmd`) files, update the `DESCRIPTION` file.
 
+# Submitting Blog Articles {#sec-submitBlogArticles}
+
+See the syllabus for instructions regarding submitting your blog article.
+As noted in the syllabus, you are encouraged to submit your blog article well before the deadline.
+You can expect to run into technical issues (e.g., errors when running your code, issues getting the blog post to compile, etc.).
+Thus, you should give yourself plenty of time to troubleshoot so that you can submit your blog article on time.
+See the syllabus for suggestions on how to troubleshoot when issues arise.
+
 # Data Files {#sec-dataFiles}
 
 If you want to save a data file in the GitHub repository to be loaded and used in a post, you can save the data file in the same folder as the post.
