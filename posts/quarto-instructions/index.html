@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -194,19 +194,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link" data-scroll-target="#sec-intro"><span class="header-section-number">2</span> Intro</a></li>
   <li><a href="#sec-quartoInstructions" id="toc-sec-quartoInstructions" class="nav-link" data-scroll-target="#sec-quartoInstructions"><span class="header-section-number">3</span> Instructions for Working with Quarto</a></li>
-  <li><a href="#sec-level1Heading" id="toc-sec-level1Heading" class="nav-link" data-scroll-target="#sec-level1Heading"><span class="header-section-number">4</span> Level-1 Heading</a>
+  <li><a href="#sec-submitBlogArticles" id="toc-sec-submitBlogArticles" class="nav-link" data-scroll-target="#sec-submitBlogArticles"><span class="header-section-number">4</span> Submitting Blog Articles</a></li>
+  <li><a href="#sec-dataFiles" id="toc-sec-dataFiles" class="nav-link" data-scroll-target="#sec-dataFiles"><span class="header-section-number">5</span> Data Files</a></li>
+  <li><a href="#sec-level1Heading" id="toc-sec-level1Heading" class="nav-link" data-scroll-target="#sec-level1Heading"><span class="header-section-number">6</span> Level-1 Heading</a>
   <ul class="collapse">
-  <li><a href="#sec-level2Heading" id="toc-sec-level2Heading" class="nav-link" data-scroll-target="#sec-level2Heading"><span class="header-section-number">4.1</span> Level-2 Heading</a>
+  <li><a href="#sec-level2Heading" id="toc-sec-level2Heading" class="nav-link" data-scroll-target="#sec-level2Heading"><span class="header-section-number">6.1</span> Level-2 Heading</a>
   <ul class="collapse">
-  <li><a href="#sec-level3Heading" id="toc-sec-level3Heading" class="nav-link" data-scroll-target="#sec-level3Heading"><span class="header-section-number">4.1.1</span> Level-3 Heading</a></li>
+  <li><a href="#sec-level3Heading" id="toc-sec-level3Heading" class="nav-link" data-scroll-target="#sec-level3Heading"><span class="header-section-number">6.1.1</span> Level-3 Heading</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#sec-addCodeOptions" id="toc-sec-addCodeOptions" class="nav-link" data-scroll-target="#sec-addCodeOptions"><span class="header-section-number">5</span> Adding Code Options</a></li>
-  <li><a href="#sec-plot" id="toc-sec-plot" class="nav-link" data-scroll-target="#sec-plot"><span class="header-section-number">6</span> Plot</a></li>
-  <li><a href="#sec-image" id="toc-sec-image" class="nav-link" data-scroll-target="#sec-image"><span class="header-section-number">7</span> Image</a></li>
-  <li><a href="#sec-unorderedLists" id="toc-sec-unorderedLists" class="nav-link" data-scroll-target="#sec-unorderedLists"><span class="header-section-number">8</span> Unordered Lists</a></li>
-  <li><a href="#sec-orderedLists" id="toc-sec-orderedLists" class="nav-link" data-scroll-target="#sec-orderedLists"><span class="header-section-number">9</span> Ordered Lists</a></li>
-  <li><a href="#sec-sessionInfo" id="toc-sec-sessionInfo" class="nav-link" data-scroll-target="#sec-sessionInfo"><span class="header-section-number">10</span> Session Info</a></li>
+  <li><a href="#sec-addCodeOptions" id="toc-sec-addCodeOptions" class="nav-link" data-scroll-target="#sec-addCodeOptions"><span class="header-section-number">7</span> Adding Code Options</a></li>
+  <li><a href="#sec-plot" id="toc-sec-plot" class="nav-link" data-scroll-target="#sec-plot"><span class="header-section-number">8</span> Plot</a></li>
+  <li><a href="#sec-image" id="toc-sec-image" class="nav-link" data-scroll-target="#sec-image"><span class="header-section-number">9</span> Image</a></li>
+  <li><a href="#sec-unorderedLists" id="toc-sec-unorderedLists" class="nav-link" data-scroll-target="#sec-unorderedLists"><span class="header-section-number">10</span> Unordered Lists</a></li>
+  <li><a href="#sec-orderedLists" id="toc-sec-orderedLists" class="nav-link" data-scroll-target="#sec-orderedLists"><span class="header-section-number">11</span> Ordered Lists</a></li>
+  <li><a href="#sec-sessionInfo" id="toc-sec-sessionInfo" class="nav-link" data-scroll-target="#sec-sessionInfo"><span class="header-section-number">12</span> Session Info</a></li>
   </ul>
 </nav>
     </div>
@@ -237,80 +239,111 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 data-number="3"><span class="header-section-number">3</span> Instructions for Working with Quarto</h1>
 <ul>
 <li><strong>Use a new line for every sentence.</strong> This helps with version control—individually changed sentences will be highlighted upon commits (which are easy to parse to identify the specific changes) rather than whole paragraphs (which are a nightmare to parse to identify the specific changes).</li>
-<li>Add linked content (e.g., images) to the sub-directories of the relevant post</li>
+<li>Add linked content (e.g., images, data) to the sub-directories of the relevant post; do not add a file that is more than 50 mb to the repo. Data files on GitHub can be no larger than 50 mb. If you want to use a data file that is larger than 50 mb, either subset the data to the relevant rows/columns you need and save it as a new data file that is less than 50 mb, or <a href="https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook/download-football-data.html">download the data from the internet</a> as part of the <code>R</code> code in the Quarto script so that the data file does not need to be saved in the repo. For example:</li>
+</ul>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>nfl_pbp_raw <span class="ot">&lt;-</span> nflreadr<span class="sc">::</span><span class="fu">load_pbp</span>(<span class="at">seasons =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<ul>
 <li>Use no spaces in file or folder names. Use a dash (-) instead of a space.</li>
 <li>When making numbered (ordered) lists, just use <code>1.</code> for all numbers. <a href="https://quarto.org">Quarto</a> will make them sequential automatically.</li>
 <li>To update the list of <code>R</code> packages that are installed for running the blog post (<code>.qmd</code>) files, update the <code>DESCRIPTION</code> file.</li>
+<li>Before posting the article to the blog, make sure the article renders correctly locally by clicking the “Render” button in RStudio.</li>
 </ul>
 </section>
-<section id="sec-level1Heading" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Level-1 Heading</h1>
+<section id="sec-submitBlogArticles" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Submitting Blog Articles</h1>
+<p>See the syllabus for instructions regarding submitting your blog article. As noted in the syllabus, you are encouraged to submit your blog article well before the deadline. You can expect to run into technical issues (e.g., errors when running your code, issues getting the blog post to compile, etc.). Thus, you should give yourself plenty of time to troubleshoot so that you can submit your blog article on time. See the syllabus for suggestions on how to troubleshoot when issues arise.</p>
+</section>
+<section id="sec-dataFiles" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Data Files</h1>
+<p>If you want to save a data file in the GitHub repository to be loaded and used in a post, you can save the data file in the same folder as the post. Or, if you want to use the same data file in multiple posts, you can save the data files in the “data” folder that is in the root of the repository.</p>
+<p>To load a data file in the same folder as the post, use the following code:</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"DATA_FILENAME.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>To load a data file in the root “data” folder, use the following code:</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"../../data/DATA_FILENAME.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="sec-level1Heading" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Level-1 Heading</h1>
 <p>This is a post with executable code.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
 </div>
 </div>
-<section id="sec-level2Heading" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="sec-level2Heading"><span class="header-section-number">4.1</span> Level-2 Heading</h2>
-<section id="sec-level3Heading" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="sec-level3Heading"><span class="header-section-number">4.1.1</span> Level-3 Heading</h3>
-<section id="sec-level4Heading" class="level4" data-number="4.1.1.1">
-<h4 data-number="4.1.1.1" class="anchored" data-anchor-id="sec-level4Heading"><span class="header-section-number">4.1.1.1</span> Level-4 Heading</h4>
+<section id="sec-level2Heading" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="sec-level2Heading"><span class="header-section-number">6.1</span> Level-2 Heading</h2>
+<section id="sec-level3Heading" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="sec-level3Heading"><span class="header-section-number">6.1.1</span> Level-3 Heading</h3>
+<section id="sec-level4Heading" class="level4" data-number="6.1.1.1">
+<h4 data-number="6.1.1.1" class="anchored" data-anchor-id="sec-level4Heading"><span class="header-section-number">6.1.1.1</span> Level-4 Heading</h4>
 </section>
 </section>
 </section>
 </section>
-<section id="sec-addCodeOptions" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Adding Code Options</h1>
+<section id="sec-addCodeOptions" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Adding Code Options</h1>
 <p>You can add options to executable code like this:</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
-</div>
-</div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| echo: false</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="in">2 * 2</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The <code>echo: false</code> option disables the printing of code (only output is displayed). Below is a code chunk that specifies <code>eval: false</code>, which allows providing code without executing the code:</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"DevPsyLab/petersenlab"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"DevPsyLab/petersenlab"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Below is a code chunk that specifies <code>message: false</code> and <code>warning: false</code> to suppress messages and warnings:</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"petersenlab"</span>) <span class="co">#located here: https://github.com/DevPsyLab/petersenlab</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"petersenlab"</span>) <span class="co">#located here: https://github.com/DevPsyLab/petersenlab</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
-<section id="sec-plot" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Plot</h1>
+<section id="sec-plot" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Plot</h1>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(cars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(cars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="sec-image" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Image</h1>
+<section id="sec-image" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Image</h1>
 <p><img src="quarto-logo.png" class="img-fluid"></p>
 </section>
-<section id="sec-unorderedLists" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Unordered Lists</h1>
+<section id="sec-unorderedLists" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Unordered Lists</h1>
 <ul>
 <li>one item</li>
 <li>one item</li>
@@ -322,8 +355,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="sec-orderedLists" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Ordered Lists</h1>
+<section id="sec-orderedLists" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Ordered Lists</h1>
 <ol type="1">
 <li>the first item</li>
 <li>the second item</li>
@@ -334,12 +367,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ol>
 </section>
-<section id="sec-sessionInfo" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Session Info</h1>
+<section id="sec-sessionInfo" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> Session Info</h1>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.1 (2024-06-14)
@@ -363,7 +396,7 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] petersenlab_1.0.6
+[1] petersenlab_1.0.8
 
 loaded via a namespace (and not attached):
  [1] utf8_1.2.4         generics_0.1.3     lattice_0.22-6     stringi_1.8.4     
@@ -379,7 +412,7 @@ loaded via a namespace (and not attached):
 [41] vctrs_0.6.5        R6_2.5.1           rpart_4.1.23       stats4_4.4.1      
 [45] lifecycle_1.0.4    stringr_1.5.1      htmlwidgets_1.6.4  psych_2.4.6.26    
 [49] foreign_0.8-86     cluster_2.1.6      pkgconfig_2.0.3    pillar_1.9.0      
-[53] gtable_0.3.5       Rcpp_1.0.13        glue_1.7.0         data.table_1.15.4 
+[53] gtable_0.3.5       Rcpp_1.0.13        glue_1.7.0         data.table_1.16.0 
 [57] xfun_0.47          tibble_3.2.1       tidyselect_1.2.1   rstudioapi_0.16.0 
 [61] knitr_1.48         xtable_1.8-4       nlme_3.1-164       htmltools_0.5.8.1 
 [65] rmarkdown_2.28     lavaan_0.6-18      compiler_4.4.1     quadprog_1.5-8    </code></pre>
