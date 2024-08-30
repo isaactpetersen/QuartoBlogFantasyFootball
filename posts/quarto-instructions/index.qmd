@@ -10,6 +10,13 @@ image: "quarto-logo.png"
 
 ## Load Libraries {#sec-loadLibraries}
 
+```{{r}}
+#| message: false
+#| warning: false
+
+library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
+```
+
 ```{r}
 #| message: false
 #| warning: false
@@ -81,6 +88,10 @@ load("../../data/DATA_FILENAME.RData")
 
 This is a post with executable code.
 
+```{{r}}
+1 + 1
+```
+
 ```{r}
 1 + 1
 ```
@@ -104,7 +115,7 @@ You can add options to executable code like this:
 The `echo: false` option disables the printing of code (only output is displayed).
 Below is a code chunk that specifies `eval: false`, which allows providing code without executing the code:
 
-```{r}
+```{{r}}
 #| eval: false
 
 install.packages("remotes")
@@ -113,7 +124,7 @@ remotes::install_github("DevPsyLab/petersenlab")
 
 Below is a code chunk that specifies `message: false` and `warning: false` to suppress messages and warnings:
 
-```{r}
+```{{r}}
 #| message: false
 #| warning: false
 
@@ -121,6 +132,10 @@ library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
 ```
 
 # Plot {#sec-plot}
+
+```{{r}}
+plot(cars)
+```
 
 ```{r}
 plot(cars)
