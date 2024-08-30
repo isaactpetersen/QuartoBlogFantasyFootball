@@ -32,12 +32,42 @@ To learn more about [Quarto](https://quarto.org) see <https://quarto.org>.
 
 - **Use a new line for every sentence.** 
 This helps with version control—individually changed sentences will be highlighted upon commits (which are easy to parse to identify the specific changes) rather than whole paragraphs (which are a nightmare to parse to identify the specific changes).
-- Add linked content (e.g., images) to the sub-directories of the relevant post
+- Add linked content (e.g., images, data) to the sub-directories of the relevant post; do not add a file that is more than 50 mb to the repo.
+Data files on GitHub can be no larger than 50 mb.
+If you want to use a data file that is larger than 50 mb, either subset the data to the relevant rows/columns you need and save it as a new data file that is less than 50 mb, or [download the data from the internet](https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook/download-football-data.html) as part of the `R` code in the Quarto script so that the data file does not need to be saved in the repo.
+For example:
+```{r}
+#| eval: false
+
+nfl_pbp_raw <- progressr::with_progress(
+  nflreadr::load_pbp(seasons = TRUE))
+```
 - Use no spaces in file or folder names.
 Use a dash (-) instead of a space.
 - When making numbered (ordered) lists, just use `1. ` for all numbers.
 [Quarto](https://quarto.org) will make them sequential automatically.
 - To update the list of `R` packages that are installed for running the blog post (`.qmd`) files, update the `DESCRIPTION` file.
+
+# Data Files {#sec-dataFiles}
+
+If you want to save a data file in the GitHub repository to be loaded and used in a post, you can save the data file in the same folder as the post.
+Or, if you want to use the same data file in multiple posts, you can save the data files in the "data" folder that is in the root of the repository.
+
+To load a data file in the same folder as the post, use the following code:
+
+```{r}
+#| eval: false
+
+load("DATA_FILENAME.RData")
+```
+
+To load a data file in the root "data" folder, use the following code:
+
+```{r}
+#| eval: false
+
+load("../../data/DATA_FILENAME.RData")
+```
 
 # Level-1 Heading {#sec-level1Heading}
 
