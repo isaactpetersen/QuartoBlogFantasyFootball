@@ -24,29 +24,29 @@
     "objectID": "posts/quarto-instructions/index.html#sec-level2Heading",
     "href": "posts/quarto-instructions/index.html#sec-level2Heading",
     "title": "Quarto Instructions",
-    "section": "6.1 Level-2 Heading",
-    "text": "6.1 Level-2 Heading\nCreate a level-2 heading using the following syntax:\n## Level-2 Heading {#sec-level2Heading}\n\n6.1.1 Level-3 Heading\nCreate a level-3 heading using the following syntax:\n### Level-3 Heading {#sec-level3Heading}\n\n6.1.1.1 Level-4 Heading\nCreate a level-4 heading using the following syntax:\n#### Level-4 Heading {#sec-level4Heading}"
+    "section": "7.1 Level-2 Heading",
+    "text": "7.1 Level-2 Heading\nCreate a level-2 heading using the following syntax:\n## Level-2 Heading {#sec-level2Heading}\n\n7.1.1 Level-3 Heading\nCreate a level-3 heading using the following syntax:\n### Level-3 Heading {#sec-level3Heading}\n\n7.1.1.1 Level-4 Heading\nCreate a level-4 heading using the following syntax:\n#### Level-4 Heading {#sec-level4Heading}"
   },
   {
     "objectID": "posts/quarto-instructions/index.html#sec-troubleshootingR",
     "href": "posts/quarto-instructions/index.html#sec-troubleshootingR",
     "title": "Quarto Instructions",
-    "section": "13.1 R",
-    "text": "13.1 R"
+    "section": "14.1 R",
+    "text": "14.1 R"
   },
   {
     "objectID": "posts/quarto-instructions/index.html#sec-troubleshootingGitHub",
     "href": "posts/quarto-instructions/index.html#sec-troubleshootingGitHub",
     "title": "Quarto Instructions",
-    "section": "13.2 GitHub",
-    "text": "13.2 GitHub"
+    "section": "14.2 GitHub",
+    "text": "14.2 GitHub"
   },
   {
     "objectID": "posts/quarto-instructions/index.html#sec-troubleshootingGitHubPages",
     "href": "posts/quarto-instructions/index.html#sec-troubleshootingGitHubPages",
     "title": "Quarto Instructions",
-    "section": "13.3 GitHub Pages",
-    "text": "13.3 GitHub Pages"
+    "section": "14.3 GitHub Pages",
+    "text": "14.3 GitHub Pages"
   },
   {
     "objectID": "posts/welcome/index.html",
