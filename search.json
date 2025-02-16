@@ -25,7 +25,7 @@
     "href": "posts/quarto-instructions/index.html#sec-level2Heading",
     "title": "Quarto Instructions",
     "section": "6.1 Level-2 Heading",
-    "text": "6.1 Level-2 Heading\n\n6.1.1 Level-3 Heading\n\n6.1.1.1 Level-4 Heading"
+    "text": "6.1 Level-2 Heading\n## Level-2 Heading {#sec-level2Heading}\n\n6.1.1 Level-3 Heading\n### Level-3 Heading {#sec-level3Heading}\n\n6.1.1.1 Level-4 Heading\n#### Level-4 Heading {#sec-level4Heading}"
   },
   {
     "objectID": "posts/quarto-instructions/index.html#sec-troubleshootingR",
