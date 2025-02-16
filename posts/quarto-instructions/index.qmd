@@ -100,6 +100,9 @@ Use a dash (-) instead of a space.
 [`Quarto`](https://quarto.org) will make them sequential automatically.
 This makes it easier to add/reorder items, so you do not have to renumber manually each time there is a change.
 - To update the list of `R` packages that are installed for running the blog post (`.qmd`) files, update the `DESCRIPTION` file.
+- The default editor in RStudio is the "Source" editor, which allows you to edit the source code directly.
+I recommend using the "Source" editor, because it gives you full control of the code, and you learn how to manipulate it.
+However, you may use the ["Visual" editor](https://quarto.org/docs/visual-editor/), if you prefer.
 
 # Submitting Blog Articles {#sec-submitBlogArticles}
 
