@@ -56,7 +56,7 @@ Make sure you add—to the `data` folder—whatever data files you need for your
 In writing the article, I strongly encourage you to consult the [example post](https://isaactpetersen.github.io/QuartoBlogFantasyFootball/posts/example/) (and the [associated `.qmd` file](https://github.com/isaactpetersen/QuartoBlogFantasyFootball/blob/main/posts/example/index.qmd) that generated it) and the [template post](https://isaactpetersen.github.io/QuartoBlogFantasyFootball/posts/template/) (and the [associated `.qmd` file](https://github.com/isaactpetersen/QuartoBlogFantasyFootball/blob/main/posts/template/index.qmd) that generated it) to ensure you include the necessary information and follow the required structure.
 1. After writing the article, preview it to make sure it looks the way you want it to look by rendering it locally.
 To render the article on your local computer, with the `index.qmd` file open, click the "Render" button in the top left of `RStudio` (see image below).
-![Rendering Your Post in RStudio](render.png)
+![Rendering Your Post in RStudio](render.png){.lightbox}
 1. After you get the post the way you want it to look locally, create a commit in `GitHub` with your changes and push them to your `GitHub` repository.
 1. Go the the "Actions" tab of your `GitHub` repository to track the status as your blog and post(s) compile.
 This will take a while the first time to compile on `GitHub`, because it needs to install all of the necessary packages.
