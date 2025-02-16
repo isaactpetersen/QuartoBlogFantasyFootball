@@ -100,7 +100,6 @@ Use a dash (-) instead of a space.
 [`Quarto`](https://quarto.org) will make them sequential automatically.
 This makes it easier to add/reorder items, so you do not have to renumber manually each time there is a change.
 - To update the list of `R` packages that are installed for running the blog post (`.qmd`) files, update the `DESCRIPTION` file.
-- Before posting the article to the blog, make sure the article renders correctly locally by clicking the "Render" button in RStudio.
 
 # Submitting Blog Articles {#sec-submitBlogArticles}
 
