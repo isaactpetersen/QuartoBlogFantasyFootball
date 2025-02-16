@@ -252,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 data-number="3"><span class="header-section-number">3</span> Instructions for Working with Quarto</h1>
 <ul>
 <li><strong>Use a new line for every sentence.</strong> This helps with version control—individually changed sentences will be highlighted upon commits (which are easy to parse to identify the specific changes) rather than whole paragraphs (which are a nightmare to parse to identify the specific changes).</li>
-<li>Wrap <code>R</code> code in a “code chunk”, with three backticks (```<code>) at the beginning and end of the chunk, and designating the code language as `R` using `{r}`, as below:</code>wcdnv # insert R code here (without the pound sign)</li>
+<li>Wrap <code>R</code> code in a “code chunk”, with three backticks (````<code>) at the beginning and end of the chunk, and designating the code language as `R` using `{r}`, as below:</code>elwim # insert R code here (without the pound sign)</li>
 </ul>
 <div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add linked content (e.g., images, data) to the sub-directories of the relevant post; do not add a file that is more than 50 mb to the repo.</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Data files on GitHub can be no larger than 50 mb.</span>
@@ -271,7 +271,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <ul>
 <li>Use no spaces in file or folder names. Use a dash (-) instead of a space.</li>
-<li>When making numbered (ordered) lists, just use <code>1.</code> for all numbers. <a href="https://quarto.org">Quarto</a> will make them sequential automatically.</li>
+<li>When making numbered (ordered) lists, just use <code>1.</code> for all numbers. <a href="https://quarto.org">Quarto</a> will make them sequential automatically. This makes it easier to add/reorder items, so you do not have to renumber manually each time there is a change.</li>
 <li>To update the list of <code>R</code> packages that are installed for running the blog post (<code>.qmd</code>) files, update the <code>DESCRIPTION</code> file.</li>
 <li>Before posting the article to the blog, make sure the article renders correctly locally by clicking the “Render” button in RStudio.</li>
 </ul>
@@ -422,13 +422,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="sec-orderedLists" class="level1" data-number="11">
 <h1 data-number="11"><span class="header-section-number">11</span> Ordered Lists</h1>
-<p>To create ordered (numbered) lists, use the following syntax:</p>
+<p>To create ordered (numbered) lists, use the following syntax (make sure to use <code>1</code> for all numbers):</p>
 <pre><code>1. the first item
 1. the second item
 1. the third item
     - one unordered item
     - one unordered item</code></pre>
-<p>The resulting output (in the document) looks like this:</p>
+<p>The resulting output (in the document) looks like this (note how the <code>1</code>s were automatically renumbered correctly):</p>
 <ol type="1">
 <li>the first item</li>
 <li>the second item</li>
