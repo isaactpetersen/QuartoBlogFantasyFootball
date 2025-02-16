@@ -15,5 +15,4 @@ format:
     theme: cosmo
     css: styles.css
 
-editor: visual
-
+editor: source
