@@ -29,23 +29,23 @@ library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
 # Intro {#sec-intro}
 
 This document provides instructions for your blog posts.
-This document is a [Quarto](https://quarto.org) document, which is an example of a computational notebook.
-[Quarto](https://quarto.org) enables you to weave together content and executable code into a finished document.
-In a [Quarto](https://quarto.org) document, the results appear beneath the code.
+This document is a [`Quarto`](https://quarto.org) document, which is an example of a computational notebook.
+[`Quarto`](https://quarto.org) enables you to weave together content and executable code into a finished document.
+In a [`Quarto`](https://quarto.org) document, the results appear beneath the code.
 This allows you to share your data, statistical code, results, graphics, and text interpreting the analyses all in-line.
 Sharing data and your analysis code with others helps ensure reproducibility—i.e., that others get the exact same results as you.
 For more information on the value of computational notebooks, see the article titled "[The Scientific Paper Is Obsolete](https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/)".
-To learn more about [Quarto](https://quarto.org) see <https://quarto.org>.
+To learn more about [`Quarto`](https://quarto.org) see <https://quarto.org>.
 
-The [Quarto website](https://quarto.org/docs/computations/r.html) provides documentation on using `R` within a [Quarto](https://quarto.org) document: <https://quarto.org/docs/computations/r.html>.
-[Quarto](https://quarto.org) is based on [Markdown](https://quarto.org/docs/authoring/markdown-basics.html) syntax.
-For more info on the basics of [Markdown](https://quarto.org/docs/authoring/markdown-basics.html), see here: <https://quarto.org/docs/authoring/markdown-basics.html>.
+The [`Quarto` website](https://quarto.org/docs/computations/r.html) provides documentation on using `R` within a [`Quarto`](https://quarto.org) document: <https://quarto.org/docs/computations/r.html>.
+[`Quarto`](https://quarto.org) is based on [`Markdown`](https://quarto.org/docs/authoring/markdown-basics.html) syntax.
+For more info on the basics of [`Markdown`](https://quarto.org/docs/authoring/markdown-basics.html), see here: <https://quarto.org/docs/authoring/markdown-basics.html>.
 
 # Steps to Post your Blog Article {#sec-postBlogArticle}
 
 To post your blog article, follow the following steps:
 
-1. Follow the steps at the following link to create your GitHub repository using the `QuartoBlogFantasyFootball` template: <https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook/getting-started.html#sec-initialSetup>.
+1. Follow the steps at the following link to create your `GitHub` repository using the `QuartoBlogFantasyFootball` template: <https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook/getting-started.html#sec-initialSetup>.
 1. Create a new folder for the article under the `posts` folder of your repository.
 I recommend naming the folder after either: a) the date (e.g., `2025-09-30`), b) the name of the assignment (e.g., `Blog Article 1`), or c) a brief title for the article (`Welcome to My Blog`).
 1. Make a copy of the [`index.qmd` file](https://github.com/isaactpetersen/QuartoBlogFantasyFootball/blob/main/posts/template/index.qmd) from the [`template` folder](https://github.com/isaactpetersen/QuartoBlogFantasyFootball/tree/main/posts/template) and paste it into the new folder you created for your post (do not delete the original file).
@@ -56,9 +56,9 @@ In writing the article, I strongly encourage you to consult the [example post](h
 1. After writing the article, preview it to make sure it looks the way you want it to look by rendering it locally.
 To render the article on your local computer, with the `index.qmd` file open, click the "Render" button in the top left of `RStudio` (see image below).
 ![](render.png)
-1. After you get the post the way you want it to look locally, create a commit in `GitHub` with your changes and push them to your GitHub repository.
-1. Go the the "Actions" tab of your GitHub repository to track the status as your blog and post(s) compile.
-This will take a while the first time to compile on GitHub, because it needs to install all of the necessary packages.
+1. After you get the post the way you want it to look locally, create a commit in `GitHub` with your changes and push them to your `GitHub` repository.
+1. Go the the "Actions" tab of your `GitHub` repository to track the status as your blog and post(s) compile.
+This will take a while the first time to compile on `GitHub`, because it needs to install all of the necessary packages.
 If it compiles successfully, your blog should be viewable at the following link:
 https://YOUR_GITHUB_USERNAME.github.io/NAME_OF_YOUR_REPOSITORY/.
 For instance, my example blog is located at the following location: <https://isaactpetersen.github.io/QuartoBlogFantasyFootball/>.
@@ -66,19 +66,19 @@ For instance, my example blog is located at the following location: <https://isa
 If there are no errors, check the post online to see if it appears as expected.
 If it does not appear as expected, make the additional changes you want, and create another commit in `GitHub` with your changes and push them until it appears the way you expect.
 
-# Instructions for Working with Quarto {#sec-quartoInstructions}
+# Instructions for Working with `Quarto` {#sec-quartoInstructions}
 
 - **Use a new line for every sentence.** 
 This helps with version control—individually changed sentences will be highlighted upon commits (which are easy to parse to identify the specific changes) rather than whole paragraphs (which are a nightmare to parse to identify the specific changes).
-Quarto will automatically put a space where a new line begins.
+`Quarto` will automatically put a space where a new line begins.
 To start a new paragraph, put a blank line in between the paragraphs.
 - Wrap `R` code in a "code block", with three backticks (`` ``` ``) at the beginning and end of the block, and designating the code language as `R` using `{r}`, as below:
 ```{{r}}
 # insert R code here (without the pound sign)
 ```
 - Add linked content (e.g., images, data) to the sub-directories of the relevant post; do not add a file that is more than 50 mb to the repo.
-Data files on GitHub can be no larger than 50 mb.
-If you want to use a data file that is larger than 50 mb, either subset the data to the relevant rows/columns you need and save it as a new data file that is less than 50 mb, or [download the data from the internet](https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook/download-football-data.html) as part of the `R` code in the [Quarto](https://quarto.org) script so that the data file does not need to be saved in the repo.
+Data files on `GitHub` can be no larger than 50 mb.
+If you want to use a data file that is larger than 50 mb, either subset the data to the relevant rows/columns you need and save it as a new data file that is less than 50 mb, or [download the data from the internet](https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook/download-football-data.html) as part of the `R` code in the [`Quarto`](https://quarto.org) script so that the data file does not need to be saved in the repo.
 For example, here is an example of `R` code to download data:
 ```{{r}}
 #| eval: false
@@ -96,7 +96,7 @@ nfl_pbp_raw <- nflreadr::load_pbp(seasons = TRUE)
 - Use no spaces in file or folder names.
 Use a dash (-) instead of a space.
 - When making numbered (ordered) lists, just use `1. ` for all numbers.
-[Quarto](https://quarto.org) will make them sequential automatically.
+[`Quarto`](https://quarto.org) will make them sequential automatically.
 This makes it easier to add/reorder items, so you do not have to renumber manually each time there is a change.
 - To update the list of `R` packages that are installed for running the blog post (`.qmd`) files, update the `DESCRIPTION` file.
 - Before posting the article to the blog, make sure the article renders correctly locally by clicking the "Render" button in RStudio.
@@ -113,7 +113,7 @@ See the syllabus for suggestions on how to troubleshoot when issues arise.
 
 # Data Files {#sec-dataFiles}
 
-If you want to save a data file in the GitHub repository to be loaded and used in a post, you can save the data file in the same folder as the post.
+If you want to save a data file in the `GitHub` repository to be loaded and used in a post, you can save the data file in the same folder as the post.
 Or, if you want to use the same data file in multiple posts, you can save the data files in the "data" folder that is in the root of the repository.
 
 To load a data file in the same folder as the post, use the following `R` code (in a code block):
@@ -256,7 +256,7 @@ The resulting output (in the document) looks like this:
 
 ![](quarto-logo.png)
 
-For more info on using images in [Quarto](https://quarto.org), see here: <https://quarto.org/docs/authoring/figures.html>.
+For more info on using images in [`Quarto`](https://quarto.org), see here: <https://quarto.org/docs/authoring/figures.html>.
 
 # Table {sec-table}
 
@@ -270,7 +270,7 @@ Here is an example table (that specifies justification of each column using the 
 
 : Table caption
 
-For more info on using tables in [Quarto](https://quarto.org), see here: <https://quarto.org/docs/authoring/tables.html>.
+For more info on using tables in [`Quarto`](https://quarto.org), see here: <https://quarto.org/docs/authoring/tables.html>.
 
 # Unordered Lists {#sec-unorderedLists}
 
