@@ -41,10 +41,37 @@ The [Quarto website](https://quarto.org/docs/computations/r.html) provides docum
 [Quarto](https://quarto.org) is based on [Markdown](https://quarto.org/docs/authoring/markdown-basics.html) syntax.
 For more info on the basics of [Markdown](https://quarto.org/docs/authoring/markdown-basics.html), see here: <https://quarto.org/docs/authoring/markdown-basics.html>.
 
+# Steps to Post your Blog Article {#sec-postBlogArticle}
+
+To post your blog article, follow the following steps:
+
+1. Follow the steps at the following link to create your GitHub repository using the `QuartoBlogFantasyFootball` template: <https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook/getting-started.html#sec-initialSetup>.
+1. Create a new folder for the article under the `posts` folder of your repository.
+I recommend naming the folder after either: a) the date (e.g., `2025-09-30`), b) the name of the assignment (e.g., `Blog Article 1`), or c) a brief title for the article (`Welcome to My Blog`).
+1. Make a copy of the [`index.qmd` file](https://github.com/isaactpetersen/QuartoBlogFantasyFootball/blob/main/posts/template/index.qmd) from the [`template` folder](https://github.com/isaactpetersen/QuartoBlogFantasyFootball/tree/main/posts/template) and paste it into the new folder you created for your post (do not delete the original file).
+1. Write your article by filling in the contents of the new `index.qmd` you created.
+In the same folder, add any images you want to include in your post.
+Make sure you add—to the `data` folder—whatever data files you need for your post.
+In writing the article, I strongly encourage you to consult the [example post](https://isaactpetersen.github.io/QuartoBlogFantasyFootball/posts/example/) (and the [associated `.qmd` file](https://github.com/isaactpetersen/QuartoBlogFantasyFootball/blob/main/posts/example/index.qmd) that generated it) and the [template post](https://isaactpetersen.github.io/QuartoBlogFantasyFootball/posts/template/) (and the [associated `.qmd` file](https://github.com/isaactpetersen/QuartoBlogFantasyFootball/blob/main/posts/template/index.qmd) that generated it) to ensure you include the necessary information and follow the required structure.
+1. After writing the article, preview it to make sure it looks the way you want it to look by rendering it locally.
+To render the article on your local computer, with the `index.qmd` file open, click the "Render" button in the top left of `RStudio` (see image below).
+![](render.png)
+1. After you get the post the way you want it to look locally, create a commit in `GitHub` with your changes and push them to your GitHub repository.
+1. Go the the "Actions" tab of your GitHub repository to track the status as your blog and post(s) compile.
+This will take a while the first time to compile on GitHub, because it needs to install all of the necessary packages.
+If it compiles successfully, your blog should be viewable at the following link:
+https://YOUR_GITHUB_USERNAME.github.io/NAME_OF_YOUR_REPOSITORY/.
+For instance, my example blog is located at the following location: <https://isaactpetersen.github.io/QuartoBlogFantasyFootball/>.
+1. If there are any errors during compilation, fix them.
+If there are no errors, check the post online to see if it appears as expected.
+If it does not appear as expected, make the additional changes you want, and create another commit in `GitHub` with your changes and push them until it appears the way you expect.
+
 # Instructions for Working with Quarto {#sec-quartoInstructions}
 
 - **Use a new line for every sentence.** 
 This helps with version control—individually changed sentences will be highlighted upon commits (which are easy to parse to identify the specific changes) rather than whole paragraphs (which are a nightmare to parse to identify the specific changes).
+Quarto will automatically put a space where a new line begins.
+To start a new paragraph, put a blank line in between the paragraphs.
 - Wrap `R` code in a "code block", with three backticks (`` ``` ``) at the beginning and end of the block, and designating the code language as `R` using `{r}`, as below:
 ```{{r}}
 # insert R code here (without the pound sign)
