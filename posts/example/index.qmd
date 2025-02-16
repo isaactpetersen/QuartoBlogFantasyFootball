@@ -26,6 +26,11 @@ library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
 
 ## The Present Study {#sec-presentStudy}
 
+In the present study, I examined...
+To my knowledge, this is the first study to...
+I hypothesized that...
+If the hypothesis is true, I predict that...
+
 # Method {#sec-method}
 
 ## Data {#sec-data}
@@ -36,7 +41,7 @@ library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
 
 # Discussion {#sec-discussion}
 
-## Strengths and Limitations {#sec-strenthgsLimitations}
+## Strengths and Limitations {#sec-strengthsLimitations}
 
 ## Conclusion {#sec-conclusion}
 
