@@ -75,6 +75,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-5c67a7444eebc356e54fdce0a63e8750.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -194,7 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link" data-scroll-target="#sec-intro"><span class="header-section-number">2</span> Intro</a></li>
   <li><a href="#sec-postBlogArticle" id="toc-sec-postBlogArticle" class="nav-link" data-scroll-target="#sec-postBlogArticle"><span class="header-section-number">3</span> Steps to Post your Blog Article</a></li>
-  <li><a href="#sec-quartoInstructions" id="toc-sec-quartoInstructions" class="nav-link" data-scroll-target="#sec-quartoInstructions"><span class="header-section-number">4</span> Instructions for Working with Quarto</a></li>
+  <li><a href="#sec-quartoInstructions" id="toc-sec-quartoInstructions" class="nav-link" data-scroll-target="#sec-quartoInstructions"><span class="header-section-number">4</span> Instructions for Working with <code>Quarto</code></a></li>
   <li><a href="#sec-submitBlogArticles" id="toc-sec-submitBlogArticles" class="nav-link" data-scroll-target="#sec-submitBlogArticles"><span class="header-section-number">5</span> Submitting Blog Articles</a></li>
   <li><a href="#sec-dataFiles" id="toc-sec-dataFiles" class="nav-link" data-scroll-target="#sec-dataFiles"><span class="header-section-number">6</span> Data Files</a></li>
   <li><a href="#sec-level1Heading" id="toc-sec-level1Heading" class="nav-link" data-scroll-target="#sec-level1Heading"><span class="header-section-number">7</span> Level-1 Heading</a>
@@ -248,34 +251,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="sec-intro" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Intro</h1>
-<p>This document provides instructions for your blog posts. This document is a <a href="https://quarto.org">Quarto</a> document, which is an example of a computational notebook. <a href="https://quarto.org">Quarto</a> enables you to weave together content and executable code into a finished document. In a <a href="https://quarto.org">Quarto</a> document, the results appear beneath the code. This allows you to share your data, statistical code, results, graphics, and text interpreting the analyses all in-line. Sharing data and your analysis code with others helps ensure reproducibility—i.e., that others get the exact same results as you. For more information on the value of computational notebooks, see the article titled “<a href="https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/">The Scientific Paper Is Obsolete</a>”. To learn more about <a href="https://quarto.org">Quarto</a> see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
-<p>The <a href="https://quarto.org/docs/computations/r.html">Quarto website</a> provides documentation on using <code>R</code> within a <a href="https://quarto.org">Quarto</a> document: <a href="https://quarto.org/docs/computations/r.html" class="uri">https://quarto.org/docs/computations/r.html</a>. <a href="https://quarto.org">Quarto</a> is based on <a href="https://quarto.org/docs/authoring/markdown-basics.html">Markdown</a> syntax. For more info on the basics of <a href="https://quarto.org/docs/authoring/markdown-basics.html">Markdown</a>, see here: <a href="https://quarto.org/docs/authoring/markdown-basics.html" class="uri">https://quarto.org/docs/authoring/markdown-basics.html</a>.</p>
+<p>This document provides instructions for your blog posts. This document is a <a href="https://quarto.org"><code>Quarto</code></a> document, which is an example of a computational notebook. <a href="https://quarto.org"><code>Quarto</code></a> enables you to weave together content and executable code into a finished document. In a <a href="https://quarto.org"><code>Quarto</code></a> document, the results appear beneath the code. This allows you to share your data, statistical code, results, graphics, and text interpreting the analyses all in-line. Sharing data and your analysis code with others helps ensure reproducibility—i.e., that others get the exact same results as you. For more information on the value of computational notebooks, see the article titled “<a href="https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/">The Scientific Paper Is Obsolete</a>”. To learn more about <a href="https://quarto.org"><code>Quarto</code></a> see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
+<p>The <a href="https://quarto.org/docs/computations/r.html"><code>Quarto</code> website</a> provides documentation on using <code>R</code> within a <a href="https://quarto.org"><code>Quarto</code></a> document: <a href="https://quarto.org/docs/computations/r.html" class="uri">https://quarto.org/docs/computations/r.html</a>. <a href="https://quarto.org"><code>Quarto</code></a> is based on <a href="https://quarto.org/docs/authoring/markdown-basics.html"><code>Markdown</code></a> syntax. For more info on the basics of <a href="https://quarto.org/docs/authoring/markdown-basics.html"><code>Markdown</code></a>, see here: <a href="https://quarto.org/docs/authoring/markdown-basics.html" class="uri">https://quarto.org/docs/authoring/markdown-basics.html</a>.</p>
 </section>
 <section id="sec-postBlogArticle" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Steps to Post your Blog Article</h1>
 <p>To post your blog article, follow the following steps:</p>
 <ol type="1">
-<li>Follow the steps at the following link to create your GitHub repository using the <code>QuartoBlogFantasyFootball</code> template: <a href="https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook/getting-started.html#sec-initialSetup" class="uri">https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook/getting-started.html#sec-initialSetup</a>.</li>
+<li>Follow the steps at the following link to create your <code>GitHub</code> repository using the <code>QuartoBlogFantasyFootball</code> template: <a href="https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook/getting-started.html#sec-initialSetup" class="uri">https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook/getting-started.html#sec-initialSetup</a>.</li>
 <li>Create a new folder for the article under the <code>posts</code> folder of your repository. I recommend naming the folder after either: a) the date (e.g., <code>2025-09-30</code>), b) the name of the assignment (e.g., <code>Blog Article 1</code>), or c) a brief title for the article (<code>Welcome to My Blog</code>).</li>
 <li>Make a copy of the <a href="https://github.com/isaactpetersen/QuartoBlogFantasyFootball/blob/main/posts/template/index.qmd"><code>index.qmd</code> file</a> from the <a href="https://github.com/isaactpetersen/QuartoBlogFantasyFootball/tree/main/posts/template"><code>template</code> folder</a> and paste it into the new folder you created for your post (do not delete the original file).</li>
 <li>Write your article by filling in the contents of the new <code>index.qmd</code> you created. In the same folder, add any images you want to include in your post. Make sure you add—to the <code>data</code> folder—whatever data files you need for your post. In writing the article, I strongly encourage you to consult the <a href="https://isaactpetersen.github.io/QuartoBlogFantasyFootball/posts/example/">example post</a> (and the <a href="https://github.com/isaactpetersen/QuartoBlogFantasyFootball/blob/main/posts/example/index.qmd">associated <code>.qmd</code> file</a> that generated it) and the <a href="https://isaactpetersen.github.io/QuartoBlogFantasyFootball/posts/template/">template post</a> (and the <a href="https://github.com/isaactpetersen/QuartoBlogFantasyFootball/blob/main/posts/template/index.qmd">associated <code>.qmd</code> file</a> that generated it) to ensure you include the necessary information and follow the required structure.</li>
-<li>After writing the article, preview it to make sure it looks the way you want it to look by rendering it locally. To render the article on your local computer, with the <code>index.qmd</code> file open, click the “Render” button in the top left of <code>RStudio</code> (see image below). <img src="render.png" class="img-fluid"></li>
-<li>After you get the post the way you want it to look locally, create a commit in <code>GitHub</code> with your changes and push them to your GitHub repository.</li>
-<li>Go the the “Actions” tab of your GitHub repository to track the status as your blog and post(s) compile. This will take a while the first time to compile on GitHub, because it needs to install all of the necessary packages. If it compiles successfully, your blog should be viewable at the following link: https://YOUR_GITHUB_USERNAME.github.io/NAME_OF_YOUR_REPOSITORY/. For instance, my example blog is located at the following location: <a href="https://isaactpetersen.github.io/QuartoBlogFantasyFootball/" class="uri">https://isaactpetersen.github.io/QuartoBlogFantasyFootball/</a>.</li>
+<li>After writing the article, preview it to make sure it looks the way you want it to look by rendering it locally. To render the article on your local computer, with the <code>index.qmd</code> file open, click the “Render” button in the top left of <code>RStudio</code> (see image below). <a href="render.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Rendering Your Post in RStudio"><img src="render.png" class="img-fluid" alt="Rendering Your Post in RStudio"></a></li>
+<li>After you get the post the way you want it to look locally, create a commit in <code>GitHub</code> with your changes and push them to your <code>GitHub</code> repository.</li>
+<li>Go the the “Actions” tab of your <code>GitHub</code> repository to track the status as your blog and post(s) compile. This will take a while the first time to compile on <code>GitHub</code>, because it needs to install all of the necessary packages. If it compiles successfully, your blog should be viewable at the following link: <code>https://YOUR_GITHUB_USERNAME.github.io/NAME_OF_YOUR_REPOSITORY/</code>. For instance, my example blog is located at the following location: <a href="https://isaactpetersen.github.io/QuartoBlogFantasyFootball/" class="uri">https://isaactpetersen.github.io/QuartoBlogFantasyFootball/</a>.</li>
 <li>If there are any errors during compilation, fix them. If there are no errors, check the post online to see if it appears as expected. If it does not appear as expected, make the additional changes you want, and create another commit in <code>GitHub</code> with your changes and push them until it appears the way you expect.</li>
 </ol>
 </section>
 <section id="sec-quartoInstructions" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Instructions for Working with Quarto</h1>
+<h1 data-number="4"><span class="header-section-number">4</span> Instructions for Working with <code>Quarto</code></h1>
 <ul>
-<li><strong>Use a new line for every sentence.</strong> This helps with version control—individually changed sentences will be highlighted upon commits (which are easy to parse to identify the specific changes) rather than whole paragraphs (which are a nightmare to parse to identify the specific changes). Quarto will automatically put a space where a new line begins. To start a new paragraph, put a blank line in between the paragraphs.</li>
+<li><strong>Use a new line for every sentence.</strong> This helps with version control—individually changed sentences will be highlighted upon commits (which are easy to parse to identify the specific changes) rather than whole paragraphs (which are a nightmare to parse to identify the specific changes). <code>Quarto</code> will automatically put a space where a new line begins. To start a new paragraph, put a blank line in between the paragraphs.</li>
 <li>Wrap <code>R</code> code in a “code block”, with three backticks (<code>```</code>) at the beginning and end of the block, and designating the code language as <code>R</code> using <code>{r}</code>, as below:</li>
 </ul>
 <div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="in"># insert R code here (without the pound sign)</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li>Add linked content (e.g., images, data) to the sub-directories of the relevant post; do not add a file that is more than 50 mb to the repo. Data files on GitHub can be no larger than 50 mb. If you want to use a data file that is larger than 50 mb, either subset the data to the relevant rows/columns you need and save it as a new data file that is less than 50 mb, or <a href="https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook/download-football-data.html">download the data from the internet</a> as part of the <code>R</code> code in the <a href="https://quarto.org">Quarto</a> script so that the data file does not need to be saved in the repo. For example, here is an example of <code>R</code> code to download data:</li>
+<li>Add linked content (e.g., images, data) to the sub-directories of the relevant post; do not add a file that is more than 50 mb to the repo. Data files on <code>GitHub</code> can be no larger than 50 mb. If you want to use a data file that is larger than 50 mb, either subset the data to the relevant rows/columns you need and save it as a new data file that is less than 50 mb, or <a href="https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook/download-football-data.html">download the data from the internet</a> as part of the <code>R</code> code in the <a href="https://quarto.org"><code>Quarto</code></a> script so that the data file does not need to be saved in the repo. For example, here is an example of <code>R</code> code to download data:</li>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
@@ -291,7 +294,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <ul>
 <li>Use no spaces in file or folder names. Use a dash (-) instead of a space.</li>
-<li>When making numbered (ordered) lists, just use <code>1.</code> for all numbers. <a href="https://quarto.org">Quarto</a> will make them sequential automatically. This makes it easier to add/reorder items, so you do not have to renumber manually each time there is a change.</li>
+<li>When making numbered (ordered) lists, just use <code>1.</code> for all numbers. <a href="https://quarto.org"><code>Quarto</code></a> will make them sequential automatically. This makes it easier to add/reorder items, so you do not have to renumber manually each time there is a change.</li>
 <li>To update the list of <code>R</code> packages that are installed for running the blog post (<code>.qmd</code>) files, update the <code>DESCRIPTION</code> file.</li>
 <li>Before posting the article to the blog, make sure the article renders correctly locally by clicking the “Render” button in RStudio.</li>
 </ul>
@@ -302,7 +305,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="sec-dataFiles" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Data Files</h1>
-<p>If you want to save a data file in the GitHub repository to be loaded and used in a post, you can save the data file in the same folder as the post. Or, if you want to use the same data file in multiple posts, you can save the data files in the “data” folder that is in the root of the repository.</p>
+<p>If you want to save a data file in the <code>GitHub</code> repository to be loaded and used in a post, you can save the data file in the same folder as the post. Or, if you want to use the same data file in multiple posts, you can save the data files in the “data” folder that is in the root of the repository.</p>
 <p>To load a data file in the same folder as the post, use the following <code>R</code> code (in a code block):</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
@@ -406,7 +409,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<p><a href="index_files/figure-html/unnamed-chunk-8-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -417,8 +420,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>To include an image, use the following syntax:</p>
 <pre><code>![](quarto-logo.png)</code></pre>
 <p>The resulting output (in the document) looks like this:</p>
-<p><img src="quarto-logo.png" class="img-fluid"></p>
-<p>For more info on using images in <a href="https://quarto.org">Quarto</a>, see here: <a href="https://quarto.org/docs/authoring/figures.html" class="uri">https://quarto.org/docs/authoring/figures.html</a>.</p>
+<p><a href="quarto-logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="quarto-logo.png" class="img-fluid"></a></p>
+<p>For more info on using images in <a href="https://quarto.org"><code>Quarto</code></a>, see here: <a href="https://quarto.org/docs/authoring/figures.html" class="uri">https://quarto.org/docs/authoring/figures.html</a>.</p>
 </section>
 <section id="table-sec-table" class="level1" data-number="11">
 <h1 data-number="11"><span class="header-section-number">11</span> Table {sec-table}</h1>
@@ -454,7 +457,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>For more info on using tables in <a href="https://quarto.org">Quarto</a>, see here: <a href="https://quarto.org/docs/authoring/tables.html" class="uri">https://quarto.org/docs/authoring/tables.html</a>.</p>
+<p>For more info on using tables in <a href="https://quarto.org"><code>Quarto</code></a>, see here: <a href="https://quarto.org/docs/authoring/tables.html" class="uri">https://quarto.org/docs/authoring/tables.html</a>.</p>
 </section>
 <section id="sec-unorderedLists" class="level1" data-number="12">
 <h1 data-number="12"><span class="header-section-number">12</span> Unordered Lists</h1>
@@ -984,6 +987,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
