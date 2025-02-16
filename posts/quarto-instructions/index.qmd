@@ -58,9 +58,11 @@ Use a dash (-) instead of a space.
 # Submitting Blog Articles {#sec-submitBlogArticles}
 
 See the syllabus for instructions regarding submitting your blog article.
-As noted in the syllabus, you are encouraged to submit your blog article well before the deadline.
+As noted in the syllabus, <u>**you are encouraged to submit your blog article well before the deadline**<u>.
 You can expect to run into technical issues (e.g., errors when running your code, issues getting the blog post to compile, etc.).
+And, it can take a long time for the blog to compile the first time, because it needs to install all of the necessary packages (it can also take a while for subsequent runs for which new versions of the packages are available and the packages need to be updated).
 Thus, you should give yourself plenty of time to troubleshoot so that you can submit your blog article on time.
+If you leave it for the last day, it is unlikely that you will be able to submit your blog article on time!
 See the syllabus for suggestions on how to troubleshoot when issues arise.
 
 # Data Files {#sec-dataFiles}
@@ -161,6 +163,18 @@ plot(cars)
 3. the third item
     - one unordered item
     - one unordered item
+
+# Troubleshooting {#sec-troubleshooting}
+
+If you run into questions/issues/warnings/errors and need to troubleshoot, see the syllabus for suggestions on how to troubleshoot when issues arise.
+
+Below are sections for common questions/issues/warnings/errors in [`R`](#sec-troubleshootingR) and [`GitHub Pages`](#sec-troubleshootingGitHubPages) (that I will populate as I receive questions), and how to info on how to address them.
+
+## `R` {#sec-troubleshootingR}
+
+## `GitHub` {#sec-troubleshootingGitHub}
+
+## `GitHub Pages` {#sec-troubleshootingGitHubPages}
 
 # Session Info {#sec-sessionInfo}
 
