@@ -95,5 +95,6 @@ rsconnect/
 rsconnect
 
 _site/
+_freeze/
 
 /.quarto/
