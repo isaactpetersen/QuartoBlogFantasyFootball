@@ -17,6 +17,8 @@ image: "quarto-logo.png"
 library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
 ```
 
+The resulting output (in the document) looks like this:
+
 ```{r}
 #| message: false
 #| warning: false
@@ -39,7 +41,7 @@ To learn more about [Quarto](https://quarto.org) see <https://quarto.org>.
 
 - **Use a new line for every sentence.** 
 This helps with version control—individually changed sentences will be highlighted upon commits (which are easy to parse to identify the specific changes) rather than whole paragraphs (which are a nightmare to parse to identify the specific changes).
-- Wrap `R` code in a "code chunk", with three backticks (`````) at the beginning and end of the chunk, and designating the code language as `R` using `{r}`, as below:
+- Wrap `R` code in a "code chunk", with three backticks (``````) at the beginning and end of the chunk, and designating the code language as `R` using `{r}`, as below:
 ```{{r}}
 # insert R code here (without the pound sign)
 ```
@@ -52,6 +54,8 @@ For example, here is an example of `R` code to download data:
 
 nfl_pbp_raw <- nflreadr::load_pbp(seasons = TRUE)
 ```
+
+The resulting output (in the document) looks like this:
 
 ```{r}
 #| eval: false
@@ -88,6 +92,8 @@ To load a data file in the same folder as the post, use the following `R` code (
 load("DATA_FILENAME.RData")
 ```
 
+The resulting output (in the document) looks like this:
+
 ```{r}
 #| eval: false
 
@@ -102,6 +108,8 @@ To load a data file in the root "data" folder, use the following `R` code (in a 
 load("../../data/DATA_FILENAME.RData")
 ```
 
+The resulting output (in the document) looks like this:
+
 ```{r}
 #| eval: false
 
@@ -110,23 +118,31 @@ load("../../data/DATA_FILENAME.RData")
 
 # Level-1 Heading {#sec-level1Heading}
 
+Create a level-1 heading using the following syntax:
+
 ```
 # Level-1 Heading {#sec-level1Heading}
 ```
 
 ## Level-2 Heading {#sec-level2Heading}
 
+Create a level-2 heading using the following syntax:
+
 ```
 ## Level-2 Heading {#sec-level2Heading}
 ```
 
 ### Level-3 Heading {#sec-level3Heading}
 
+Create a level-3 heading using the following syntax:
+
 ```
 ### Level-3 Heading {#sec-level3Heading}
 ```
 
 #### Level-4 Heading {#sec-level4Heading}
+
+Create a level-4 heading using the following syntax:
 
 ```
 #### Level-4 Heading {#sec-level4Heading}
@@ -141,6 +157,8 @@ You can add options to executable code like this:
 
 2 * 2
 ```
+
+The resulting output (in the document) looks like this:
 
 ```{r}
 #| echo: false
@@ -157,6 +175,8 @@ Below is a code chunk that specifies `eval: false`, which allows providing code 
 2 * 2
 ```
 
+The resulting output (in the document) looks like this:
+
 ```{r}
 #| eval: false
 
@@ -172,6 +192,8 @@ Below is a code chunk that specifies `message: false` and `warning: false` to su
 library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
 ```
 
+The resulting output (in the document) looks like this:
+
 ```{r}
 #| eval: false
 
@@ -184,20 +206,28 @@ library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
 plot(cars)
 ```
 
+The resulting output (in the document) looks like this:
+
 ```{r}
 plot(cars)
 ```
 
 # Image {#sec-image}
 
+To include an image, use the following syntax:
+
 ```
 ![](quarto-logo.png)
 ```
+
+The resulting output (in the document) looks like this:
 
 ![](quarto-logo.png)
 
 # Unordered Lists {#sec-unorderedLists}
 
+To create unordered (bulleted) lists, use the following syntax:
+
 ```
 - one item
 - one item
@@ -206,6 +236,8 @@ plot(cars)
     - one more item
     - one more item
 ```
+
+The resulting output (in the document) looks like this:
 
 - one item
 - one item
@@ -216,6 +248,8 @@ plot(cars)
 
 # Ordered Lists {#sec-orderedLists}
 
+To create ordered (numbered) lists, use the following syntax:
+
 ```
 1. the first item
 1. the second item
@@ -223,6 +257,8 @@ plot(cars)
     - one unordered item
     - one unordered item
 ```
+
+The resulting output (in the document) looks like this:
 
 1. the first item
 1. the second item
