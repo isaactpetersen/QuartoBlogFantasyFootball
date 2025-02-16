@@ -11,21 +11,21 @@
     "href": "posts/quarto-instructions/index.html",
     "title": "Quarto Instructions",
     "section": "",
-    "text": "```{r}\n#| message: false\n#| warning: false\n\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab\n```\n\n\nCode\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab"
+    "text": "```{r}\n#| message: false\n#| warning: false\n\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab\n```\nThe resulting output (in the document) looks like this:\n\n\nCode\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab"
   },
   {
     "objectID": "posts/quarto-instructions/index.html#sec-loadLibraries",
     "href": "posts/quarto-instructions/index.html#sec-loadLibraries",
     "title": "Quarto Instructions",
     "section": "",
-    "text": "```{r}\n#| message: false\n#| warning: false\n\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab\n```\n\n\nCode\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab"
+    "text": "```{r}\n#| message: false\n#| warning: false\n\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab\n```\nThe resulting output (in the document) looks like this:\n\n\nCode\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab"
   },
   {
     "objectID": "posts/quarto-instructions/index.html#sec-level2Heading",
     "href": "posts/quarto-instructions/index.html#sec-level2Heading",
     "title": "Quarto Instructions",
     "section": "6.1 Level-2 Heading",
-    "text": "6.1 Level-2 Heading\n## Level-2 Heading {#sec-level2Heading}\n\n6.1.1 Level-3 Heading\n### Level-3 Heading {#sec-level3Heading}\n\n6.1.1.1 Level-4 Heading\n#### Level-4 Heading {#sec-level4Heading}"
+    "text": "6.1 Level-2 Heading\nCreate a level-2 heading using the following syntax:\n## Level-2 Heading {#sec-level2Heading}\n\n6.1.1 Level-3 Heading\nCreate a level-3 heading using the following syntax:\n### Level-3 Heading {#sec-level3Heading}\n\n6.1.1.1 Level-4 Heading\nCreate a level-4 heading using the following syntax:\n#### Level-4 Heading {#sec-level4Heading}"
   },
   {
     "objectID": "posts/quarto-instructions/index.html#sec-troubleshootingR",

@@ -235,6 +235,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="in">library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The resulting output (in the document) looks like this:</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -251,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 data-number="3"><span class="header-section-number">3</span> Instructions for Working with Quarto</h1>
 <ul>
 <li><strong>Use a new line for every sentence.</strong> This helps with version control—individually changed sentences will be highlighted upon commits (which are easy to parse to identify the specific changes) rather than whole paragraphs (which are a nightmare to parse to identify the specific changes).</li>
-<li>Wrap <code>R</code> code in a “code chunk”, with three backticks (``<code>) at the beginning and end of the chunk, and designating the code language as `R` using `{r}`, as below:</code>rzxcr # insert R code here (without the pound sign)</li>
+<li>Wrap <code>R</code> code in a “code chunk”, with three backticks (```<code>) at the beginning and end of the chunk, and designating the code language as `R` using `{r}`, as below:</code>wcdnv # insert R code here (without the pound sign)</li>
 </ul>
 <div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add linked content (e.g., images, data) to the sub-directories of the relevant post; do not add a file that is more than 50 mb to the repo.</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Data files on GitHub can be no larger than 50 mb.</span>
@@ -261,6 +262,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="in">nfl_pbp_raw &lt;- nflreadr::load_pbp(seasons = TRUE)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The resulting output (in the document) looks like this:</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -287,6 +289,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="in">load("DATA_FILENAME.RData")</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The resulting output (in the document) looks like this:</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -299,6 +302,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="in">load("../../data/DATA_FILENAME.RData")</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The resulting output (in the document) looks like this:</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -308,15 +312,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="sec-level1Heading" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Level-1 Heading</h1>
+<p>Create a level-1 heading using the following syntax:</p>
 <pre><code># Level-1 Heading {#sec-level1Heading}</code></pre>
 <section id="sec-level2Heading" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="sec-level2Heading"><span class="header-section-number">6.1</span> Level-2 Heading</h2>
+<p>Create a level-2 heading using the following syntax:</p>
 <pre><code>## Level-2 Heading {#sec-level2Heading}</code></pre>
 <section id="sec-level3Heading" class="level3" data-number="6.1.1">
 <h3 data-number="6.1.1" class="anchored" data-anchor-id="sec-level3Heading"><span class="header-section-number">6.1.1</span> Level-3 Heading</h3>
+<p>Create a level-3 heading using the following syntax:</p>
 <pre><code>### Level-3 Heading {#sec-level3Heading}</code></pre>
 <section id="sec-level4Heading" class="level4" data-number="6.1.1.1">
 <h4 data-number="6.1.1.1" class="anchored" data-anchor-id="sec-level4Heading"><span class="header-section-number">6.1.1.1</span> Level-4 Heading</h4>
+<p>Create a level-4 heading using the following syntax:</p>
 <pre><code>#### Level-4 Heading {#sec-level4Heading}</code></pre>
 </section>
 </section>
@@ -330,6 +338,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="in">2 * 2</span></span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The resulting output (in the document) looks like this:</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 4</code></pre>
@@ -341,6 +350,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="in">2 * 2</span></span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The resulting output (in the document) looks like this:</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -354,6 +364,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="in">library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab</span></span>
 <span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The resulting output (in the document) looks like this:</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -366,6 +377,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="in">plot(cars)</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The resulting output (in the document) looks like this:</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -382,17 +394,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="sec-image" class="level1" data-number="9">
 <h1 data-number="9"><span class="header-section-number">9</span> Image</h1>
+<p>To include an image, use the following syntax:</p>
 <pre><code>![](quarto-logo.png)</code></pre>
+<p>The resulting output (in the document) looks like this:</p>
 <p><img src="quarto-logo.png" class="img-fluid"></p>
 </section>
 <section id="sec-unorderedLists" class="level1" data-number="10">
 <h1 data-number="10"><span class="header-section-number">10</span> Unordered Lists</h1>
+<p>To create unordered (bulleted) lists, use the following syntax:</p>
 <pre><code>- one item
 - one item
 - one item
     - one more item
     - one more item
     - one more item</code></pre>
+<p>The resulting output (in the document) looks like this:</p>
 <ul>
 <li>one item</li>
 <li>one item</li>
@@ -406,11 +422,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="sec-orderedLists" class="level1" data-number="11">
 <h1 data-number="11"><span class="header-section-number">11</span> Ordered Lists</h1>
+<p>To create ordered (numbered) lists, use the following syntax:</p>
 <pre><code>1. the first item
 1. the second item
 1. the third item
     - one unordered item
     - one unordered item</code></pre>
+<p>The resulting output (in the document) looks like this:</p>
 <ol type="1">
 <li>the first item</li>
 <li>the second item</li>
