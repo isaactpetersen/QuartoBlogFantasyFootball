@@ -442,7 +442,13 @@ Figure&nbsp;2
 </section>
 <section id="sec-table" class="level1" data-number="11">
 <h1 data-number="11"><span class="header-section-number">11</span> Table</h1>
-<p>Here is an example table (that specifies justification of each column using the location of the colon):</p>
+<p>Here is the syntax to create a table (the location of the colon in a given column specifies the text justification of that column):</p>
+<pre><code>| Default | Left | Right | Center |
+|---------|:-----|------:|:------:|
+| 12      | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |
+| 1       | 1    |     1 |   1    |</code></pre>
+<p>The resulting output (in the document) looks like this:</p>
 <div id="tbl-insertTableLabel" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-insertTableLabel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -564,7 +570,7 @@ Or here is [another cross-reference](#tbl-insertTableLabel) ot the same table.</
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
