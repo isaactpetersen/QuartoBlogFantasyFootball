@@ -267,7 +267,17 @@ For more info on using images in [`Quarto`](https://quarto.org), see here: <http
 
 # Table {#sec-table}
 
-Here is an example table (that specifies justification of each column using the location of the colon):
+Here is the syntax to create a table (the location of the colon in a given column specifies the text justification of that column):
+
+```
+| Default | Left | Right | Center |
+|---------|:-----|------:|:------:|
+| 12      | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |
+| 1       | 1    |     1 |   1    |
+```
+
+The resulting output (in the document) looks like this:
 
 | Default | Left | Right | Center |
 |---------|:-----|------:|:------:|
