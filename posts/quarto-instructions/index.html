@@ -210,7 +210,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#sec-addCodeOptions" id="toc-sec-addCodeOptions" class="nav-link" data-scroll-target="#sec-addCodeOptions"><span class="header-section-number">8</span> Adding Code Options</a></li>
   <li><a href="#sec-plot" id="toc-sec-plot" class="nav-link" data-scroll-target="#sec-plot"><span class="header-section-number">9</span> Plot</a></li>
   <li><a href="#sec-image" id="toc-sec-image" class="nav-link" data-scroll-target="#sec-image"><span class="header-section-number">10</span> Image</a></li>
-  <li><a href="#table-sec-table" id="toc-table-sec-table" class="nav-link" data-scroll-target="#table-sec-table"><span class="header-section-number">11</span> Table {sec-table}</a></li>
+  <li><a href="#sec-table" id="toc-sec-table" class="nav-link" data-scroll-target="#sec-table"><span class="header-section-number">11</span> Table</a></li>
   <li><a href="#sec-unorderedLists" id="toc-sec-unorderedLists" class="nav-link" data-scroll-target="#sec-unorderedLists"><span class="header-section-number">12</span> Unordered Lists</a></li>
   <li><a href="#sec-orderedLists" id="toc-sec-orderedLists" class="nav-link" data-scroll-target="#sec-orderedLists"><span class="header-section-number">13</span> Ordered Lists</a></li>
   <li><a href="#sec-crossReferences" id="toc-sec-crossReferences" class="nav-link" data-scroll-target="#sec-crossReferences"><span class="header-section-number">14</span> Cross-References</a></li>
@@ -440,8 +440,8 @@ Figure&nbsp;2
 </div>
 <p>For more info on using images in <a href="https://quarto.org"><code>Quarto</code></a>, see here: <a href="https://quarto.org/docs/authoring/figures.html" class="uri">https://quarto.org/docs/authoring/figures.html</a>.</p>
 </section>
-<section id="table-sec-table" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> Table {sec-table}</h1>
+<section id="sec-table" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Table</h1>
 <p>Here is an example table (that specifies justification of each column using the location of the colon):</p>
 <div id="tbl-insertTableLabel" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -526,9 +526,22 @@ Table&nbsp;1: Insert table caption
 </section>
 <section id="sec-crossReferences" class="level1" data-number="14">
 <h1 data-number="14"><span class="header-section-number">14</span> Cross-References</h1>
+<p>You can create cross-references using the following syntax:</p>
+<pre><code>Here is a cross-reference to @sec-level1Heading.
+Or, here is [another cross-reference](#sec-level1Heading) to the same section header.
+
+Here is a cross-reference to @fig-insertPlotLabel.
+Or here is [another cross-reference](#fig-insertPlotLabel) to the same plot.
+
+Here is a cross-reference to @fig-insertFigureLabel.
+Or here is [another cross-reference](#fig-insertFigureLabel) to the same image.
+
+Here is a cross-reference to @tbl-insertTableLabel.
+Or here is [another cross-reference](#tbl-insertTableLabel) ot the same table.</code></pre>
+<p>The resulting output (in the document) looks like this:</p>
 <p>Here is a cross-reference to <a href="#sec-level1Heading" class="quarto-xref">Section&nbsp;7</a>. Or, here is <a href="#sec-level1Heading">another cross-reference</a> to the same section header.</p>
-<p>Here is a cross-reference to <a href="#fig-insertFigureLabel" class="quarto-xref">Figure&nbsp;2</a>. Or here is <a href="#fig-insertFigureLabel">another cross-reference</a> to the same image.</p>
 <p>Here is a cross-reference to <a href="#fig-insertPlotLabel" class="quarto-xref">Figure&nbsp;1</a>. Or here is <a href="#fig-insertPlotLabel">another cross-reference</a> to the same plot.</p>
+<p>Here is a cross-reference to <a href="#fig-insertFigureLabel" class="quarto-xref">Figure&nbsp;2</a>. Or here is <a href="#fig-insertFigureLabel">another cross-reference</a> to the same image.</p>
 <p>Here is a cross-reference to <a href="#tbl-insertTableLabel" class="quarto-xref">Table&nbsp;1</a>. Or here is <a href="#tbl-insertTableLabel">another cross-reference</a> ot the same table.</p>
 <p>For more info on cross-references, see here: <a href="https://quarto.org/docs/authoring/cross-references.html" class="uri">https://quarto.org/docs/authoring/cross-references.html</a>.</p>
 </section>
@@ -551,7 +564,7 @@ Table&nbsp;1: Insert table caption
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.4.2 (2024-10-31)
