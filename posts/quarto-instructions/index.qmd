@@ -265,7 +265,7 @@ The resulting output (in the document) looks like this:
 
 For more info on using images in [`Quarto`](https://quarto.org), see here: <https://quarto.org/docs/authoring/figures.html>.
 
-# Table {sec-table}
+# Table {#sec-table}
 
 Here is an example table (that specifies justification of each column using the location of the colon):
 
@@ -323,14 +323,32 @@ The resulting output (in the document) looks like this (note how the `1`s were a
 
 # Cross-References {#sec-crossReferences}
 
+You can create cross-references using the following syntax:
+
+```
 Here is a cross-reference to @sec-level1Heading.
 Or, here is [another cross-reference](#sec-level1Heading) to the same section header.
+
+Here is a cross-reference to @fig-insertPlotLabel.
+Or here is [another cross-reference](#fig-insertPlotLabel) to the same plot.
 
 Here is a cross-reference to @fig-insertFigureLabel.
 Or here is [another cross-reference](#fig-insertFigureLabel) to the same image.
 
+Here is a cross-reference to @tbl-insertTableLabel.
+Or here is [another cross-reference](#tbl-insertTableLabel) ot the same table.
+```
+
+The resulting output (in the document) looks like this:
+
+Here is a cross-reference to @sec-level1Heading.
+Or, here is [another cross-reference](#sec-level1Heading) to the same section header.
+
 Here is a cross-reference to @fig-insertPlotLabel.
 Or here is [another cross-reference](#fig-insertPlotLabel) to the same plot.
+
+Here is a cross-reference to @fig-insertFigureLabel.
+Or here is [another cross-reference](#fig-insertFigureLabel) to the same image.
 
 Here is a cross-reference to @tbl-insertTableLabel.
 Or here is [another cross-reference](#tbl-insertTableLabel) ot the same table.
