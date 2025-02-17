@@ -3,11 +3,11 @@ title: "Example Blog Post"
 author: "Insert Author's Name Here"
 date: "8/20/2024"
 categories: [template, fantasy football]
-image: "fantasyFootball.jpg"
+image: "insertPhotoName.jpg"
 ---
 
-This is a template [Quarto](https://quarto.org) file for your blog posts.
-Note: The post image was obtained from [here](https://commons.wikimedia.org/wiki/File:Fantasy_Football_-1.jpg).
+This is an example blog post.
+Note: The post image was obtained from [here](INSERT_URL).
 
 # Preamble {#sec-preamble}
 

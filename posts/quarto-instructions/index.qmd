@@ -9,7 +9,11 @@ lightbox: true
 
 # Preamble {#sec-preamble}
 
+This document provides instructions for using Quarto, which is how you will write blog posts.
+
 ## Load Libraries {#sec-loadLibraries}
+
+To load libraries, use the following syntax:
 
 ```{{r}}
 #| message: false
