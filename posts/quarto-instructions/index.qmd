@@ -153,7 +153,7 @@ load("../../data/DATA_FILENAME.RData")
 
 # Level-1 Heading {#sec-level1Heading}
 
-Create a level-1 heading using the following syntax (where `{#sec-level1Heading}` is a *unique* heading label that can be used for [cross-references](https://quarto.org/docs/authoring/cross-references.html)):
+Create a level-1 heading using the following syntax (where `{#sec-level1Heading}` is a *unique* heading label that can be used for [cross-references](#sec-crossReferences)):
 
 ```
 # Level-1 Heading {#sec-level1Heading}
@@ -161,7 +161,7 @@ Create a level-1 heading using the following syntax (where `{#sec-level1Heading}
 
 ## Level-2 Heading {#sec-level2Heading}
 
-Create a level-2 heading using the following syntax (where `{#sec-level2Heading}` is a *unique* heading label that can be used for [cross-references](https://quarto.org/docs/authoring/cross-references.html)):
+Create a level-2 heading using the following syntax (where `{#sec-level2Heading}` is a *unique* heading label that can be used for [cross-references](#sec-crossReferences)):
 
 ```
 ## Level-2 Heading {#sec-level2Heading}
@@ -169,7 +169,7 @@ Create a level-2 heading using the following syntax (where `{#sec-level2Heading}
 
 ### Level-3 Heading {#sec-level3Heading}
 
-Create a level-3 heading using the following syntax (where `{#sec-level3Heading}` is a *unique* heading label that can be used for [cross-references](https://quarto.org/docs/authoring/cross-references.html)):
+Create a level-3 heading using the following syntax (where `{#sec-level3Heading}` is a *unique* heading label that can be used for [cross-references](#sec-crossReferences)):
 
 ```
 ### Level-3 Heading {#sec-level3Heading}
@@ -177,7 +177,7 @@ Create a level-3 heading using the following syntax (where `{#sec-level3Heading}
 
 #### Level-4 Heading {#sec-level4Heading}
 
-Create a level-4 heading using the following syntax (where `{#sec-level4Heading}` is a *unique* heading label that can be used for [cross-references](https://quarto.org/docs/authoring/cross-references.html)):
+Create a level-4 heading using the following syntax (where `{#sec-level4Heading}` is a *unique* heading label that can be used for [cross-references](#sec-crossReferences)):
 
 ```
 #### Level-4 Heading {#sec-level4Heading}
@@ -238,6 +238,8 @@ library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
 # Plot {#sec-plot}
 
 ```{{r}}
+#| label: fig-insertPlotLabel
+
 plot(cars)
 ```
 
@@ -252,7 +254,7 @@ plot(cars)
 To include an image, use the following syntax:
 
 ```
-![](quarto-logo.png)
+![Insert figure caption](quarto-logo.png){#fig-insertFigureLabel}
 ```
 
 The resulting output (in the document) looks like this:
@@ -271,7 +273,7 @@ Here is an example table (that specifies justification of each column using the 
 | 123     | 123  |   123 |  123   |
 | 1       | 1    |     1 |   1    |
 
-: Table caption
+: Insert table caption {#tbl-insertTableLabel}
 
 For more info on using tables in [`Quarto`](https://quarto.org), see here: <https://quarto.org/docs/authoring/tables.html>.
 
@@ -316,6 +318,22 @@ The resulting output (in the document) looks like this (note how the `1`s were a
 1. the third item
     - one unordered item
     - one unordered item
+
+# Cross-References {#sec-crossReferences}
+
+Here is a cross-reference to @sec-level1Heading.
+Or, here is [another cross-reference](#sec-level1Heading) to the same section header.
+
+Here is a cross-reference to @fig-insertFigureLabel.
+Or here is [another cross-reference](#fig-insertFigureLabel) to the same image.
+
+Here is a cross-reference to @fig-insertPlotLabel.
+Or here is [another cross-reference](#fig-insertPlotLabel) to the same plot.
+
+Here is a cross-reference to @tbl-insertTableLabel.
+Or here is [another cross-reference](#tbl-insertTableLabel) ot the same table.
+
+For more info on cross-references, see here: <https://quarto.org/docs/authoring/cross-references.html>.
 
 # Troubleshooting {#sec-troubleshooting}
 
