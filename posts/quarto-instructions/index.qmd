@@ -246,6 +246,8 @@ plot(cars)
 The resulting output (in the document) looks like this:
 
 ```{r}
+#| label: fig-insertPlotLabel
+
 plot(cars)
 ```
 
@@ -259,7 +261,7 @@ To include an image, use the following syntax:
 
 The resulting output (in the document) looks like this:
 
-![](quarto-logo.png)
+![](quarto-logo.png){#fig-insertFigureLabel}
 
 For more info on using images in [`Quarto`](https://quarto.org), see here: <https://quarto.org/docs/authoring/figures.html>.
 
