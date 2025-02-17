@@ -161,7 +161,7 @@ Create a level-1 heading using the following syntax:
 
 ## Level-2 Heading {#sec-level2Heading}
 
-Create a level-2 heading using the following syntax:
+Create a level-2 heading using the following syntax (where `{#sec-level1Heading}` is a *unique* heading label that can be used for [cross-references](https://quarto.org/docs/authoring/cross-references.html)):
 
 ```
 ## Level-2 Heading {#sec-level2Heading}
@@ -169,7 +169,7 @@ Create a level-2 heading using the following syntax:
 
 ### Level-3 Heading {#sec-level3Heading}
 
-Create a level-3 heading using the following syntax:
+Create a level-3 heading using the following syntax (where `{#sec-level2Heading}` is a *unique* heading label that can be used for [cross-references](https://quarto.org/docs/authoring/cross-references.html)):
 
 ```
 ### Level-3 Heading {#sec-level3Heading}
@@ -177,7 +177,7 @@ Create a level-3 heading using the following syntax:
 
 #### Level-4 Heading {#sec-level4Heading}
 
-Create a level-4 heading using the following syntax:
+Create a level-4 heading using the following syntax (where `{#sec-level3Heading}` is a *unique* heading label that can be used for [cross-references](https://quarto.org/docs/authoring/cross-references.html)):
 
 ```
 #### Level-4 Heading {#sec-level4Heading}
@@ -185,7 +185,7 @@ Create a level-4 heading using the following syntax:
 
 # Adding Code Options {#sec-addCodeOptions}
 
-You can add options to executable code like this:
+You can add options to executable code like this (where `{#sec-level4Heading}` is a *unique* heading label that can be used for [cross-references](https://quarto.org/docs/authoring/cross-references.html)):
 
 ```{{r}}
 #| echo: false
