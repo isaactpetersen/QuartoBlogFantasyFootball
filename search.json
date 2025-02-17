@@ -25,7 +25,7 @@
     "href": "posts/quarto-instructions/index.html#sec-level2Heading",
     "title": "Quarto Instructions",
     "section": "7.1 Level-2 Heading",
-    "text": "7.1 Level-2 Heading\nCreate a level-2 heading using the following syntax (where {#sec-level1Heading} is a unique heading label that can be used for cross-references):\n## Level-2 Heading {#sec-level2Heading}\n\n7.1.1 Level-3 Heading\nCreate a level-3 heading using the following syntax (where {#sec-level2Heading} is a unique heading label that can be used for cross-references):\n### Level-3 Heading {#sec-level3Heading}\n\n7.1.1.1 Level-4 Heading\nCreate a level-4 heading using the following syntax (where {#sec-level3Heading} is a unique heading label that can be used for cross-references):\n#### Level-4 Heading {#sec-level4Heading}"
+    "text": "7.1 Level-2 Heading\nCreate a level-2 heading using the following syntax (where {#sec-level2Heading} is a unique heading label that can be used for cross-references):\n## Level-2 Heading {#sec-level2Heading}\n\n7.1.1 Level-3 Heading\nCreate a level-3 heading using the following syntax (where {#sec-level3Heading} is a unique heading label that can be used for cross-references):\n### Level-3 Heading {#sec-level3Heading}\n\n7.1.1.1 Level-4 Heading\nCreate a level-4 heading using the following syntax (where {#sec-level4Heading} is a unique heading label that can be used for cross-references):\n#### Level-4 Heading {#sec-level4Heading}"
   },
   {
     "objectID": "posts/quarto-instructions/index.html#sec-troubleshootingR",
