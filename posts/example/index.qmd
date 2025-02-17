@@ -3,11 +3,11 @@ title: "Example Blog Post"
 author: "Insert Author's Name Here"
 date: "8/20/2024"
 categories: [template, fantasy football]
-image: "insertPhotoName.jpg"
+image: "placeholder.jpg"
 ---
 
 This is an example blog post.
-Note: The post image was obtained from [here](INSERT_URL).
+Note: The post image was obtained from [here](https://www.flickr.com/photos/velo_city/1173356226).
 
 # Preamble {#sec-preamble}
 
