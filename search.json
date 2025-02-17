@@ -11,14 +11,14 @@
     "href": "posts/quarto-instructions/index.html",
     "title": "Quarto Instructions",
     "section": "",
-    "text": "```{r}\n#| message: false\n#| warning: false\n\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab\n```\nThe resulting output (in the document) looks like this:\n\n\nCode\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab"
+    "text": "This document provides instructions for using Quarto, which is how you will write blog posts.\n\n\nTo load libraries, use the following syntax:\n```{r}\n#| message: false\n#| warning: false\n\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab\n```\nThe resulting output (in the document) looks like this:\n\n\nCode\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab"
   },
   {
     "objectID": "posts/quarto-instructions/index.html#sec-loadLibraries",
     "href": "posts/quarto-instructions/index.html#sec-loadLibraries",
     "title": "Quarto Instructions",
     "section": "",
-    "text": "```{r}\n#| message: false\n#| warning: false\n\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab\n```\nThe resulting output (in the document) looks like this:\n\n\nCode\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab"
+    "text": "To load libraries, use the following syntax:\n```{r}\n#| message: false\n#| warning: false\n\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab\n```\nThe resulting output (in the document) looks like this:\n\n\nCode\nlibrary(\"petersenlab\") #located here: https://github.com/DevPsyLab/petersenlab"
   },
   {
     "objectID": "posts/quarto-instructions/index.html#sec-level2Heading",
@@ -116,7 +116,7 @@
     "href": "posts/example/index.html",
     "title": "Example Blog Post",
     "section": "",
-    "text": "This is a template Quarto file for your blog posts. Note: The post image was obtained from here."
+    "text": "This is an example blog post. Note: The post image was obtained from here."
   },
   {
     "objectID": "posts/example/index.html#sec-loadLibraries",
