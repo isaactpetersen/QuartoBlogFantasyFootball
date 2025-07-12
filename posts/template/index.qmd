@@ -20,6 +20,13 @@ Note: The post image was obtained from [here](https://commons.wikimedia.org/wiki
 library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
 ```
 
+# AI Disclosure {#sec-aiDisclosure}
+
+AI Disclosure: AI was used for [SPECIFY ONE OR MORE AMONG THE FOLLOWING]: Mentoring, Code, and Editing.
+(Or, "AI was not used.")
+
+Link to AI Transcript: [INSERT URL]
+
 # Abstract {#sec-abstract}
 
 The Abstract is be a brief summary of your article.

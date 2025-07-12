@@ -20,6 +20,12 @@ Note: The post image was obtained from [here](https://www.flickr.com/photos/velo
 library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
 ```
 
+# AI Disclosure {#sec-aiDisclosure}
+
+AI Disclosure: AI was not used.
+
+Link to AI Transcript: not applicable
+
 # Abstract {#sec-abstract}
 
 # Background {#sec-background}

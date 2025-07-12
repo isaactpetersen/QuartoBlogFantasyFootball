@@ -120,6 +120,10 @@ See the syllabus for suggestions on how to troubleshoot when issues arise.
 
 # Data Files {#sec-dataFiles}
 
+As part of your writing assignments, you will use analyze data.
+Thus, you will need to have data.
+You can use any data file(s) as part of your writing assignments—including data files that included in the course/textbook repository, data files that you find online, data files that you create, and/or data files that you simulate.
+You should specify where/how you obtained, created, or simulated the data.
 If you want to save a data file in the `GitHub` repository to be loaded and used in a post, you can save the data file in the same folder as the post.
 Or, if you want to use the same data file in multiple posts, you can save the data files in the "data" folder that is in the root of the repository.
 
