@@ -120,7 +120,7 @@ See the syllabus for suggestions on how to troubleshoot when issues arise.
 
 # Data Files {#sec-dataFiles}
 
-As part of your writing assignments, you will use analyze data.
+As part of your writing assignments, you will analyze data.
 Thus, you will need to have data.
 You can use any data file(s) as part of your writing assignments—including data files that included in the course/textbook repository, data files that you find online, data files that you create, and/or data files that you simulate.
 You should specify where/how you obtained, created, or simulated the data.
