@@ -8,22 +8,19 @@ For more information on how to customize your blog, see here: https://quarto.org
 To install all the `R` packages that the textbook uses, run the following code in the console:
 
 ```r
-install.packages(
-  c("petersenlab","remotes","knitr","rmarkdown","dplyr",
-    "ggplot2","tidyverse","psych","xfun","downlit","xml2",
-    "nflreadr","nflplotR","nflfastR","nflseedR","nfl4th",
-    "gsisdecoder","progressr","DescTools","pwr","pwrss",
-    "WebPower","XICOR","dagitty","ggdag","lubridate",
-    "ggtext","gghighlight","ggExtra","grid","patchwork",
-    "pROC","lme4","lmerTest","MuMIn","emmeans","pbkrtest",
-    "sjstats","AICcmodavg","rstan","brms","bbmle",
-    "fitdistrplus","mclust","magrittr","viridis","viridisLite",
-    "msir","plotly","webshot2","quantmod","fPortfolio",
-    "xts","zoo","forecast","stringi","parallel","parallelly",
-    "doParallel","missRanger","powerjoin","caret","gpboost",
-    "ggridges","corrplot","rms","car","caret","performance",
-    "correlation","interactions","lavaan","mice","miceadds",
-    "robustbase","see"))
+install.packages(c(
+  "petersenlab","remotes","knitr","rmarkdown","tidyverse","nflverse",
+  "tidymodels","easystats","broom","broom.mixed","psych","downlit","xml2",
+  "gsisdecoder","progressr","DescTools","pwr","pwrss","WebPower","XICOR",
+  "dagitty","ggdag","ggtext","gghighlight","ggExtra","grid","patchwork",
+  "pROC", "lme4","lmerTest","MuMIn","emmeans","pbkrtest","sjstats",
+  "AICcmodavg","rstan","brms","tidybayes","bbmle","fitdistrplus","sn",
+  "mclust","magrittr","viridis","viridisLite","msir","plotly","webshot2",
+  "quantmod","fPortfolio","NMOF","nFactors","xts","zoo","forecast","stringi",
+  "parallelly","doParallel","missRanger","ggridges","powerjoin","caret",
+  "LongituRF","gpboost","corrplot","mgcv","rms","car","lavaan","lavaanPlot",
+  "lavaangui","mice","miceadds","interactions","robustbase","ordinal","MASS",
+  "data.table","future","future.apply","SimDesign","domir"))
 ```
 
 Some necessary packages, including the [`ffanalytics` package](https://github.com/FantasyFootballAnalytics/ffanalytics), are hosted in GitHub (and are not hosted on the Comprehensive R Archive Network [CRAN]) and thus need to be installed using the following code (after installing the `remotes` package above)[^petersenlabPackageGitHub]:
