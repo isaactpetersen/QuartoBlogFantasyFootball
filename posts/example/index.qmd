@@ -494,6 +494,7 @@ I operationalized a wide receiver's opportunity as their air yards, an index of 
 For the criterion of fantasy performance, I examined wide receivers' fantasy points in the subsequent game.
 I hypothesized that opportunity would be a stronger influence of subsequent performance than previous performance and that, as a result, air yards will be a stronger predictor, compared to actual receiving yards, in predicting future fantasy points among wide receivers.
 Contrary to my hypothesis, however, I found that receiving yards was a stronger predictor than air yards in predicting wide receivers' fantasy points the following week.
+Receiving yards had a medium effect size; air yards had a small effect size.
 
 Nevertheless, both previous fantasy points and air yards accounted for unique variance in future fantasy points.
 The findings held when conducting sensitivity analyses, including transforming the outcome variable to be more normally distributed and using a mixed model to account for the longitudinal nature of the data.
