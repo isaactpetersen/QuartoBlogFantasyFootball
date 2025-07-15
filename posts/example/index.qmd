@@ -1,5 +1,5 @@
 ---
-title: "Example Blog Post: Are Air Yards More Predictive than Actual Receiving Yards of Future Fantasy Points?"
+title: "Example Blog Post: Are Air Yards or Receiving Yards a Better Predictor of Future Fantasy Points?"
 author: "Insert Author's Name Here"
 date: "7/14/2025"
 categories: [template, fantasy football]
@@ -37,38 +37,47 @@ Link to AI Transcript: not applicable
 
 # Abstract {#sec-abstract}
 
-Due to natural variability of players' fantasy points, it is possible that opportunity may be a stronger influence of future performance than previous performance.
-However, this possibility has not been tested.
-In the present study, I examined whether previous performance or opportunity is a stronger predictor of future performance among wide receivers.
-I examined air yards as the index of a wide receiver's opportunity; I examined fantasy points as the index of player performance.
-I found that previous performance was a stronger predictor of fantasy performance than was previous opportunity.
-Nevertheless, both previous fantasy points and air yards accounted for unique variance in future fantasy points.
-Both previous performance and opportunity are important predictors of fantasy performance and should be considered when predicting wide receiver fantasy performance.
+**Background:** Due to natural variability of players' fantasy points from week to week, it is possible that a player's opportunity (i.e., volume) may be a stronger influence of future performance than previous performance.
+However, this possibility has not been tested.\
+**Method:** In the present study, I compared predictors to determine which is a stronger predictor of future performance among wide receivers: previous performance or previous opportunity.
+For the predictors, I examined air yards as the index of a wide receiver's opportunity and receiving yards as the index of player performance.
+For the criterion, I examined wide receivers' fantasy points in the subsequent game.\
+**Results:** I found that previous performance (i.e., receiving yards) was a stronger predictor of fantasy performance (i.e., fantasy points) than was previous opportunity (i.e., air yards).
+Nevertheless, both previous receiving yards and air yards accounted for unique variance in future fantasy points.\
+**Discussion:** In conclusion, both previous performance and opportunity are important predictors of fantasy performance and should be considered.
 
 # Background {#sec-background}
 
-A key predictor of future performance in football is past performance.
-Wide receivers who score many points in a given week or season are more likely than other players to score many points in future weeks or seasons.
+In football, like many other domains, a key predictor of future performance is past performance.
+Wide receivers who gain many receiving yards in a given week or season are more likely than other players to gain many receiving yards and score many points in future weeks or seasons.
 However, previous performance is not the only important predictor of future performance.
 
 Early in the fantasy football season, there is considerable uncertainty regarding how players will perform.
-It is common for players to [regress to the mean](https://www.footballguys.com/article/stuart_regression_to_the_mean) (Stewart, 2013), where players who do not meet expectations in Week 1 or 2 may rebound in subsequent weeks; and players who outperform their expectations may be a blip on the radar and revert to their expected performance.
-After several weeks into the season, players' situations tend to become better understood and thus their performance may become more predictable (i.e., their expected mean may change).
+It is common for players to [regress to the mean](https://www.footballguys.com/article/stuart_regression_to_the_mean) ([Stewart, 2013](#ref-Stewart2013)), where players who do not meet expectations in Week 1 or 2 may rebound in subsequent weeks; and players who outperform their expectations may be a blip on the radar and revert to their expected performance.
+After several weeks into the season, players' situations tend to become better understood and thus their performance may become more predictable (i.e., their expected mean may change from preseason expectations for the player).
 
 Thus, it is important to consider factors in addition to previous performance that predict player performance.
 Key influences of player performance, in addition to player ability, include opportunity, usage, and volume.
 For a wide receiver, opportunity may encompass many aspects including how many snaps they receive, how many routes they run, how many targets they receive, and so on.
 Another key aspect of opportunity is the depth of the targets they receive—because greater target depth provides greater opportunity for them to obtain receiving yards and fantasy points.
-A key index of the length of the targets that a player receives is called "air yards" (Hermsmeyer, 2018).
+A key index of the length of the targets that a player receives is called "air yards" ([Hermsmeyer, 2018](#ref-Hermsmeyer2018)).
 
-[*Air yards*](https://bradcongelio.com/nfl-analytics-with-r-book/a1-nfl-analytics-dictionary.html#air-yards) on a given play are defined as the yardage distance the ball travels in air, from the line of scrimmage, to the point the receiver catches or does not catch the ball (Congelio, 2023).
-Air yard distance is tracked in yards from the line of scrimmage, not the true distance the ball travels in air (Hermsmeyer, 2018).
+[*Air yards*](https://bradcongelio.com/nfl-analytics-with-r-book/a1-nfl-analytics-dictionary.html#air-yards) on a given play are defined as the yardage distance the ball travels in air, from the line of scrimmage, to the point the receiver catches or does not catch the ball ([Congelio, 2023](#ref-Congelio2023)).
+Air yard distance is tracked in yards from the line of scrimmage, not the true distance the ball travels in air ([Hermsmeyer, 2018](#ref-Hermsmeyer2018)).
 Air yards are depicted visually in @fig-airyards.
 Air yards involve targeted yards—whether or not the pass was completed—and do not include yards after the catch.
 For a given play in which there is a completed pass, the passing or receiving yards on that play is equal to the sum of the air yards and yards after the catch on that play.
-Receiving air yards over the course of a game is the sum of air yards in that game for all passes targeting the player.
-Receiving air yards thus represent an important index of a wide receiver's opportunity, volume, or usage (Hermsmeyer, 2018).
-Moreover, among underperforming players, considering their air yards may be useful for identifying the ones who might bounce back in subsequent weeks due to regression to the mean.
+Receiving air yards over the course of a game are calculated as the sum of air yards in that game for all passes targeting the player.
+Receiving air yards thus represent an important index of a wide receiver's opportunity, volume, or usage ([Hermsmeyer, 2018](#ref-Hermsmeyer2018)).
+Hereafter, I refer to receiving air yards as simply "air yards".
+
+Fantasy managers often must decide whether to trust a player's previous production or to consider opportunity metrics such as air yards.
+Understanding which better predicts future fantasy performance can improve weekly start/sit decisions and waiver pickups.
+One of the goals in fantasy football is to predict which players will do well before they "blow up" and have a big game.
+Relying on receiving yards, touchdowns, and fantasy points may not be the optimal prognostic indicator of future performance.
+Although analyzing a wide receiver's receiving yards or fantasy points tells us about the player's outcome, it does not indicate *how* they arrived at that outcome—i.e., how the team used the player, not just what the they caught.
+It is possible, for instance, that players who get air yards (even if they do not always catch the passes) are more likely to score fantasy points next week than those who just had a good box score (i.e., many receiving yards) last week.
+Moreover, among underperforming players, considering their air yards may be useful for identifying the ones who are more likely to bounce back in subsequent weeks due to regression to the mean.
 
 ::: {#fig-airyards}
 ![](airyards.png){width=100% fig-alt="Visual Representation of Air Yards. From Congelio (2023)."}
@@ -80,23 +89,35 @@ However, it is not known whether previous performance or opportunity is a strong
 
 ## The Present Study {#sec-presentStudy}
 
-In the present study, I examined whether previous performance or opportunity is a stronger predictor of future performance among wide receivers.
-I operationalized a wide receiver's performance using their fantasy points, calculated by Petersen (2025) using the `ffanalytics` package (Andersen, Petersen, & Tungate, 2025).
-I operationalized a wide receiver's opportunity using their air yards, obtained from the `nflreadr` package (Ho & Carl, 2024).
-I examined the wide receiver's fantasy points and air yards in a given week in predicting their fantasy points in the subsequent week.
+In the present study, I examined whether previous performance or previous opportunity is a stronger predictor of future performance among wide receivers.
+For the predictors, I operationalized a wide receiver's performance using their receiving yards, obtained from the `nflreadr` package ([Ho & Carl, 2024](#ref-nflreadr)).
+I operationalized a wide receiver's opportunity using their air yards, obtained from the `nflreadr` package ([Ho & Carl, 2024](#ref-nflreadr)).
+For the criterion, I examined wide receivers' fantasy points in the subsequent game, calculated by [Petersen (2025)](#ref-Petersen2025) using the `ffanalytics` package ([Andersen, Petersen, & Tungate, 2025](#ref-ffanalytics)).
+Thus, I examined the wide receiver's fantasy points and air yards in a given week in predicting their fantasy points in the subsequent week.
+Although fantasy points are the ultimate outcome, I examined air yards (opportunity) and receiving yards (performance) as a predictor to isolate the predictive utility of yardage-related receiving opportunity relative to yardage-related receiving production.
 To my knowledge, this is the first study to examine whether previous performance or opportunity is a stronger predictor of future fantasy performance.
-I hypothesized that, due to natural variability from week-to-week that, in part, reflects randomness, opportunity would be a stronger influence of subsequent performance than previous performance.
+
+I hypothesized that, due to natural variability from week-to-week that, in part, reflects randomness and is consistent with the statistical principle of regression to the mean, opportunity would be a stronger influence of subsequent performance than previous performance.
 If the hypothesis is true, I predict that air yards will be a stronger predictor, compared to actual receiving yards, in predicting future fantasy points.
+Testing this possibility is important for determining what factors may be used to best identify players who, despite not gaining many receiving yards in a given week, may do well in future weeks.
 
 # Method {#sec-method}
 
-To examine the hypothesis, I examined whether receiving air yards in a given week was a better predictor than actual receiving yards for a wide receiver's fantasy points the following week.
+To test the hypothesis, I examined whether a wide receiver's air yards in a given week was a better predictor than their actual receiving yards of the player's fantasy points the following week.
 
 ## Data {#sec-data}
 
 Below, I load the data file used for this post.
 The data file includes weekly player statistics, including air yards, receiving yards, and fantasy points.
-I obtained the data file from the [Open Science Framework repository](https://osf.io/z6pg4) for the textbook, "Fantasy Football Analytics: Statistics, Prediction, and Empiricism Using R" (Petersen, 2025).
+I obtained the data file from the [Open Science Framework repository](https://osf.io/z6pg4) for the textbook, "Fantasy Football Analytics: Statistics, Prediction, and Empiricism Using R" ([Petersen, 2025](#ref-Petersen2025)).
+
+```{r}
+#| include: false
+#| eval: false
+
+# Run this to load the data when running the script locally (not rendering)
+load(file = "./data/player_stats_weekly.RData")
+```
 
 ```{r}
 load(file = "../../data/player_stats_weekly.RData")
@@ -191,7 +212,7 @@ analysisData %>%
       values_from = value)
 ```
 
-The lagged variable of fantasy points has fewer observations than the original fantasy points variable because, as I mentioned earlier, I lagged data within seasons; consequently, week 1 data were not lagged to the prior season and thus were not retained in the lagged variable.
+The lagged variable of fantasy points has fewer observations than the original fantasy points variable because, as mentioned earlier, I lagged data within seasons; consequently, week 1 data were not lagged to the prior season and thus were not retained in the lagged variable.
 
 Here is a correlation matrix of the relevant variables:
 
@@ -202,13 +223,13 @@ petersenlab::cor.table(analysisData[,modelVars])
 ## Statistical Analysis {#sec-statisticalAnalysis}
 
 I used multiple regression to test the hypothesis.
-Specifically, I compared the standardized regression coefficients for the two predictors of interest: receiving air yards versus receiving yards.
+Specifically, I compared the standardized regression coefficients for the two predictors of interest: air yards versus receiving yards.
 
 # Results {#sec-results}
 
 ## Main Analyses
 
-@fig-associationAirYardsFantasyPoints depicts the association between air yards and fantasy points among wide receivers.
+@fig-associationAirYardsFantasyPoints depicts the association between air yards in a given game and their fantasy points the following week among wide receivers.
 
 ```{r}
 #| label: fig-associationAirYardsFantasyPoints
@@ -228,15 +249,15 @@ ggplot2::ggplot(
     ylim = c(0,NA),
     expand = FALSE) +
   labs(
-    x = "Receiving Air Yards (Game)",
+    x = "Air Yards (Game)",
     y = "Fantasy Points in the Following Week",
-    title = "Fantasy Points by the Previous Week Receiving Air Yards",
+    title = "Fantasy Points by the Previous Week's Air Yards",
     subtitle = "(Among Wide Receivers)"
   ) +
   theme_classic()
 ```
 
-@fig-associationReceivingYardsFantasyPoints depicts the association between receiving yards and fantasy points among wide receivers.
+@fig-associationReceivingYardsFantasyPoints depicts the association between receiving yards in a given game and their fantasy points the following week among wide receivers.
 
 ```{r}
 #| label: fig-associationReceivingYardsFantasyPoints
@@ -331,10 +352,11 @@ beta_airYards <- coef(regressionModelStandardized)[["scale(receiving_air_yards)"
 beta_receivingYards <- coef(regressionModelStandardized)[["scale(receiving_yards)"]]
 ```
 
-The standardized regression coefficient for receiving air yards was larger than for receiving yards.
-As shown in @fig-regressionCoefficientsStandardized, their 95% confidence intervals did not overlap, indicating that the standardized regression coefficient for receiving air yards was larger than for receiving yards.
-The standardized regression coefficient for receiving air yards in predicting fantasy points was $\beta = `r petersenlab::apa(beta_airYards, decimals = 2)`$.
+The standardized regression coefficient for receiving yards was larger than for air yards.
+As shown in @fig-regressionCoefficientsStandardized, their 95% confidence intervals did not overlap, indicating that the standardized regression coefficient for receiving yards was larger than for air yards.
+The standardized regression coefficient for air yards in predicting fantasy points was $\beta = `r petersenlab::apa(beta_airYards, decimals = 2)`$.
 The standardized regression coefficient for receiving yards in predicting fantasy points was $\beta = `r petersenlab::apa(beta_receivingYards, decimals = 2)`$.
+Thus, receiving yards had a medium effect size, whereas air yards had a small effect size.
 
 ## Sensitivity Analyses
 
@@ -395,7 +417,7 @@ hist(
   main = "Histogram of Fantasy Points")
 ```
 
-A histogram of the transformed variable is in @fig-histogram.
+A histogram of the transformed variable is in @fig-histogramTransformed.
 
 ```{r}
 #| label: fig-histogramTransformed
@@ -420,7 +442,7 @@ summary(regressionModelStandardized_transformed)
 
 The pattern of findings did not differ substantially when transforming the outcome variable to be more normally distributed.
 
-Because the data were nested with players (i.e., longitudinal) and thus violated the assumption of uncorrelated residuals, we also conducted a sensitivity analysis using a mixed model to account for the nested data.
+Because the data were nested within players (i.e., longitudinal) and thus violated the assumption of uncorrelated residuals, we also conducted a sensitivity analysis using a mixed model to account for the nested data.
 
 ```{r}
 mixedModelStandardized <- lmerTest::lmer(
@@ -467,19 +489,22 @@ In sum, the pattern of findings held after conducting sensitivity analyses to ac
 # Discussion {#sec-discussion}
 
 In this article, I examined whether previous performance or opportunity is a stronger predictor of future fantasy performance among wide receivers.
-To operationalize fantasy performance, I examined the wide receiver's fantasy points.
-To operationalize opportunity, I examined air yards, an index of the depth of targets the wide receiver received.
+For the predictors, I operationalized the wide receiver's performance as their receiving yards.
+I operationalized a wide receiver's opportunity as their air yards, an index of the depth of targets the player received.
+For the criterion of fantasy performance, I examined wide receivers' fantasy points in the subsequent game.
 I hypothesized that opportunity would be a stronger influence of subsequent performance than previous performance and that, as a result, air yards will be a stronger predictor, compared to actual receiving yards, in predicting future fantasy points among wide receivers.
-Counter to my hypothesis, however, I found that previous fantasy points was a stronger predictor than air yards in predicting wide receivers' fantasy points.
+Contrary to my hypothesis, however, I found that receiving yards was a stronger predictor than air yards in predicting wide receivers' fantasy points the following week.
+
 Nevertheless, both previous fantasy points and air yards accounted for unique variance in future fantasy points.
-Our findings held when conducting sensitivity analyses, including transforming the outcome variable to be more normally distributed and using a mixed model to account for the longitudinal nature of the data.
-Thus, findings suggest that, although previous performance is a stronger predictor than previous opportunity in predicting future fantasy performance among wide receivers, both are important predictors of fantasy performance and should be considered when predicting wide receiver fantasy performance.
+The findings held when conducting sensitivity analyses, including transforming the outcome variable to be more normally distributed and using a mixed model to account for the longitudinal nature of the data.
+Thus, findings suggest that, although previous performance is a stronger predictor than previous opportunity in predicting future fantasy performance among wide receivers, both previous performance and opportunity are important predictors of fantasy performance that should be considered.
+A possible alternative interpretation of the findings is that previous performance reflects other causal processes (such as ability and opportunity) and that previous performance does not influence future performance per se.
 
 ## Strengths and Limitations {#sec-strengthsLimitations}
 
 The study had several strengths.
-First, I examined data from all seasons since 1999, thus providing strong statistical power to detect differential associations.
-Second, I conducted several sensitivity analyses, providing additional rigor and confidence in the findings.
+First, I examined data from all seasons since 1999, thus providing strong statistical power to detect differences in the strength of associations.
+Second, I conducted several sensitivity analyses, providing additional rigor in the methods and additional confidence in the findings.
 
 The study also had limitations.
 First, air yards and other statistical indexes depend on many factors such as the game script and, in a given game, may not be representative of a player's role in the offense.
@@ -491,21 +516,33 @@ This possibility would be important for future work to consider.
 
 In conclusion, previous performance is a stronger predictor than previous opportunity in predicting future fantasy performance among wide receivers.
 However, both previous performance and opportunity are important predictors of fantasy performance and should be considered when predicting wide receiver fantasy performance.
-Among underperforming players, air yards may be a useful way of identifying those who may bounce back in subsequent weeks.
+Among underperforming players, air yards—as an index of opportunity—may be a useful way of identifying those who may bounce back in subsequent weeks.
 
 # References {#sec-references}
 
+::: {#ref-ffanalytics}
 Andersen, D., Petersen, I. T., & Tungate, A. (2025). *ffanalytics: Scrape data for fantasy football*. <https://github.com/FantasyFootballAnalytics/ffanalytics>
+:::
 
+::: {#ref-Congelio2023}
 Congelio, B. J. (2023). *Introduction to NFL analytics with R*. CRC Press. <https://doi.org/10.1201/9781003364320>
+:::
 
+::: {#ref-Hermsmeyer2018}
 Hermsmeyer, J. (2018). *Why receiver air yards matter*. <https://www.nbcsports.com/fantasy/football/news/article-numbers-why-receiver-air-yards-matter> (archived at <https://perma.cc/3KJD-4J2R>)
+:::
 
+::: {#ref-nflreadr}
 Ho, T., & Carl, S. (2024). *nflreadr: Download nflverse data*. <https://doi.org/10.32614/CRAN.package.nflreadr>
+:::
 
+::: {#ref-Petersen2025}
 Petersen, I. T. (2025). *Fantasy football analytics: Statistics, prediction, and empiricism using R*. University of Iowa Libraries. <https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook>
+:::
 
+::: {#ref-Stewart2013}
 Stewart, C. (2013). *Regression to the mean*. <https://www.footballguys.com/article/stuart_regression_to_the_mean> (archived at <https://perma.cc/D5C6-DVUK>)
+:::
 
 # Session Info {#sec-sessionInfo}
 

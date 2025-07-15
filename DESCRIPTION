@@ -2,7 +2,6 @@ Package: placeholder
 Title: QuartoBlogFantasyFootball
 Version: 1.0.0
 Imports:
-  quarto,
   knitr,
   rmarkdown,
   tidyverse,
