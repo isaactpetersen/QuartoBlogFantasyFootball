@@ -31,6 +31,12 @@ Link to AI Transcript: [INSERT URL]
 
 The Abstract is be a brief summary of your article.
 It should briefly summarize the background, method, results, discussion, and conclusion.
+The slashes in the Abstract template below make a new line (without creating a new paragraph).
+
+**Background:** INSERT.\
+**Method:** INSERT.\
+**Results:** INSERT.\
+**Discussion:** INSERT.
 
 # Background {#sec-background}
 
