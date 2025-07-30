@@ -1,7 +1,7 @@
 ---
 title: "Welcome To My Blog"
 author: "Insert D. Name"
-date: "7/11/2024"
+date: "9/2/2025"
 categories: [welcome, news]
 image: "thumbnail.jpg"
 ---
@@ -14,11 +14,19 @@ This is my first blog post.
 # Instructions {#sec-instructions}
 
 In this assignment, you will be creating your "Welcome to my Blog" post by editing the contents of this document.
-Please follow the instructions below:
+This document is written in Quarto.
+Here are the course's [Quarto instructions](https://isaactpetersen.github.io/QuartoBlogFantasyFootball/posts/quarto-instructions/).
+However, for this post, you will not need to create a new folder/post from a template (which you will do for future posts)—in this assignment, you will merely edit and re-post this current post.
 
-- In the header (above), change the author name to your full name and change the date.
-- Change the post image (you'll need to add the image to the folder and update the file name above).
+To follow the instructions (below), you must first create a new GitHub repository using the "QuartoBlogFantasyFootball" repository as a template (per the instructions [here](https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook/getting-started.html#sec-initialSetup)).
+Then, you will edit the `index.qmd` file associated with this post in the following location: `./posts/welcome/index.qmd`.
+Edit the `index.qmd` file according to the instructions below:
+
+- In the header (above; currently `author: "Insert D. Name"`), change the author name to your full name and change the date (currently `date: "9/2/2025"`).
+- Change the post image.
+To do this, you'll need to add the image file to the same folder as this document and update the file name above (currently `image: "thumbnail.jpg"`).
 - Insert headers for the following sections (I aleady created a header for the first section for you):
+    - "Welcome to my Blog!"
     - "About Me"
     - "About This Blog"
 - Add the info described below to the relevant section:
@@ -27,8 +35,9 @@ Please follow the instructions below:
     - Say what your blog articles will be about (generally) and why you are excited to write about that.
     - Say something about the unique perspective you will bring to writing about that topic.
 - Remove this "Instructions" section (and the notes below) when you post your article.
-
-Notes:
+- To post your article, follow the course's [Quarto instructions](https://isaactpetersen.github.io/QuartoBlogFantasyFootball/posts/quarto-instructions/) to first render it locally, and, if everything looks the way you want it to, push it to GitHub so the article goes live (assuming it renders successfully in GitHub Actions)!
+- If you have difficulty, consult the course's [Quarto instructions](https://isaactpetersen.github.io/QuartoBlogFantasyFootball/posts/quarto-instructions/).
+- When submitting, make sure to follow the assignment instructions and the rubric, and to submit both (1) the URL to the live post and (2) a PDF of the post.
 
 - This is a **public** blog.
 The whole world can see it.
