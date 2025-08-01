@@ -273,7 +273,8 @@ window.Quarto = {
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"caret"</span>)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"lme4"</span>)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"lmerTest"</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"GGally"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -448,6 +449,28 @@ Figure&nbsp;1: Visual Representation of Air Yards. From <a href="https://bradcon
 </div>
 </div>
 </div>
+<p><a href="#fig-correlationMatrixPlot" class="quarto-xref">Figure&nbsp;2</a> depicts a correlation matrix plot of the relevant variables.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>GGally<span class="sc">::</span><span class="fu">ggcorr</span>(</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  analysisData[,modelVars],</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">label_round =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-correlationMatrixPlot" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Correlation Matrix Plot.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-correlationMatrixPlot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-correlationMatrixPlot-1.png" class="img-fluid figure-img" alt="Correlation Matrix Plot." width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-correlationMatrixPlot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Correlation Matrix Plot.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="sec-statisticalAnalysis" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="sec-statisticalAnalysis"><span class="header-section-number">5.2</span> Statistical Analysis</h2>
@@ -458,50 +481,14 @@ Figure&nbsp;1: Visual Representation of Air Yards. From <a href="https://bradcon
 <h1 data-number="6"><span class="header-section-number">6</span> Results</h1>
 <section id="main-analyses" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="main-analyses"><span class="header-section-number">6.1</span> Main Analyses</h2>
-<p><a href="#fig-associationAirYardsFantasyPoints" class="quarto-xref">Figure&nbsp;2</a> depicts the association between air yards in a given game and their fantasy points the following week among wide receivers.</p>
-<div class="cell">
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> analysisData,</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> receiving_air_yards,</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> fantasyPoints_lag)) <span class="sc">+</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.15</span>) <span class="sc">+</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="cn">NA</span>),</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="cn">NA</span>),</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">expand =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Air Yards (Game)"</span>,</span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Fantasy Points in the Following Week"</span>,</span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Fantasy Points by the Previous Week's Air Yards"</span>,</span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"(Among Wide Receivers)"</span></span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div id="fig-associationAirYardsFantasyPoints" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Association Between Air Yards and the Player's Fantasy Points in the Following Week.">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-associationAirYardsFantasyPoints-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-associationAirYardsFantasyPoints-1.png" class="img-fluid figure-img" alt="Association Between Air Yards and the Player's Fantasy Points in the Following Week." width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-associationAirYardsFantasyPoints-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Association Between Air Yards and the Player’s Fantasy Points in the Following Week.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p><a href="#fig-associationReceivingYardsFantasyPoints" class="quarto-xref">Figure&nbsp;3</a> depicts the association between receiving yards in a given game and their fantasy points the following week among wide receivers.</p>
+<p><a href="#fig-associationAirYardsFantasyPoints" class="quarto-xref">Figure&nbsp;3</a> depicts the association between air yards in a given game and their fantasy points the following week among wide receivers.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> analysisData,</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> receiving_yards,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> receiving_air_yards,</span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> fantasyPoints_lag)) <span class="sc">+</span></span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.15</span>) <span class="sc">+</span></span>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
@@ -510,12 +497,48 @@ Figure&nbsp;2: Association Between Air Yards and the Player’s Fantasy Points i
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="cn">NA</span>),</span>
 <span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">expand =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
 <span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Receiving Yards (Game)"</span>,</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Air Yards (Game)"</span>,</span>
 <span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Fantasy Points in the Following Week"</span>,</span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Fantasy Points by the Previous Week Receiving Yards"</span>,</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Fantasy Points by the Previous Week's Air Yards"</span>,</span>
 <span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"(Among Wide Receivers)"</span></span>
 <span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-associationAirYardsFantasyPoints" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Association Between Air Yards and the Player's Fantasy Points in the Following Week.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-associationAirYardsFantasyPoints-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-associationAirYardsFantasyPoints-1.png" class="img-fluid figure-img" alt="Association Between Air Yards and the Player's Fantasy Points in the Following Week." width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-associationAirYardsFantasyPoints-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Association Between Air Yards and the Player’s Fantasy Points in the Following Week.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><a href="#fig-associationReceivingYardsFantasyPoints" class="quarto-xref">Figure&nbsp;4</a> depicts the association between receiving yards in a given game and their fantasy points the following week among wide receivers.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> analysisData,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> receiving_yards,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> fantasyPoints_lag)) <span class="sc">+</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.15</span>) <span class="sc">+</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="cn">NA</span>),</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="cn">NA</span>),</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">expand =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Receiving Yards (Game)"</span>,</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Fantasy Points in the Following Week"</span>,</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Fantasy Points by the Previous Week Receiving Yards"</span>,</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"(Among Wide Receivers)"</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-associationReceivingYardsFantasyPoints" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Association Between Receiving Yards and the Player's Fantasy Points in the Following Week.">
@@ -524,7 +547,7 @@ Figure&nbsp;2: Association Between Air Yards and the Player’s Fantasy Points i
 <img src="index_files/figure-html/fig-associationReceivingYardsFantasyPoints-1.png" class="img-fluid figure-img" alt="Association Between Receiving Yards and the Player's Fantasy Points in the Following Week." width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-associationReceivingYardsFantasyPoints-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Association Between Receiving Yards and the Player’s Fantasy Points in the Following Week.
+Figure&nbsp;4: Association Between Receiving Yards and the Player’s Fantasy Points in the Following Week.
 </figcaption>
 </figure>
 </div>
@@ -534,27 +557,27 @@ Figure&nbsp;3: Association Between Receiving Yards and the Player’s Fantasy Po
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>regressionModel <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">formula =</span> fantasyPoints_lag <span class="sc">~</span> receiving_air_yards <span class="sc">+</span> receiving_yards,</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> analysisData</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>regressionModel <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">formula =</span> fantasyPoints_lag <span class="sc">~</span> receiving_air_yards <span class="sc">+</span> receiving_yards,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> analysisData</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Below, I fit the standardized regression model (by standardizing all of the terms):</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>regressionModelStandardized <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">formula =</span> <span class="fu">scale</span>(fantasyPoints_lag) <span class="sc">~</span> <span class="fu">scale</span>(receiving_air_yards) <span class="sc">+</span> <span class="fu">scale</span>(receiving_yards),</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> analysisData</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>regressionModelStandardized <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">formula =</span> <span class="fu">scale</span>(fantasyPoints_lag) <span class="sc">~</span> <span class="fu">scale</span>(receiving_air_yards) <span class="sc">+</span> <span class="fu">scale</span>(receiving_yards),</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> analysisData</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Here are the model results:</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(regressionModel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(regressionModel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -584,7 +607,7 @@ F-statistic:  4288 on 2 and 42771 DF,  p-value: &lt; 2.2e-16</code></pre>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(effectsize<span class="sc">::</span><span class="fu">standardize_parameters</span>(regressionModel, <span class="at">method =</span> <span class="st">"refit"</span>), <span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(effectsize<span class="sc">::</span><span class="fu">standardize_parameters</span>(regressionModel, <span class="at">method =</span> <span class="st">"refit"</span>), <span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code># Standardization method: refit
@@ -596,31 +619,31 @@ receiving air yards |       0.08 | [ 0.07, 0.09]
 receiving yards     |       0.36 | [ 0.35, 0.37]</code></pre>
 </div>
 </div>
-<p>The standardized regression coefficients are depicted in <a href="#fig-regressionCoefficientsStandardized" class="quarto-xref">Figure&nbsp;4</a>.</p>
+<p>The standardized regression coefficients are depicted in <a href="#fig-regressionCoefficientsStandardized" class="quarto-xref">Figure&nbsp;5</a>.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>regressionModelStandardized_tidy <span class="ot">&lt;-</span> broom<span class="sc">::</span><span class="fu">tidy</span>(</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  regressionModelStandardized,</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">conf.int =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  regressionModelStandardized_tidy,</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> term,</span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> estimate)) <span class="sc">+</span></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(</span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(</span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">ymin =</span> conf.low,</span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">ymax =</span> conf.high),</span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>)) <span class="sc">+</span></span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Standardized Regression Coefficients with 95% CI"</span>,</span>
-<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Predictor"</span>,</span>
-<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Standardized Coefficient Estimate"</span>) <span class="sc">+</span></span>
-<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>regressionModelStandardized_tidy <span class="ot">&lt;-</span> broom<span class="sc">::</span><span class="fu">tidy</span>(</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  regressionModelStandardized,</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">conf.int =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  regressionModelStandardized_tidy,</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> term,</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> estimate)) <span class="sc">+</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">ymin =</span> conf.low,</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">ymax =</span> conf.high),</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>)) <span class="sc">+</span></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Standardized Regression Coefficients with 95% CI"</span>,</span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Predictor"</span>,</span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Standardized Coefficient Estimate"</span>) <span class="sc">+</span></span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-regressionCoefficientsStandardized" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Standardized Regression Coefficients with 95% Confidence Interval.">
@@ -629,25 +652,25 @@ receiving yards     |       0.36 | [ 0.35, 0.37]</code></pre>
 <img src="index_files/figure-html/fig-regressionCoefficientsStandardized-1.png" class="img-fluid figure-img" alt="Standardized Regression Coefficients with 95% Confidence Interval." width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-regressionCoefficientsStandardized-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Standardized Regression Coefficients with 95% Confidence Interval.
+Figure&nbsp;5: Standardized Regression Coefficients with 95% Confidence Interval.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The standardized regression coefficient for receiving yards was larger than for air yards. As shown in <a href="#fig-regressionCoefficientsStandardized" class="quarto-xref">Figure&nbsp;4</a>, their 95% confidence intervals did not overlap, indicating that the standardized regression coefficient for receiving yards was larger than for air yards. The standardized regression coefficient for air yards in predicting fantasy points was <span class="math inline">\(\beta = 0.08\)</span>. The standardized regression coefficient for receiving yards in predicting fantasy points was <span class="math inline">\(\beta = 0.36\)</span>. Thus, receiving yards had a medium effect size, whereas air yards had a small effect size.</p>
+<p>The standardized regression coefficient for receiving yards was larger than for air yards. As shown in <a href="#fig-regressionCoefficientsStandardized" class="quarto-xref">Figure&nbsp;5</a>, their 95% confidence intervals did not overlap, indicating that the standardized regression coefficient for receiving yards was larger than for air yards. The standardized regression coefficient for air yards in predicting fantasy points was <span class="math inline">\(\beta = 0.08\)</span>. The standardized regression coefficient for receiving yards in predicting fantasy points was <span class="math inline">\(\beta = 0.36\)</span>. Thus, receiving yards had a medium effect size, whereas air yards had a small effect size.</p>
 </section>
 <section id="sensitivity-analyses" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="sensitivity-analyses"><span class="header-section-number">6.2</span> Sensitivity Analyses</h2>
-<p>We considered assumptions of multiple regression: 1) linear association, 2) homoscedasticity, 3) uncorrelated residuals, and 4) normally distributed residuals. To evaluate the assumption of a linear association between the predictor variables and outcome variable, we examined the shape of the associations of air yards and receiving yards with fantasy points using line graphs. The associations of air yards and receiving yards with fantasy points were mostly linear, as depicted in Figures <a href="#fig-associationAirYardsFantasyPoints" class="quarto-xref">2</a> and <a href="#fig-associationReceivingYardsFantasyPoints" class="quarto-xref">3</a>.</p>
+<p>We considered assumptions of multiple regression: 1) linear association, 2) homoscedasticity, 3) uncorrelated residuals, and 4) normally distributed residuals. To evaluate the assumption of a linear association between the predictor variables and outcome variable, we examined the shape of the associations of air yards and receiving yards with fantasy points using line graphs. The associations of air yards and receiving yards with fantasy points were mostly linear, as depicted in Figures <a href="#fig-associationAirYardsFantasyPoints" class="quarto-xref">3</a> and <a href="#fig-associationReceivingYardsFantasyPoints" class="quarto-xref">4</a>.</p>
 <p>To evaluate the assumption of homoscedasticity, we examined residual and spread-level plots.</p>
-<p>Residual plots is in <a href="#fig-residualPlots" class="quarto-xref">Figure&nbsp;5</a>.</p>
+<p>Residual plots is in <a href="#fig-residualPlots" class="quarto-xref">Figure&nbsp;6</a>.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">residualPlots</span>(</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  regressionModel,</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">residualPlots</span>(</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  regressionModel,</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>                    Test stat Pr(&gt;|Test stat|)    
@@ -664,19 +687,19 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <img src="index_files/figure-html/fig-residualPlots-1.png" class="img-fluid figure-img" alt="Residual Plots." width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-residualPlots-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Residual Plots.
+Figure&nbsp;6: Residual Plots.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>A spread-level plot is in <a href="#fig-spreadLevelPlot" class="quarto-xref">Figure&nbsp;6</a>.</p>
+<p>A spread-level plot is in <a href="#fig-spreadLevelPlot" class="quarto-xref">Figure&nbsp;7</a>.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">spreadLevelPlot</span>(</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  regressionModel,</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">spreadLevelPlot</span>(</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  regressionModel,</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -689,7 +712,7 @@ Suggested power transformation:  0.5426738 </code></pre>
 <img src="index_files/figure-html/fig-spreadLevelPlot-1.png" class="img-fluid figure-img" alt="Spread-Level Plot." width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spreadLevelPlot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Spread-Level Plot.
+Figure&nbsp;7: Spread-Level Plot.
 </figcaption>
 </figure>
 </div>
@@ -699,11 +722,11 @@ Figure&nbsp;6: Spread-Level Plot.
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>yjTransformed <span class="ot">&lt;-</span> caret<span class="sc">::</span><span class="fu">preProcess</span>(</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  analysisData[<span class="st">"fantasyPoints_lag"</span>],</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">method =</span> <span class="fu">c</span>(<span class="st">"YeoJohnson"</span>))</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>yjTransformed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>yjTransformed <span class="ot">&lt;-</span> caret<span class="sc">::</span><span class="fu">preProcess</span>(</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  analysisData[<span class="st">"fantasyPoints_lag"</span>],</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">method =</span> <span class="fu">c</span>(<span class="st">"YeoJohnson"</span>))</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>yjTransformed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Created from 52945 samples and 1 variables
@@ -717,19 +740,40 @@ Lambda estimates for Yeo-Johnson transformation:
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>analysisData<span class="sc">$</span>fantasyPoints_lag_transformed <span class="ot">&lt;-</span> <span class="fu">predict</span>(</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  yjTransformed,</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">newdata =</span> analysisData[<span class="st">"fantasyPoints_lag"</span>])<span class="sc">$</span>fantasyPoints_lag</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>analysisData<span class="sc">$</span>fantasyPoints_lag_transformed <span class="ot">&lt;-</span> <span class="fu">predict</span>(</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  yjTransformed,</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">newdata =</span> analysisData[<span class="st">"fantasyPoints_lag"</span>])<span class="sc">$</span>fantasyPoints_lag</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>A histogram of raw fantasy points is in <a href="#fig-histogram" class="quarto-xref">Figure&nbsp;7</a>.</p>
+<p>A histogram of raw fantasy points is in <a href="#fig-histogram" class="quarto-xref">Figure&nbsp;8</a>.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  analysisData<span class="sc">$</span>fantasyPoints_lag,</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"Histogram of Fantasy Points"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> analysisData,</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> fantasyPoints_lag)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"#000000"</span>,</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"#0099F8"</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Fantasy Points in a Week"</span>,</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Count"</span>,</span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Histogram of Fantasy Points (Week)"</span>,</span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"(Among Wide Receivers)"</span></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 44057 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
+</div>
 <div class="cell-output-display">
 <div id="fig-histogram" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Histogram of Fantasy Points.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -737,20 +781,41 @@ Lambda estimates for Yeo-Johnson transformation:
 <img src="index_files/figure-html/fig-histogram-1.png" class="img-fluid figure-img" alt="Histogram of Fantasy Points." width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: Histogram of Fantasy Points.
+Figure&nbsp;8: Histogram of Fantasy Points.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>A histogram of the transformed variable is in <a href="#fig-histogramTransformed" class="quarto-xref">Figure&nbsp;8</a>.</p>
+<p>A histogram of the transformed variable is in <a href="#fig-histogramTransformed" class="quarto-xref">Figure&nbsp;9</a>.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  analysisData<span class="sc">$</span>fantasyPoints_lag_transformed,</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"Histogram of Fantasy Points (Transformed)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> analysisData,</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> fantasyPoints_lag_transformed)</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"#000000"</span>,</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"#0099F8"</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Fantasy Points (Transformed) in a Week"</span>,</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Count"</span>,</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Histogram of Fantasy Points (Transformed)"</span>,</span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"(Among Wide Receivers)"</span></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 44057 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
+</div>
 <div class="cell-output-display">
 <div id="fig-histogramTransformed" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Histogram of Fantasy Points (Transformed).">
 <figure class="quarto-float quarto-float-fig figure">
@@ -758,7 +823,7 @@ Figure&nbsp;7: Histogram of Fantasy Points.
 <img src="index_files/figure-html/fig-histogramTransformed-1.png" class="img-fluid figure-img" alt="Histogram of Fantasy Points (Transformed)." width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-histogramTransformed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8: Histogram of Fantasy Points (Transformed).
+Figure&nbsp;9: Histogram of Fantasy Points (Transformed).
 </figcaption>
 </figure>
 </div>
@@ -768,12 +833,12 @@ Figure&nbsp;8: Histogram of Fantasy Points (Transformed).
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>regressionModelStandardized_transformed <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">formula =</span> <span class="fu">scale</span>(fantasyPoints_lag_transformed) <span class="sc">~</span> <span class="fu">scale</span>(receiving_air_yards) <span class="sc">+</span> <span class="fu">scale</span>(receiving_yards),</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> analysisData</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(regressionModelStandardized_transformed)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>regressionModelStandardized_transformed <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">formula =</span> <span class="fu">scale</span>(fantasyPoints_lag_transformed) <span class="sc">~</span> <span class="fu">scale</span>(receiving_air_yards) <span class="sc">+</span> <span class="fu">scale</span>(receiving_yards),</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> analysisData</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(regressionModelStandardized_transformed)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -804,14 +869,14 @@ F-statistic:  5224 on 2 and 42771 DF,  p-value: &lt; 2.2e-16</code></pre>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>mixedModelStandardized <span class="ot">&lt;-</span> lmerTest<span class="sc">::</span><span class="fu">lmer</span>(</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale</span>(fantasyPoints_lag_transformed) <span class="sc">~</span> <span class="fu">scale</span>(receiving_air_yards) <span class="sc">+</span> <span class="fu">scale</span>(receiving_yards) <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> player_id),</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> analysisData,</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">REML =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">lmerControl</span>(<span class="at">optimizer =</span> <span class="st">"bobyqa"</span>)</span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mixedModelStandardized)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>mixedModelStandardized <span class="ot">&lt;-</span> lmerTest<span class="sc">::</span><span class="fu">lmer</span>(</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale</span>(fantasyPoints_lag_transformed) <span class="sc">~</span> <span class="fu">scale</span>(receiving_air_yards) <span class="sc">+</span> <span class="fu">scale</span>(receiving_yards) <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> player_id),</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> analysisData,</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">REML =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">lmerControl</span>(<span class="at">optimizer =</span> <span class="st">"bobyqa"</span>)</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mixedModelStandardized)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's
@@ -853,14 +918,14 @@ scl(rcvng_)  0.049 -0.446</code></pre>
 </div>
 </div>
 <p>The pattern of findings did not differ substantially when using a mixed model and the transformed outcome variable.</p>
-<p>To evaluate the assumption of normally distributed residuals, we examined a quantile–quantile (QQ) plot, in <a href="#fig-qqPlot" class="quarto-xref">Figure&nbsp;9</a>.</p>
+<p>To evaluate the assumption of normally distributed residuals, we examined a quantile–quantile (QQ) plot, in <a href="#fig-qqPlot" class="quarto-xref">Figure&nbsp;10</a>.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">qqPlot</span>(</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  regressionModel,</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"QQ Plot"</span>,</span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">qqPlot</span>(</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  regressionModel,</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"QQ Plot"</span>,</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 12169 92151</code></pre>
@@ -872,20 +937,20 @@ scl(rcvng_)  0.049 -0.446</code></pre>
 <img src="index_files/figure-html/fig-qqPlot-1.png" class="img-fluid figure-img" alt="Quantile–Quantile (QQ) Plot." width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-qqPlot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9: Quantile–Quantile (QQ) Plot.
+Figure&nbsp;10: Quantile–Quantile (QQ) Plot.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The residuals showed some deviations from normality. However, the residuals from the model with a transformed outcome variable showed some improvements in terms of deviations from normality, as depicted in <a href="#fig-qqPlotTransformed" class="quarto-xref">Figure&nbsp;10</a>.</p>
+<p>The residuals showed some deviations from normality. However, the residuals from the model with a transformed outcome variable showed some improvements in terms of deviations from normality, as depicted in <a href="#fig-qqPlotTransformed" class="quarto-xref">Figure&nbsp;11</a>.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">qqPlot</span>(</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  regressionModelStandardized_transformed,</span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"QQ Plot (Transformed)"</span>,</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">qqPlot</span>(</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  regressionModelStandardized_transformed,</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"QQ Plot (Transformed)"</span>,</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 21853 47581</code></pre>
@@ -897,7 +962,7 @@ Figure&nbsp;9: Quantile–Quantile (QQ) Plot.
 <img src="index_files/figure-html/fig-qqPlotTransformed-1.png" class="img-fluid figure-img" alt="Quantile–Quantile (QQ) Plot (Transformed)." width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-qqPlotTransformed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10: Quantile–Quantile (QQ) Plot (Transformed).
+Figure&nbsp;11: Quantile–Quantile (QQ) Plot (Transformed).
 </figcaption>
 </figure>
 </div>
@@ -946,7 +1011,7 @@ Figure&nbsp;10: Quantile–Quantile (QQ) Plot (Transformed).
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.5.1 (2025-06-13)
@@ -972,10 +1037,10 @@ attached base packages:
 other attached packages:
  [1] lubridate_1.9.4   forcats_1.0.0     stringr_1.5.1     dplyr_1.1.4      
  [5] purrr_1.1.0       readr_2.1.5       tidyr_1.3.1       tibble_3.3.0     
- [9] tidyverse_2.0.0   lmerTest_3.1-3    lme4_1.1-37       Matrix_1.7-3     
-[13] caret_7.0-1       lattice_0.22-7    ggplot2_3.5.2     car_3.1-3        
-[17] carData_3.0-5     broom_1.0.9       effectsize_1.0.1  DescTools_0.99.60
-[21] psych_2.5.6       petersenlab_1.1.7
+ [9] tidyverse_2.0.0   GGally_2.3.0      lmerTest_3.1-3    lme4_1.1-37      
+[13] Matrix_1.7-3      caret_7.0-1       lattice_0.22-7    ggplot2_3.5.2    
+[17] car_3.1-3         carData_3.0-5     broom_1.0.9       effectsize_1.0.1 
+[21] DescTools_0.99.60 psych_2.5.6       petersenlab_1.1.7
 
 loaded via a namespace (and not attached):
   [1] RColorBrewer_1.1-3   rstudioapi_0.17.1    jsonlite_2.0.0      
@@ -984,7 +1049,7 @@ loaded via a namespace (and not attached):
  [10] rmarkdown_2.29       fs_1.6.6             vctrs_0.6.5         
  [13] minqa_1.2.8          base64enc_0.1-3      htmltools_0.5.8.1   
  [16] haven_2.5.5          cellranger_1.1.0     Formula_1.2-5       
- [19] pROC_1.18.5          parallelly_1.45.1    htmlwidgets_1.6.4   
+ [19] pROC_1.19.0.1        parallelly_1.45.1    htmlwidgets_1.6.4   
  [22] plyr_1.8.9           sandwich_3.1-1       emmeans_1.11.2      
  [25] rootSolve_1.8.2.4    zoo_1.8-14           lifecycle_1.0.4     
  [28] iterators_1.0.14     pkgconfig_2.0.3      R6_2.6.1            
@@ -993,30 +1058,31 @@ loaded via a namespace (and not attached):
  [37] colorspace_2.1-1     Hmisc_5.2-3          labeling_0.4.3      
  [40] timechange_0.3.0     mgcv_1.9-3           httr_1.4.7          
  [43] abind_1.4-8          compiler_4.5.1       proxy_0.4-27        
- [46] withr_3.0.2          htmlTable_2.4.3      backports_1.5.0     
- [49] DBI_1.2.3            MASS_7.3-65          lava_1.8.1          
- [52] gld_2.6.7            ModelMetrics_1.2.2.2 tools_4.5.1         
- [55] pbivnorm_0.6.0       foreign_0.8-90       future.apply_1.20.0 
- [58] nnet_7.3-20          glue_1.8.0           quadprog_1.5-8      
- [61] nlme_3.1-168         grid_4.5.1           checkmate_2.3.2     
- [64] cluster_2.1.8.1      reshape2_1.4.4       generics_0.1.4      
- [67] recipes_1.3.1        gtable_0.3.6         tzdb_0.5.0          
- [70] class_7.3-23         data.table_1.17.8    lmom_3.2            
- [73] hms_1.1.3            foreach_1.5.2        pillar_1.11.0       
- [76] mitools_2.4          splines_4.5.1        survival_3.8-3      
- [79] tidyselect_1.2.1     mix_1.0-13           knitr_1.50          
- [82] reformulas_0.4.1     gridExtra_2.3        stats4_4.5.1        
- [85] xfun_0.52            expm_1.0-0           hardhat_1.4.1       
- [88] timeDate_4041.110    stringi_1.8.7        yaml_2.3.10         
- [91] boot_1.3-31          evaluate_1.0.4       codetools_0.2-20    
- [94] cli_3.6.5            rpart_4.1.24         xtable_1.8-4        
- [97] parameters_0.27.0    Rdpack_2.6.4         lavaan_0.6-19       
-[100] Rcpp_1.1.0           readxl_1.4.5         globals_0.18.0      
-[103] coda_0.19-4.1        parallel_4.5.1       gower_1.0.2         
-[106] bayestestR_0.16.1    listenv_0.9.1        viridisLite_0.4.2   
-[109] mvtnorm_1.3-3        ipred_0.9-15         scales_1.4.0        
-[112] prodlim_2025.04.28   e1071_1.7-16         insight_1.3.1       
-[115] rlang_1.1.6          multcomp_1.4-28      mnormt_2.1.1        </code></pre>
+ [46] withr_3.0.2          S7_0.2.0             htmlTable_2.4.3     
+ [49] backports_1.5.0      DBI_1.2.3            ggstats_0.10.0      
+ [52] MASS_7.3-65          lava_1.8.1           gld_2.6.7           
+ [55] ModelMetrics_1.2.2.2 tools_4.5.1          pbivnorm_0.6.0      
+ [58] foreign_0.8-90       future.apply_1.20.0  nnet_7.3-20         
+ [61] glue_1.8.0           quadprog_1.5-8       nlme_3.1-168        
+ [64] grid_4.5.1           checkmate_2.3.2      cluster_2.1.8.1     
+ [67] reshape2_1.4.4       generics_0.1.4       recipes_1.3.1       
+ [70] gtable_0.3.6         tzdb_0.5.0           class_7.3-23        
+ [73] data.table_1.17.8    lmom_3.2             hms_1.1.3           
+ [76] foreach_1.5.2        pillar_1.11.0        mitools_2.4         
+ [79] splines_4.5.1        survival_3.8-3       tidyselect_1.2.1    
+ [82] mix_1.0-13           knitr_1.50           reformulas_0.4.1    
+ [85] gridExtra_2.3        stats4_4.5.1         xfun_0.52           
+ [88] expm_1.0-0           hardhat_1.4.1        timeDate_4041.110   
+ [91] stringi_1.8.7        yaml_2.3.10          boot_1.3-31         
+ [94] evaluate_1.0.4       codetools_0.2-20     cli_3.6.5           
+ [97] rpart_4.1.24         xtable_1.8-4         parameters_0.27.0   
+[100] Rdpack_2.6.4         lavaan_0.6-19        Rcpp_1.1.0          
+[103] readxl_1.4.5         globals_0.18.0       coda_0.19-4.1       
+[106] parallel_4.5.1       gower_1.0.2          bayestestR_0.16.1   
+[109] listenv_0.9.1        viridisLite_0.4.2    mvtnorm_1.3-3       
+[112] ipred_0.9-15         scales_1.4.0         prodlim_2025.04.28  
+[115] e1071_1.7-16         insight_1.3.1        rlang_1.1.6         
+[118] multcomp_1.4-28      mnormt_2.1.1        </code></pre>
 </div>
 </div>
 
