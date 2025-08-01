@@ -18,7 +18,7 @@ install.packages(c(
   "mclust","magrittr","viridis","viridisLite","msir","plotly","webshot2",
   "quantmod","fPortfolio","NMOF","nFactors","xts","zoo","forecast","stringi",
   "parallelly","doParallel","missRanger","ggridges","powerjoin","caret",
-  "LongituRF","gpboost","corrplot","mgcv","rms","car","lavaan","lavaanPlot",
+  "LongituRF","gpboost","mgcv","rms","car","lavaan","lavaanPlot",
   "lavaangui","mice","miceadds","interactions","robustbase","ordinal","MASS",
   "data.table","future","future.apply","SimDesign","domir","GGally"))
 ```

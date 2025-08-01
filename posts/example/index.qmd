@@ -26,6 +26,7 @@ library("car")
 library("caret")
 library("lme4")
 library("lmerTest")
+library("GGally")
 library("tidyverse")
 ```
 
@@ -220,6 +221,19 @@ Here is a correlation matrix of the relevant variables:
 petersenlab::cor.table(analysisData[,modelVars])
 ```
 
+@fig-correlationMatrixPlot depicts a correlation matrix plot of the relevant variables.
+
+```{r}
+#| label: fig-correlationMatrixPlot
+#| fig-cap: "Correlation Matrix Plot."
+#| fig-alt: "Correlation Matrix Plot."
+
+GGally::ggcorr(
+  analysisData[,modelVars],
+  label = TRUE,
+  label_round = 2)
+```
+
 ## Statistical Analysis {#sec-statisticalAnalysis}
 
 I used multiple regression to test the hypothesis.
@@ -412,9 +426,23 @@ A histogram of raw fantasy points is in @fig-histogram.
 #| fig-cap: "Histogram of Fantasy Points."
 #| fig-alt: "Histogram of Fantasy Points."
 
-hist(
-  analysisData$fantasyPoints_lag,
-  main = "Histogram of Fantasy Points")
+ggplot2::ggplot(
+  data = analysisData,
+  mapping = aes(
+    x = fantasyPoints_lag)
+) +
+  geom_histogram(
+    color = "#000000",
+    fill = "#0099F8"
+  ) +
+  labs(
+    x = "Fantasy Points in a Week",
+    y = "Count",
+    title = "Histogram of Fantasy Points (Week)",
+    subtitle = "(Among Wide Receivers)"
+  ) +
+  theme_classic() +
+  theme(axis.title.y = element_text(angle = 0, vjust = 0.5))
 ```
 
 A histogram of the transformed variable is in @fig-histogramTransformed.
@@ -424,9 +452,23 @@ A histogram of the transformed variable is in @fig-histogramTransformed.
 #| fig-cap: "Histogram of Fantasy Points (Transformed)."
 #| fig-alt: "Histogram of Fantasy Points (Transformed)."
 
-hist(
-  analysisData$fantasyPoints_lag_transformed,
-  main = "Histogram of Fantasy Points (Transformed)")
+ggplot2::ggplot(
+  data = analysisData,
+  mapping = aes(
+    x = fantasyPoints_lag_transformed)
+) +
+  geom_histogram(
+    color = "#000000",
+    fill = "#0099F8"
+  ) +
+  labs(
+    x = "Fantasy Points (Transformed) in a Week",
+    y = "Count",
+    title = "Histogram of Fantasy Points (Transformed)",
+    subtitle = "(Among Wide Receivers)"
+  ) +
+  theme_classic() +
+  theme(axis.title.y = element_text(angle = 0, vjust = 0.5))
 ```
 
 The results of the regression model are below:
