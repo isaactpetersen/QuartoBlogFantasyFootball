@@ -564,7 +564,7 @@ Among underperforming players, air yards—as an index of opportunity—may be a
 # References {#sec-references}
 
 ::: {#ref-ffanalytics}
-Andersen, D., Petersen, I. T., & Tungate, A. (2025). *ffanalytics: Scrape data for fantasy football*. <https://github.com/FantasyFootballAnalytics/ffanalytics>
+Tungate, A., Andersen, D., & Petersen, I. T. (2025). *ffanalytics: Scrape data for fantasy football*. <https://github.com/FantasyFootballAnalytics/ffanalytics>
 :::
 
 ::: {#ref-Congelio2023}
