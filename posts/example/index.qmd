@@ -23,7 +23,7 @@ library("DescTools")
 library("effectsize")
 library("broom")
 library("car")
-library("caret")
+library("bestNormalize")
 library("lme4")
 library("lmerTest")
 library("GGally")
@@ -408,15 +408,14 @@ The residuals appeared to increase as a function of the fitted values.
 To handle this, we conducted a sensitivity analysis by transforming the outcome variable to be more normally distributed using a Yeo-Johnson transformation.
 
 ```{r}
-yjTransformed <- caret::preProcess(
-  analysisData["fantasyPoints_lag"],
-  method = c("YeoJohnson"))
+# Fit the best transformation
+bnTransformed <- bestNormalize(analysisData$fantasyPoints_lag)
 
-yjTransformed
+# Inspect the transformation object
+bnTransformed
 
-analysisData$fantasyPoints_lag_transformed <- predict(
-  yjTransformed,
-  newdata = analysisData["fantasyPoints_lag"])$fantasyPoints_lag
+# Apply the transformation
+analysisData$fantasyPoints_lag_transformed <- predict(bnTransformed)
 ```
 
 A histogram of raw fantasy points is in @fig-histogram.

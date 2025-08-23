@@ -17,8 +17,8 @@ install.packages(c(
   "rstan","brms","tidybayes","bbmle","fitdistrplus","sn","mclust",
   "magrittr","viridis","viridisLite","msir","plotly","webshot2","quantmod",
   "fPortfolio","NMOF","nFactors","xts","zoo","forecast","parallelly",
-  "doParallel","missRanger","ggridges","powerjoin","caret","LongituRF",
-  "gpboost","mgcv","rms","car","lavaan","lavaanPlot","lavaangui",
+  "doParallel","missRanger","ggridges","powerjoin","bestNormalize",
+  "LongituRF","gpboost","mgcv","rms","car","lavaan","lavaanPlot","lavaangui",
   "mice","miceadds","interactions","robustbase","ordinal","MASS",
   "data.table","future","future.apply","SimDesign","domir","GGally","Rglpk",
   "TTR"))
