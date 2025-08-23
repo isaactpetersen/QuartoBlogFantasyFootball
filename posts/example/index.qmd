@@ -374,13 +374,13 @@ Thus, receiving yards had a medium effect size, whereas air yards had a small ef
 
 ## Sensitivity Analyses
 
-We considered assumptions of multiple regression: 1) linear association, 2) homoscedasticity, 3) uncorrelated residuals, and 4) normally distributed residuals.
-To evaluate the assumption of a linear association between the predictor variables and outcome variable, we examined the shape of the associations of air yards and receiving yards with fantasy points using line graphs.
+I evaluated assumptions of multiple regression: 1) linear association, 2) homoscedasticity, 3) uncorrelated residuals, and 4) normally distributed residuals.
+To evaluate the assumption of a linear association between the predictor variables and outcome variable, I examined the shape of the associations of air yards and receiving yards with fantasy points using line graphs.
 The associations of air yards and receiving yards with fantasy points were mostly linear, as depicted in Figures [-@fig-associationAirYardsFantasyPoints] and [-@fig-associationReceivingYardsFantasyPoints].
 
-To evaluate the assumption of homoscedasticity, we examined residual and spread-level plots.
+To evaluate the assumption of homoscedasticity, I examined residual and spread-level plots.
 
-Residual plots is in @fig-residualPlots.
+Residual plots are in @fig-residualPlots.
 
 ```{r}
 #| label: fig-residualPlots
@@ -405,16 +405,24 @@ car::spreadLevelPlot(
 ```
 
 The residuals appeared to increase as a function of the fitted values.
-To handle this, we conducted a sensitivity analysis by transforming the outcome variable to be more normally distributed using a Yeo-Johnson transformation.
+To handle this, I conducted a sensitivity analysis by transforming the outcome variable to be more normally distributed.
+I first identified the best-fitting transformation for (lagged) fantasy points:
 
 ```{r}
-# Fit the best transformation
+#| warning: false
+
 bnTransformed <- bestNormalize(analysisData$fantasyPoints_lag)
+```
 
-# Inspect the transformation object
+Here are the transformation results—in this case, the best-fitting transformation is an ordered quantile (ORQ) normalization transformation:
+
+```{r}
 bnTransformed
+```
 
-# Apply the transformation
+Then, I apply the best-fitting transformation to the variable, to create a transformed variable that is more normally distributed.
+
+```{r}
 analysisData$fantasyPoints_lag_transformed <- predict(bnTransformed)
 ```
 
@@ -424,6 +432,7 @@ A histogram of raw fantasy points is in @fig-histogram.
 #| label: fig-histogram
 #| fig-cap: "Histogram of Fantasy Points."
 #| fig-alt: "Histogram of Fantasy Points."
+#| warning: false
 
 ggplot2::ggplot(
   data = analysisData,
@@ -450,6 +459,7 @@ A histogram of the transformed variable is in @fig-histogramTransformed.
 #| label: fig-histogramTransformed
 #| fig-cap: "Histogram of Fantasy Points (Transformed)."
 #| fig-alt: "Histogram of Fantasy Points (Transformed)."
+#| warning: false
 
 ggplot2::ggplot(
   data = analysisData,
