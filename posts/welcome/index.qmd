@@ -1,6 +1,6 @@
 ---
 title: "Welcome To My Blog"
-author: "Isaac Petersen"
+author: "Insert D. Name"
 date: "9/2/2025"
 categories: [welcome, news]
 image: "thumbnail.jpg"
