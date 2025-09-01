@@ -78,7 +78,7 @@ It should say: "Your site is live at: [URL]", as depicted in the image below (if
 ![GitHub Pages Settings](githubPages.png){.lightbox}
 You can then navigate to that URL and click on your post to get the URL to that post.
 The URL that starts with `http://localhost` is NOT a public URL—that is just used for viewing your rendered version locally (it is not accessible by others to view).
-You need to submit the public URL to the live post (e.g., <https://isaactpetersen.github.io/QuartoBlogFantasyFootball/posts/welcome/>)
+You need to submit the public URL to the live post (e.g., <https://isaactpetersen.github.io/QuartoBlogFantasyFootball/posts/welcome/>).
 1. If there are any errors during compilation, fix them.
 If there are no errors, check the post online to see if it appears as expected.
 If it does not appear as expected, make the additional changes you want, and create another commit in `GitHub` with your changes and push them until it appears the way you expect.
