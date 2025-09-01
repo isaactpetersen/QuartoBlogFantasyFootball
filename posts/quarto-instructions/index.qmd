@@ -51,6 +51,10 @@ For more info on the basics of [`Markdown`](https://quarto.org/docs/authoring/ma
 To post your blog article, follow the following steps:
 
 1. Follow the steps at the following link to create your `GitHub` repository using the `QuartoBlogFantasyFootball` template: <https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook/getting-started.html#sec-initialSetup>.
+The settings in your GitHub repository should look like the following images:
+![GitHub Actions Settings - Page 1](githubActions1.png){.lightbox}
+![GitHub Actions Settings - Page 2](githubActions2.png){.lightbox}
+![GitHub Pages Settings](githubPages.png){.lightbox}
 1. Create a new folder for the article under the `posts` folder of your repository.
 I recommend naming the folder after either: a) the date (e.g., `2025-09-30`), b) the name of the assignment (e.g., `Blog Article 1`), or c) a brief title for the article (`Welcome to My Blog`).
 **Note**: you will NOT need to create a new folder for your "Welcome to my Blog!" post; to create your "Welcome to my Blog!" post you can just edit the already existing welcome post in the following location of your repository: `./posts/welcome/index.qmd`.
@@ -69,6 +73,12 @@ This will take a while the first time to compile on `GitHub`, because it needs t
 If it compiles successfully, your blog should be viewable at the following link:
 `https://YOUR_GITHUB_USERNAME.github.io/NAME_OF_YOUR_REPOSITORY/`.
 For instance, my example blog is located at the following location: <https://isaactpetersen.github.io/QuartoBlogFantasyFootball/>.
+You can locate the URL to your GitHub Pages site by navigating to your blog's GitHub repository on GitHub.com, clicking "Settings", then clicking "Pages".
+It should say: "Your site is live at: [URL]", as depicted in the image below (if it does not say that, you have not set something up correctly above).
+![GitHub Pages Settings](githubPages.png){.lightbox}
+You can then navigate to that URL and click on your post to get the URL to that post.
+The URL that starts with `http://localhost` is NOT a public URL—that is just used for viewing your rendered version locally (it is not accessible by others to view).
+You need to submit the public URL to the live post (e.g., <https://isaactpetersen.github.io/QuartoBlogFantasyFootball/posts/welcome/>)
 1. If there are any errors during compilation, fix them.
 If there are no errors, check the post online to see if it appears as expected.
 If it does not appear as expected, make the additional changes you want, and create another commit in `GitHub` with your changes and push them until it appears the way you expect.

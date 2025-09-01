@@ -37,7 +37,9 @@ To do this, you'll need to add the image file to the same folder as this documen
 - Remove this "Instructions" section (and the notes below) when you post your article.
 - To post your article, follow the course's [Quarto instructions](https://isaactpetersen.github.io/QuartoBlogFantasyFootball/posts/quarto-instructions/) to first render it locally, and, if everything looks the way you want it to, push it to GitHub so the article goes live (assuming it renders successfully in GitHub Actions)!
 - If you have difficulty, consult the course's [Quarto instructions](https://isaactpetersen.github.io/QuartoBlogFantasyFootball/posts/quarto-instructions/).
-- When submitting, make sure to follow the assignment instructions and rubric on ICON, and to submit both (1) the URL to the live post and (2) a PDF of the post.
+- When submitting, make sure to follow the assignment instructions and rubric on ICON, and to submit both (1) the *public* URL to the live post and (2) a PDF of the post.
+For info how to find the public URL to the live post, see the course's [Quarto instructions](https://isaactpetersen.github.io/QuartoBlogFantasyFootball/posts/quarto-instructions/); the URL that starts with `http://localhost` is NOT a public URL—that is just used for viewing your rendered version locally (it is not accessible by others to view).
+You need to submit the public URL to the live post (e.g., <https://isaactpetersen.github.io/QuartoBlogFantasyFootball/posts/welcome/>)
 
 - This is a **public** blog.
 The whole world can see it.
