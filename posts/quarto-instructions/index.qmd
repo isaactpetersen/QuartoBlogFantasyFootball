@@ -59,6 +59,8 @@ The settings in your GitHub repository should look like the following images:
 I recommend naming the folder after either: a) the date (e.g., `2025-09-30`), b) the name of the assignment (e.g., `Blog Article 1`), or c) a brief title for the article (`Welcome to My Blog`).
 **Note**: you will NOT need to create a new folder for your "Welcome to my Blog!" post; to create your "Welcome to my Blog!" post you can just edit the already existing welcome post in the following location of your repository: `./posts/welcome/index.qmd`.
 1. Make a copy of the [`index.qmd` file](https://github.com/isaactpetersen/QuartoBlogFantasyFootball/blob/main/posts/template/index.qmd) from the [`template` folder](https://github.com/isaactpetersen/QuartoBlogFantasyFootball/tree/main/posts/template) and paste it into the new folder you created for your post (do not delete the original file).
+Make sure the file for your post (in the new folder) is called `index.qmd`.
+Basically, each new post should have a new subfolder within the `./posts/` folder and should have the post saved as `index.qmd` within that folder.
 **Note**: you will NOT need to paste this file for your "Welcome to my Blog!" post; to create your "Welcome to my Blog!" post you can just edit the already existing welcome post in the following location of your repository: `./posts/welcome/index.qmd`.
 1. Write your article by filling in the contents of the new `index.qmd` you created.
 In the same folder, add any images you want to include in your post.
