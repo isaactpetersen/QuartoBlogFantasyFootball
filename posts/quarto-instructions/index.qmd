@@ -111,7 +111,7 @@ Here are some reminders to make sure get full credit for your blog posts:
 - In sum, submit what you can when you can!
 - See the syllabus for suggestions on how to troubleshoot when issues arise.
 - Don't struggle in silence!
-Don't hesitate to come to office hours if you want my troubleshooting something.
+Don't hesitate to come to office hours if you want my help troubleshooting something.
 
 # Instructions for Working with `Quarto` {#sec-quartoInstructions}
 
