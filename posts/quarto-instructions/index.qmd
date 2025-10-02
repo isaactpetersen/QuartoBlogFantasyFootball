@@ -85,6 +85,34 @@ You need to submit the public URL to the live post (e.g., <https://isaactpeterse
 If there are no errors, check the post online to see if it appears as expected.
 If it does not appear as expected, make the additional changes you want, and create another commit in `GitHub` with your changes and push them until it appears the way you expect.
 
+# Blog Post Reminders {#sec-blogPostReminders}
+
+Here are some reminders to make sure get full credit for your blog posts:
+
+- Follow the template and the ICON rubric!
+    - Include all of the elements, including an Abstract (making sure to follow the [blog post template](https://github.com/isaactpetersen/QuartoBlogFantasyFootball/blob/main/posts/template/index.qmd))
+- Include an AI disclosure!
+- Provide a background for your topic (including a citation) and why it is important
+- Hypothesis vs. prediction
+    - You should have both a hypothesis and prediction.
+    They are NOT the same!
+    - Hypothesis should include a causal explanation!
+    - Justify your hypotheses
+- Provide descriptive statistics for your study variables
+    - I provide example of how to do that in the textbook: <https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook/basic-statistics.html#sec-descriptiveStatisticsCombination>
+- Make sure your blog post contains analysis relevant to the target topic for that particular blog post (e.g., correlation/regression)
+- Consider practical significance (effect size) in addition to statistical significance
+- Provide a plausible alternative explanation for your findings
+- Make sure to submit a *public* URL (the URL should NOT contain `localhost`)
+- See the example blog post if you want to see an example: <https://isaactpetersen.github.io/QuartoBlogFantasyFootball/posts/example/>
+- Better to submit late than never! (late penalty: 20%)
+- Even if you are having trouble compiling it to your public blog, you can still submit a locally rendered version (for partial credit)
+    - Though, you won't get full credit (you need to submit URL to public article for full credit)
+- In sum, submit what you can when you can!
+- See the syllabus for suggestions on how to troubleshoot when issues arise.
+- Don't struggle in silence!
+Don't hesitate to come to office hours if you want my troubleshooting something.
+
 # Instructions for Working with `Quarto` {#sec-quartoInstructions}
 
 - **Use a new line for every sentence.** 
