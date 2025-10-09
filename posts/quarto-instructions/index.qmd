@@ -427,6 +427,26 @@ Below are sections for common questions/issues/warnings/errors in [`R`](#sec-tro
 
 ## `GitHub Pages` {#sec-troubleshootingGitHubPages}
 
+### Error in `readChar()`: ! cannot open the connection {#sec-GitHubPagesErrorReadChar}
+
+```r
+Error in `readChar()`:
+! cannot open the connection
+Backtrace:
+    ▆
+ 1. └─base::load("../../data/player_stats_weekly.Rdata")
+```
+
+This error means that the post cannot compile because it cannot find the data file at that relative file path.
+Make sure that the path and the filename is correct.
+GitHub Pages runs on Linux, which has case-sensitive file paths, so make sure that your capitalization of all folders and files is correct.
+A relative path is relative to the working directory.
+When pushing to GitHub pages, the working directory is the path of the post (i.e., the `index.qmd` file).
+Thus, a relative path is relative to the path of the post—i.e., it is relative to the `index.qmd` file.
+A single period means relative to the working directory (e.g.: `"./player_stats_weekly.Rdata"`).
+A double period means up a level relative to the working directory (e.g.: `"../parentfolder/player_stats_weekly.Rdata"`).
+Two sets of double periods means up two levels relative to the working directory (e.g.: `"../../data/player_stats_weekly.Rdata"`).
+
 # Session Info {#sec-sessionInfo}
 
 ```{r}
