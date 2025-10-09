@@ -226,7 +226,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#sec-troubleshootingR" id="toc-sec-troubleshootingR" class="nav-link" data-scroll-target="#sec-troubleshootingR"><span class="header-section-number">16.1</span> <code>R</code></a></li>
   <li><a href="#sec-troubleshootingGitHub" id="toc-sec-troubleshootingGitHub" class="nav-link" data-scroll-target="#sec-troubleshootingGitHub"><span class="header-section-number">16.2</span> <code>GitHub</code></a></li>
-  <li><a href="#sec-troubleshootingGitHubPages" id="toc-sec-troubleshootingGitHubPages" class="nav-link" data-scroll-target="#sec-troubleshootingGitHubPages"><span class="header-section-number">16.3</span> <code>GitHub Pages</code></a></li>
+  <li><a href="#sec-troubleshootingGitHubPages" id="toc-sec-troubleshootingGitHubPages" class="nav-link" data-scroll-target="#sec-troubleshootingGitHubPages"><span class="header-section-number">16.3</span> <code>GitHub Pages</code></a>
+  <ul class="collapse">
+  <li><a href="#sec-GitHubPagesErrorReadChar" id="toc-sec-GitHubPagesErrorReadChar" class="nav-link" data-scroll-target="#sec-GitHubPagesErrorReadChar"><span class="header-section-number">16.3.1</span> Error in <code>readChar()</code>: ! cannot open the connection</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#sec-sessionInfo" id="toc-sec-sessionInfo" class="nav-link" data-scroll-target="#sec-sessionInfo"><span class="header-section-number">17</span> Session Info</a></li>
   </ul>
@@ -608,6 +611,15 @@ Or here is [another cross-reference](#tbl-insertTableLabel) ot the same table.</
 </section>
 <section id="sec-troubleshootingGitHubPages" class="level2" data-number="16.3">
 <h2 data-number="16.3" class="anchored" data-anchor-id="sec-troubleshootingGitHubPages"><span class="header-section-number">16.3</span> <code>GitHub Pages</code></h2>
+<section id="sec-GitHubPagesErrorReadChar" class="level3" data-number="16.3.1">
+<h3 data-number="16.3.1" class="anchored" data-anchor-id="sec-GitHubPagesErrorReadChar"><span class="header-section-number">16.3.1</span> Error in <code>readChar()</code>: ! cannot open the connection</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>Error <span class="cf">in</span> <span class="st">`</span><span class="at">readChar()</span><span class="st">`</span><span class="sc">:</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span> cannot open the connection</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>Backtrace<span class="sc">:</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>    ▆</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a> <span class="fl">1.</span> └─base<span class="sc">::</span><span class="fu">load</span>(<span class="st">"../../data/player_stats_weekly.Rdata"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This error means that the post cannot compile because it cannot find the data file at that relative file path. Make sure that the path and the filename is correct. GitHub Pages runs on Linux, which has case-sensitive file paths, so make sure that your capitalization of all folders and files is correct. A relative path is relative to the working directory. When pushing to GitHub pages, the working directory is the path of the post (i.e., the <code>index.qmd</code> file). Thus, a relative path is relative to the path of the post—i.e., it is relative to the <code>index.qmd</code> file. A single period means relative to the working directory (e.g.: <code>"./player_stats_weekly.Rdata"</code>). A double period means up a level relative to the working directory (e.g.: <code>"../parentfolder/player_stats_weekly.Rdata"</code>). Two sets of double periods means up two levels relative to the working directory (e.g.: <code>"../../data/player_stats_weekly.Rdata"</code>).</p>
+</section>
 </section>
 </section>
 <section id="sec-sessionInfo" class="level1" data-number="17">
@@ -615,7 +627,7 @@ Or here is [another cross-reference](#tbl-insertTableLabel) ot the same table.</
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.5.1 (2025-06-13)
@@ -650,7 +662,7 @@ loaded via a namespace (and not attached):
 [21] S7_0.2.0           lifecycle_1.0.4    compiler_4.5.1     farver_2.1.2      
 [25] stringr_1.5.2      mnormt_2.1.1       mitools_2.4        htmltools_0.5.8.1 
 [29] yaml_2.3.10        htmlTable_2.4.3    Formula_1.2-5      pillar_1.11.1     
-[33] nloptr_2.2.1       MASS_7.3-65        Hmisc_5.2-3        reformulas_0.4.1  
+[33] nloptr_2.2.1       MASS_7.3-65        Hmisc_5.2-4        reformulas_0.4.1  
 [37] rpart_4.1.24       boot_1.3-31        nlme_3.1-168       lavaan_0.6-20     
 [41] tidyselect_1.2.1   digest_0.6.37      mvtnorm_1.3-3      stringi_1.8.7     
 [45] reshape2_1.4.4     purrr_1.1.0        dplyr_1.1.4        splines_4.5.1     
