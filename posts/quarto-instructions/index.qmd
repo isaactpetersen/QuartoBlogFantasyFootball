@@ -423,6 +423,20 @@ Below are sections for common questions/issues/warnings/errors in [`R`](#sec-tro
 
 ## `R` {#sec-troubleshootingR}
 
+### Error in `FUN()`: ! invalid argument to unary operator {#sec-RErrorFUN}
+
+```r
+> -nflreadr::dictionary_player_stats
+Error in `FUN()`:
+! invalid argument to unary operator
+Backtrace:
+    ▆
+ 1. └─base::Ops.data.frame(nflreadr::dictionary_player_stats)
+```
+
+This error means that you are trying to apply a unary operator like `-`, `+`, or `!` directly to a data frame—in this case, to the data frame `nflreadr::dictionary_player_stats`.
+You can address the error by removing the stray `-` symbol before the call to the data frame (`nflreadr::dictionary_player_stats`).
+
 ## `GitHub` {#sec-troubleshootingGitHub}
 
 ## `GitHub Pages` {#sec-troubleshootingGitHubPages}
@@ -430,6 +444,7 @@ Below are sections for common questions/issues/warnings/errors in [`R`](#sec-tro
 ### Error in `readChar()`: ! cannot open the connection {#sec-GitHubPagesErrorReadChar}
 
 ```r
+> load("../../data/player_stats_weekly.RData")
 Error in `readChar()`:
 ! cannot open the connection
 Backtrace:
