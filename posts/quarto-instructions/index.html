@@ -224,7 +224,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#sec-crossReferences" id="toc-sec-crossReferences" class="nav-link" data-scroll-target="#sec-crossReferences"><span class="header-section-number">15</span> Cross-References</a></li>
   <li><a href="#sec-troubleshooting" id="toc-sec-troubleshooting" class="nav-link" data-scroll-target="#sec-troubleshooting"><span class="header-section-number">16</span> Troubleshooting</a>
   <ul class="collapse">
-  <li><a href="#sec-troubleshootingR" id="toc-sec-troubleshootingR" class="nav-link" data-scroll-target="#sec-troubleshootingR"><span class="header-section-number">16.1</span> <code>R</code></a></li>
+  <li><a href="#sec-troubleshootingR" id="toc-sec-troubleshootingR" class="nav-link" data-scroll-target="#sec-troubleshootingR"><span class="header-section-number">16.1</span> <code>R</code></a>
+  <ul class="collapse">
+  <li><a href="#sec-RErrorFUN" id="toc-sec-RErrorFUN" class="nav-link" data-scroll-target="#sec-RErrorFUN"><span class="header-section-number">16.1.1</span> Error in <code>FUN()</code>: ! invalid argument to unary operator</a></li>
+  </ul></li>
   <li><a href="#sec-troubleshootingGitHub" id="toc-sec-troubleshootingGitHub" class="nav-link" data-scroll-target="#sec-troubleshootingGitHub"><span class="header-section-number">16.2</span> <code>GitHub</code></a></li>
   <li><a href="#sec-troubleshootingGitHubPages" id="toc-sec-troubleshootingGitHubPages" class="nav-link" data-scroll-target="#sec-troubleshootingGitHubPages"><span class="header-section-number">16.3</span> <code>GitHub Pages</code></a>
   <ul class="collapse">
@@ -605,6 +608,16 @@ Or here is [another cross-reference](#tbl-insertTableLabel) ot the same table.</
 <p>Below are sections for common questions/issues/warnings/errors in <a href="#sec-troubleshootingR"><code>R</code></a>, <a href="#sec-troubleshootingGitHub"><code>GitHub</code></a>, and <a href="#sec-troubleshootingGitHubPages"><code>GitHub Pages</code></a> (that I will populate as I receive questions), and how to info on how to address them.</p>
 <section id="sec-troubleshootingR" class="level2" data-number="16.1">
 <h2 data-number="16.1" class="anchored" data-anchor-id="sec-troubleshootingR"><span class="header-section-number">16.1</span> <code>R</code></h2>
+<section id="sec-RErrorFUN" class="level3" data-number="16.1.1">
+<h3 data-number="16.1.1" class="anchored" data-anchor-id="sec-RErrorFUN"><span class="header-section-number">16.1.1</span> Error in <code>FUN()</code>: ! invalid argument to unary operator</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="sc">-</span>nflreadr<span class="sc">::</span>dictionary_player_stats</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>Error <span class="cf">in</span> <span class="st">`</span><span class="at">FUN()</span><span class="st">`</span><span class="sc">:</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span> invalid argument to unary operator</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>Backtrace<span class="sc">:</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>    ▆</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a> <span class="fl">1.</span> └─base<span class="sc">::</span><span class="fu">Ops.data.frame</span>(nflreadr<span class="sc">::</span>dictionary_player_stats)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This error means that you are trying to apply a unary operator like <code>-</code>, <code>+</code>, or <code>!</code> directly to a data frame—in this case, to the data frame <code>nflreadr::dictionary_player_stats</code>. You can address the error by removing the stray <code>-</code> symbol before the call to the data frame (<code>nflreadr::dictionary_player_stats</code>).</p>
+</section>
 </section>
 <section id="sec-troubleshootingGitHub" class="level2" data-number="16.2">
 <h2 data-number="16.2" class="anchored" data-anchor-id="sec-troubleshootingGitHub"><span class="header-section-number">16.2</span> <code>GitHub</code></h2>
@@ -613,11 +626,12 @@ Or here is [another cross-reference](#tbl-insertTableLabel) ot the same table.</
 <h2 data-number="16.3" class="anchored" data-anchor-id="sec-troubleshootingGitHubPages"><span class="header-section-number">16.3</span> <code>GitHub Pages</code></h2>
 <section id="sec-GitHubPagesErrorReadChar" class="level3" data-number="16.3.1">
 <h3 data-number="16.3.1" class="anchored" data-anchor-id="sec-GitHubPagesErrorReadChar"><span class="header-section-number">16.3.1</span> Error in <code>readChar()</code>: ! cannot open the connection</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>Error <span class="cf">in</span> <span class="st">`</span><span class="at">readChar()</span><span class="st">`</span><span class="sc">:</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span> cannot open the connection</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>Backtrace<span class="sc">:</span></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>    ▆</span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a> <span class="fl">1.</span> └─base<span class="sc">::</span><span class="fu">load</span>(<span class="st">"../../data/player_stats_weekly.RData"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">load</span>(<span class="st">"../../data/player_stats_weekly.RData"</span>)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>Error <span class="cf">in</span> <span class="st">`</span><span class="at">readChar()</span><span class="st">`</span><span class="sc">:</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span> cannot open the connection</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>Backtrace<span class="sc">:</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    ▆</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a> <span class="fl">1.</span> └─base<span class="sc">::</span><span class="fu">load</span>(<span class="st">"../../data/player_stats_weekly.RData"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This error means that the post cannot compile because it cannot find the data file at that relative file path. Make sure that the path and the filename is correct. GitHub Pages runs on Linux, which has case-sensitive file paths, so make sure that your capitalization of all folders and files is correct. A relative path is relative to the working directory. When pushing to GitHub pages, the working directory is the path of the post (i.e., the <code>index.qmd</code> file). Thus, a relative path is relative to the path of the post—i.e., it is relative to the <code>index.qmd</code> file. A single period means relative to the working directory (e.g.: <code>"./player_stats_weekly.RData"</code>). A double period means up a level relative to the working directory (e.g.: <code>"../parentfolder/player_stats_weekly.RData"</code>). Two sets of double periods means up two levels relative to the working directory (e.g.: <code>"../../data/player_stats_weekly.RData"</code>).</p>
 </section>
 </section>
@@ -627,7 +641,7 @@ Or here is [another cross-reference](#tbl-insertTableLabel) ot the same table.</
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.5.1 (2025-06-13)
