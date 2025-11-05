@@ -74,12 +74,12 @@ To render the article on your local computer, with the `index.qmd` file open, cl
 This will take a while the first time to compile on `GitHub`, because it needs to install all of the necessary packages.
 (After a successful workflow run, subsequent runs often go faster unless newer versions of packages are released, in which case GitHub Actions will need to re-install those packages.)
 You can determine the status of the workflow run based on the symbol next to the workflow run.
+![GitHub Actions - Loading](githubActions-loading.gif){width=50%}
 A rotating yellow circle indicates that the blog post is still in the process of compiling.
-![GitHub Actions - Loading](githubActions-loading.gif)
-A green checkmark indicates that the blog post finished compiling successfully.
 ![GitHub Actions - Success](githubActions-success.png)
-A red "X" indicates that the blog post failed to compile.
+A green checkmark indicates that the blog post finished compiling successfully.
 ![GitHub Actions - Failure](githubActions-failure.png)
+A red "X" indicates that the blog post failed to compile.
 If the blog post fails to compile, you should click on that workflow run to identify the error and where it occured.
 1. If there are any errors during compilation, fix them.
 If it compiles successfully, your blog should be viewable at the following link:
@@ -94,6 +94,11 @@ You need to submit the public URL to the live post (e.g., <https://isaactpeterse
 1. If there are any errors during compilation, fix them.
 If there are no errors, check the post online to see if it appears as expected.
 If it does not appear as expected, make the additional changes you want, and create another commit in `GitHub` with your changes and push them until it appears the way you expect.
+
+Note: it is okay to have multiple workflow runs running at the same time.
+The files from the last successful run will be what are shown on the blog.
+Thus, it is okay to commit changes to the repository while a previous workflow run is still running.
+That said, you will not know whether a workflow run succeeds (or fails) until the run completes.
 
 # Blog Post Reminders {#sec-blogPostReminders}
 
