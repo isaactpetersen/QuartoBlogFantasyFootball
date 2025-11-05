@@ -70,8 +70,18 @@ In writing the article, I strongly encourage you to consult the [example post](h
 To render the article on your local computer, with the `index.qmd` file open, click the "Render" button in the top left of `RStudio` (see image below).
 ![Rendering Your Post in RStudio](render.png){.lightbox}
 1. After you get the post the way you want it to look locally, create a commit in `GitHub` with your changes and push them to your `GitHub` repository.
-1. Go the the "Actions" tab of your `GitHub` repository to track the status as your blog and post(s) compile.
+1. Go to the "Actions" tab of your `GitHub` repository to track the status as your blog and post(s) compile.
 This will take a while the first time to compile on `GitHub`, because it needs to install all of the necessary packages.
+(After a successful workflow run, subsequent runs often go faster unless newer versions of packages are released, in which case GitHub Actions will need to re-install those packages.)
+You can determine the status of the workflow run based on the symbol next to the workflow run.
+A rotating yellow circle indicates that the blog post is still in the process of compiling.
+![GitHub Actions - Loading](githubActions-loading.gif)
+A green checkmark indicates that the blog post finished compiling successfully.
+![GitHub Actions - Success](githubActions-success.png)
+A red "X" indicates that the blog post failed to compile.
+![GitHub Actions - Failure](githubActions-failure.png)
+If the blog post fails to compile, you should click on that workflow run to identify the error and where it occured.
+1. If there are any errors during compilation, fix them.
 If it compiles successfully, your blog should be viewable at the following link:
 `https://YOUR_GITHUB_USERNAME.github.io/NAME_OF_YOUR_REPOSITORY/`.
 For instance, my example blog is located at the following location: <https://isaactpetersen.github.io/QuartoBlogFantasyFootball/>.
@@ -437,9 +447,9 @@ Backtrace:
 This error means that you are trying to apply a unary operator like `-`, `+`, or `!` directly to a data frame—in this case, to the data frame `nflreadr::dictionary_player_stats`.
 You can address the error by removing the stray `-` symbol before the call to the data frame (`nflreadr::dictionary_player_stats`).
 
-## `GitHub` {#sec-troubleshootingGitHub}
+## `GitHub Destkop` {#sec-troubleshootingGitHub}
 
-## `GitHub Pages` {#sec-troubleshootingGitHubPages}
+## `GitHub Actions/GitHub Pages` {#sec-troubleshootingGitHubPages}
 
 ### Error in `readChar()`: ! cannot open the connection {#sec-GitHubPagesErrorReadChar}
 
