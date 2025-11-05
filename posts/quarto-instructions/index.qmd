@@ -74,7 +74,7 @@ To render the article on your local computer, with the `index.qmd` file open, cl
 This will take a while the first time to compile on `GitHub`, because it needs to install all of the necessary packages.
 (After a successful workflow run, subsequent runs often go faster unless newer versions of packages are released, in which case GitHub Actions will need to re-install those packages.)
 You can determine the status of the workflow run based on the symbol next to the workflow run.
-![GitHub Actions - Loading](githubActions-loading.gif){width=5%}
+![GitHub Actions - Loading](githubActions-loading.gif){width=3%}
 A rotating yellow circle indicates that the blog post is still in the process of compiling.
 ![GitHub Actions - Success](githubActions-success.png)
 A green checkmark indicates that the blog post finished compiling successfully.
