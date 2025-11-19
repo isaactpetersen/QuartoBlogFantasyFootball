@@ -21,7 +21,7 @@ install.packages(c(
   "LongituRF","gpboost","mgcv","rms","car","lavaan","lavaanPlot","lavaangui",
   "mice","miceadds","interactions","robustbase","ordinal","MASS",
   "data.table","future","future.apply","SimDesign","domir","GGally","Rglpk",
-  "TTR","rockchalk"))
+  "TTR","rockchalk","yhat"))
 ```
 
 Some necessary packages, including the [`ffanalytics` package](https://github.com/FantasyFootballAnalytics/ffanalytics), are hosted in GitHub (and are not hosted on the Comprehensive R Archive Network [CRAN]) and thus need to be installed using the following code (after installing the `remotes` package above)[^petersenlabPackageGitHub]:
