@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,6 +11,9 @@
 
 <title>Example Blog Post: Are Air Yards or Receiving Yards a Better Predictor of Future Fantasy Points? – My Blog</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -69,15 +72,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-4897d45d2f75ed4f519693be625836c5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -109,7 +111,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -735,14 +737,14 @@ Figure&nbsp;7: Spread-Level Plot.
 <div class="cell-output cell-output-stdout">
 <pre><code>Best Normalizing transformation with 52945 Observations
  Estimated Normality Statistics (Pearson P / df, lower =&gt; more normal):
- - arcsinh(x): 103.359
- - Center+scale: 117.0528
- - Double Reversed Log_b(x+a): 134.1353
- - Exp(x): 5458.8272
- - Log_b(x+a): 94.9513
- - orderNorm (ORQ): 91.3116
- - sqrt(x + a): 98.3589
- - Yeo-Johnson: 94.5061
+ - arcsinh(x): 103.4205
+ - Center+scale: 117.1214
+ - Double Reversed Log_b(x+a): 134.0158
+ - Exp(x): 5460.7192
+ - Log_b(x+a): 94.8015
+ - orderNorm (ORQ): 91.2823
+ - sqrt(x + a): 98.2483
+ - Yeo-Johnson: 94.397
 Estimation method: Out-of-sample via CV with 10 folds and 5 repeats
  
 Based off these, bestNormalize chose:
@@ -1015,9 +1017,9 @@ Figure&nbsp;11: Quantile–Quantile (QQ) Plot (Transformed).
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>R version 4.5.2 (2025-10-31)
+<pre><code>R version 4.6.0 (2026-04-24)
 Platform: x86_64-pc-linux-gnu
-Running under: Ubuntu 24.04.3 LTS
+Running under: Ubuntu 24.04.4 LTS
 
 Matrix products: default
 BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
@@ -1036,57 +1038,59 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
- [1] lubridate_1.9.4     forcats_1.0.1       stringr_1.6.0      
- [4] dplyr_1.1.4         purrr_1.2.0         readr_2.1.6        
- [7] tidyr_1.3.1         tibble_3.3.0        tidyverse_2.0.0    
-[10] GGally_2.4.0        ggplot2_4.0.1       lmerTest_3.1-3     
-[13] lme4_1.1-37         Matrix_1.7-4        bestNormalize_1.9.1
-[16] car_3.1-3           carData_3.0-5       broom_1.0.10       
-[19] effectsize_1.0.1    DescTools_0.99.60   psych_2.5.6        
-[22] petersenlab_1.2.1  
+ [1] lubridate_1.9.5     forcats_1.0.1       stringr_1.6.0      
+ [4] dplyr_1.2.1         purrr_1.2.2         readr_2.2.0        
+ [7] tidyr_1.3.2         tibble_3.3.1        tidyverse_2.0.0    
+[10] GGally_2.4.0        ggplot2_4.0.3       lmerTest_3.2-1     
+[13] lme4_2.0-1          Matrix_1.7-5        bestNormalize_1.9.2
+[16] car_3.1-5           carData_3.0-6       broom_1.0.12       
+[19] effectsize_1.0.2    DescTools_0.99.60   psych_2.6.3        
+[22] petersenlab_1.2.3  
 
 loaded via a namespace (and not attached):
-  [1] RColorBrewer_1.1-3  rstudioapi_0.17.1   jsonlite_2.0.0     
-  [4] datawizard_1.3.0    magrittr_2.0.4      TH.data_1.1-5      
+  [1] RColorBrewer_1.1-3  rstudioapi_0.18.0   jsonlite_2.0.0     
+  [4] datawizard_1.3.1    magrittr_2.0.5      TH.data_1.1-5      
   [7] estimability_1.5.1  farver_2.1.2        nloptr_2.2.1       
- [10] rmarkdown_2.30      fs_1.6.6            vctrs_0.6.5        
- [13] minqa_1.2.8         base64enc_0.1-3     butcher_0.3.6      
- [16] htmltools_0.5.8.1   haven_2.5.5         cellranger_1.1.0   
- [19] Formula_1.2-5       parallelly_1.45.1   htmlwidgets_1.6.4  
- [22] plyr_1.8.9          sandwich_3.1-1      emmeans_2.0.0      
- [25] rootSolve_1.8.2.4   zoo_1.8-14          lifecycle_1.0.4    
- [28] iterators_1.0.14    pkgconfig_2.0.3     R6_2.6.1           
- [31] fastmap_1.2.0       rbibutils_2.4       future_1.68.0      
- [34] numDeriv_2016.8-1.1 digest_0.6.39       Exact_3.3          
- [37] colorspace_2.1-2    Hmisc_5.2-4         labeling_0.4.3     
- [40] timechange_0.3.0    mgcv_1.9-3          httr_1.4.7         
- [43] abind_1.4-8         compiler_4.5.2      rngtools_1.5.2     
- [46] proxy_0.4-27        withr_3.0.2         doParallel_1.0.17  
- [49] htmlTable_2.4.3     S7_0.2.1            backports_1.5.0    
- [52] DBI_1.2.3           ggstats_0.11.0      MASS_7.3-65        
- [55] lava_1.8.2          gld_2.6.8           tools_4.5.2        
- [58] pbivnorm_0.6.0      foreign_0.8-90      future.apply_1.20.0
- [61] nnet_7.3-20         glue_1.8.0          quadprog_1.5-8     
- [64] nlme_3.1-168        grid_4.5.2          checkmate_2.3.3    
- [67] cluster_2.1.8.1     reshape2_1.4.5      generics_0.1.4     
- [70] recipes_1.3.1       gtable_0.3.6        nortest_1.0-4      
- [73] tzdb_0.5.0          class_7.3-23        data.table_1.17.8  
- [76] lmom_3.2            hms_1.1.4           foreach_1.5.2      
- [79] pillar_1.11.1       mitools_2.4         splines_4.5.2      
- [82] lattice_0.22-7      survival_3.8-3      tidyselect_1.2.1   
- [85] mix_1.0-13          knitr_1.50          reformulas_0.4.2   
- [88] gridExtra_2.3       stats4_4.5.2        xfun_0.54          
- [91] expm_1.0-0          hardhat_1.4.2       timeDate_4051.111  
- [94] stringi_1.8.7       yaml_2.3.10         boot_1.3-32        
- [97] evaluate_1.0.5      codetools_0.2-20    cli_3.6.5          
-[100] rpart_4.1.24        xtable_1.8-4        parameters_0.28.2  
-[103] Rdpack_2.6.4        lavaan_0.6-20       Rcpp_1.1.0         
-[106] readxl_1.4.5        globals_0.18.0      coda_0.19-4.1      
-[109] parallel_4.5.2      gower_1.0.2         bayestestR_0.17.0  
-[112] doRNG_1.8.6.2       listenv_0.10.0      viridisLite_0.4.2  
-[115] mvtnorm_1.3-3       ipred_0.9-15        scales_1.4.0       
-[118] prodlim_2025.04.28  e1071_1.7-16        insight_1.4.2      
-[121] rlang_1.1.6         multcomp_1.4-29     mnormt_2.1.1       </code></pre>
+ [10] rmarkdown_2.31      fs_2.1.0            vctrs_0.7.3        
+ [13] minqa_1.2.8         base64enc_0.1-6     butcher_0.4.0      
+ [16] htmltools_0.5.9     progress_1.2.3      haven_2.5.5        
+ [19] cellranger_1.1.0    Formula_1.2-5       parallelly_1.47.0  
+ [22] htmlwidgets_1.6.4   plyr_1.8.9          sandwich_3.1-1     
+ [25] emmeans_2.0.3       rootSolve_1.8.2.4   zoo_1.8-15         
+ [28] lifecycle_1.0.5     iterators_1.0.14    pkgconfig_2.0.3    
+ [31] R6_2.6.1            fastmap_1.2.0       future_1.70.0      
+ [34] rbibutils_2.4.1     numDeriv_2016.8-1.1 digest_0.6.39      
+ [37] Exact_3.3           colorspace_2.1-2    Hmisc_5.2-5        
+ [40] labeling_0.4.3      timechange_0.4.0    mgcv_1.9-4         
+ [43] httr_1.4.8          abind_1.4-8         compiler_4.6.0     
+ [46] rngtools_1.5.2      proxy_0.4-29        withr_3.0.2        
+ [49] doParallel_1.0.17   htmlTable_2.5.0     S7_0.2.2           
+ [52] backports_1.5.1     DBI_1.3.0           ggstats_0.13.0     
+ [55] lava_1.9.0          MASS_7.3-65         gld_2.6.8          
+ [58] tools_4.6.0         pbivnorm_0.6.0      foreign_0.8-91     
+ [61] otel_0.2.0          future.apply_1.20.2 nnet_7.3-20        
+ [64] glue_1.8.1          quadprog_1.5-8      nlme_3.1-169       
+ [67] grid_4.6.0          checkmate_2.3.4     cluster_2.1.8.2    
+ [70] reshape2_1.4.5      generics_0.1.4      recipes_1.3.2      
+ [73] gtable_0.3.6        nortest_1.0-4       tzdb_0.5.0         
+ [76] class_7.3-23        data.table_1.18.2.1 lmom_3.3           
+ [79] hms_1.1.4           foreach_1.5.2       pillar_1.11.1      
+ [82] mitools_2.4         splines_4.6.0       lattice_0.22-9     
+ [85] survival_3.8-6      tidyselect_1.2.1    mix_1.0-13         
+ [88] knitr_1.51          reformulas_0.4.4    gridExtra_2.3      
+ [91] stats4_4.6.0        xfun_0.57           expm_1.0-0         
+ [94] hardhat_1.4.3       timeDate_4052.112   stringi_1.8.7      
+ [97] yaml_2.3.12         boot_1.3-32         evaluate_1.0.5     
+[100] codetools_0.2-20    cli_3.6.6           rpart_4.1.27       
+[103] xtable_1.8-8        parameters_0.28.3   Rdpack_2.6.6       
+[106] lavaan_0.6-21       Rcpp_1.1.1-1.1      readxl_1.4.5       
+[109] globals_0.19.1      coda_0.19-4.1       parallel_4.6.0     
+[112] gower_1.0.2         prettyunits_1.2.0   bayestestR_0.17.0  
+[115] doRNG_1.8.6.3       listenv_0.10.1      viridisLite_0.4.3  
+[118] mvtnorm_1.3-7       ipred_0.9-15        scales_1.4.0       
+[121] prodlim_2026.03.11  e1071_1.7-17        insight_1.5.0      
+[124] crayon_1.5.3        rlang_1.2.0         multcomp_1.4-30    
+[127] mnormt_2.1.2       </code></pre>
 </div>
 </div>
 
